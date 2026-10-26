@@ -1,0 +1,1 @@
+# mathorcup-2026-beer
