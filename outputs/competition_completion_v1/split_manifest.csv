@@ -1,0 +1,251 @@
+﻿beer,split,style
+1,training,Brut
+2,heldout_test,Low/No alcohol
+3,training,Blond
+4,training,Strong ale
+5,heldout_test,Blond
+6,training,Amber
+7,training,Saison
+8,training,Hoppy
+9,training,Hoppy
+10,training,Low/No alcohol
+11,training,Amber
+12,training,Lambic
+13,heldout_test,Christmas
+14,heldout_test,Brett/cofermented
+15,training,Tripel
+16,training,Dubbel
+17,training,Tripel
+18,heldout_test,Lambic
+19,training,Amber
+20,training,Saison
+21,training,Lambic
+22,heldout_test,Wheat
+23,heldout_test,Tripel
+24,heldout_test,Kriek
+25,training,Brown
+26,training,West Flanders ale
+27,training,Hoppy
+28,heldout_test,Pils/Lager
+29,heldout_test,Saison
+30,heldout_test,Blond
+31,training,Hoppy
+32,training,Amber
+33,training,Fruitbeer
+34,training,Tripel
+35,training,Blond
+36,heldout_test,Brown
+37,training,Strong ale
+38,training,Christmas
+39,training,Hoppy
+40,heldout_test,Low/No alcohol
+41,training,Lambic
+42,training,Lambic
+43,training,Amber
+44,training,Wheat
+45,training,Tripel
+46,training,Blond
+47,heldout_test,Tripel
+48,training,Dubbel
+49,training,Blond
+50,training,Fruitbeer
+51,training,Strong ale
+52,training,Stout/Porter
+53,training,Brown
+54,training,Kriek
+55,training,Hoppy
+56,training,Saison
+57,heldout_test,Tripel
+58,training,Saison
+59,training,Blond
+60,training,Christmas
+61,training,Stout/Porter
+62,heldout_test,Blond
+63,training,Amber
+64,training,Blond
+65,training,Hoppy
+66,training,Tripel
+67,training,Stout/Porter
+68,heldout_test,Tripel
+69,training,Tripel
+70,training,Blond
+71,training,Blond
+72,training,Hoppy
+73,training,Blond
+74,training,Faro
+75,training,Lambic
+76,training,Blond
+77,training,Blond
+78,training,Brown
+79,heldout_test,Hoppy
+80,training,Hoppy
+81,training,Pils/Lager
+82,training,Kriek
+83,training,Low/No alcohol
+84,heldout_test,West Flanders ale
+85,training,Tripel
+86,training,Low/No alcohol
+87,heldout_test,Stout/Porter
+88,training,Kriek
+89,training,Brown
+90,training,Pils/Lager
+91,heldout_test,Strong ale
+92,training,Amber
+93,training,Tripel
+94,training,Blond
+95,heldout_test,Christmas
+96,training,Pils/Lager
+97,training,Hoppy
+98,training,Brown
+99,training,Strong ale
+100,training,Dubbel
+101,training,Blond
+102,training,Christmas
+103,training,Stout/Porter
+104,heldout_test,Strong ale
+105,training,Strong ale
+106,training,Christmas
+107,heldout_test,Dubbel
+108,training,Brown
+109,training,Brown
+110,training,Blond
+111,training,Dubbel
+112,training,Brown
+113,training,Blond
+114,training,Hoppy
+115,training,Lambic
+116,heldout_test,Lambic
+117,training,Strong ale
+118,training,West Flanders ale
+119,heldout_test,Pils/Lager
+120,heldout_test,Hoppy
+121,training,Blond
+122,training,Brett/cofermented
+123,training,Stout/Porter
+124,training,Pils/Lager
+125,training,Blond
+126,heldout_test,Amber
+127,heldout_test,Blond
+128,training,Amber
+129,heldout_test,Brown
+130,training,Brut
+131,training,Scotch
+132,training,Saison
+133,training,Strong ale
+134,training,Strong ale
+135,heldout_test,Tripel
+136,heldout_test,Blond
+137,training,Amber
+138,heldout_test,Kriek
+139,training,Pils/Lager
+140,training,Tripel
+141,training,Low/No alcohol
+142,training,Wheat
+143,training,Hoppy
+144,training,Lambic
+145,training,Saison
+146,training,Scotch
+147,training,Tripel
+148,training,Strong ale
+149,training,Blond
+150,training,Brett/cofermented
+151,heldout_test,Faro
+152,training,Wheat
+153,training,Kriek
+154,training,Tripel
+155,training,Low/No alcohol
+156,training,Kriek
+157,training,Tripel
+158,heldout_test,Amber
+159,training,Flanders old brown
+160,training,Wheat
+161,training,Flanders old brown
+162,training,Lambic
+163,training,Tripel
+164,heldout_test,Blond
+165,training,Fruitbeer
+166,training,Saison
+167,training,Flanders old brown
+168,training,Scotch
+169,training,Hoppy
+170,heldout_test,Strong ale
+171,training,Tripel
+172,training,Wheat
+173,heldout_test,Stout/Porter
+174,training,Dubbel
+175,training,Strong ale
+176,training,West Flanders ale
+177,training,Fruitbeer
+178,training,West Flanders ale
+179,heldout_test,Flanders old brown
+180,training,Christmas
+181,training,Christmas
+182,training,Stout/Porter
+183,training,Saison
+184,heldout_test,Fruitbeer
+185,training,Pils/Lager
+186,training,Strong ale
+187,training,Dubbel
+188,training,Stout/Porter
+189,heldout_test,Tripel
+190,training,Flanders old brown
+191,training,Tripel
+192,heldout_test,Brut
+193,training,Blond
+194,training,Dubbel
+195,training,Wheat
+196,training,Strong ale
+197,training,Wheat
+198,training,Dubbel
+199,training,Tripel
+200,training,West Flanders ale
+201,training,Stout/Porter
+202,heldout_test,Stout/Porter
+203,training,Brett/cofermented
+204,training,Tripel
+205,training,Brut
+206,training,Brown
+207,training,Fruitbeer
+208,training,Wheat
+209,training,Pils/Lager
+210,training,Amber
+211,training,Lambic
+212,training,Stout/Porter
+213,training,Hoppy
+214,training,Christmas
+215,training,Blond
+216,training,Scotch
+217,training,Tripel
+218,training,Pils/Lager
+219,heldout_test,Hoppy
+220,training,Kriek
+221,heldout_test,Dubbel
+222,training,Brett/cofermented
+223,training,Low/No alcohol
+224,training,Wheat
+225,training,Strong ale
+226,heldout_test,Strong ale
+227,training,Fruitbeer
+228,training,Tripel
+229,heldout_test,Wheat
+230,training,Pils/Lager
+231,training,Stout/Porter
+232,training,Kriek
+233,heldout_test,Scotch
+234,training,Blond
+235,training,Strong ale
+236,training,Brett/cofermented
+237,training,Brown
+238,training,Blond
+239,training,Tripel
+240,training,Tripel
+241,training,Kriek
+242,heldout_test,Saison
+243,training,Wheat
+244,training,West Flanders ale
+245,training,Tripel
+246,training,Blond
+247,heldout_test,Fruitbeer
+248,training,Blond
+249,training,Blond
+250,training,Faro

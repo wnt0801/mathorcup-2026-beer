@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "original_files_unchanged": 35,
+  "q1_predictions": 12500,
+  "q2_top3_records": 150,
+  "generated_spectra": 2200,
+  "transferred_spectra": 11,
+  "executed_review_notebooks": [
+    "06_competition_scoring_review.ipynb",
+    "07_competition_network_all50.ipynb",
+    "08_competition_conditional_generation.ipynb"
+  ],
+  "checks": [
+    "original hashes",
+    "frozen prediction equality",
+    "saved model round-trip",
+    "all50 Top3",
+    "official matrix type",
+    "training-only donors",
+    "style-conditional donor labels",
+    "generated donor interpolation and missing mask",
+    "training support bounds",
+    "transfer reconstruction",
+    "exact defect preservation",
+    "nonconstant auxiliary stale guard constraint",
+    "executed notebooks without errors"
+  ],
+  "limits": [
+    "No raw0–6 recovery claim",
+    "No experimental brewing or sensory safety validation",
+    "Unknown thresholds remain unknown"
+  ]
+}
