@@ -201,12 +201,69 @@ def guard_assessment():
     (OUT/'q3_stale_guard_assessment.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
 
 
+def candidate_tables():
+    """Problem-facing summaries, with no refitting or selection from held-out scores."""
+    from competition_pipeline import load,DEFECTS
+    x,y,styles,selection,tr,te=load()
+    predictions=pd.read_csv(OUT/'q1_out_of_sample_predictions.csv')
+    metrics=pd.read_csv(OUT/'q1_metrics.csv')
+    groups={'Aroma':[t for t in y if t.startswith('A_')],'Flavour':[t for t in y if t.startswith('F_')],'All50':list(y)}
+    rows=[]
+    for split in ['training_oof','heldout_test']:
+        for group,targets in groups.items():
+            d=predictions.loc[predictions['split'].eq(split)&predictions.target.isin(targets)]
+            a=d.actual_standardized.to_numpy();p=d.predicted_standardized.to_numpy();b=d.baseline_standardized.to_numpy()
+            ag=d.actual_relative_grade.to_numpy();pg=d.predicted_relative_grade.to_numpy();bg=d.baseline_relative_grade.to_numpy()
+            mae=np.abs(a-p).mean();base=np.abs(a-b).mean()
+            rows.append(dict(split=split,group=group,n_targets=len(targets),n_beers=d.beer.nunique(),baseline_MAE=base,model_MAE=mae,improvement_pct=100*(1-mae/base),baseline_grade_MAE=np.abs(ag-bg).mean(),model_grade_MAE=np.abs(ag-pg).mean(),baseline_grade_accuracy=np.mean(ag==bg),model_grade_accuracy=np.mean(ag==pg)))
+    write(pd.DataFrame(rows),'q1_group_metrics.csv')
+    difficult=metrics.loc[metrics['split'].eq('heldout_test')].copy()
+    difficult['mae_improvement_pct']=100*(1-difficult.MAE/difficult.baseline_MAE)
+    difficult['comparison']=np.where(difficult.MAE>difficult.baseline_MAE+1e-10,'worse',np.where(difficult.MAE<difficult.baseline_MAE-1e-10,'better','equal'))
+    write(difficult.sort_values('mae_improvement_pct'),'q1_dimension_comparison.csv')
+    top=pd.read_csv(OUT/'q2_top3_all50_evidence.csv')
+    nodes=pd.read_csv(OUT/'q2_graph_nodes.csv').set_index('field')
+    edges=pd.read_csv(OUT/'q2_official_graph_edges.csv')
+    edgekeys={frozenset([r.left,r.right]):r.rho for _,r in edges.iterrows()}
+    context=[]
+    for target,g in top.groupby('target',sort=False):
+        names=g.field.tolist();present=[edgekeys[frozenset([a,b])] for i,a in enumerate(names) for b in names[i+1:] if frozenset([a,b]) in edgekeys]
+        context.append(dict(target=target,top3_edges_at_abs_rho06=len(present),edge_rhos=json.dumps(present),role='auxiliary co-variation explanation; no network re-ranking or selection'))
+    write(pd.DataFrame(context),'q2_network_explanation.csv')
+    classes=top.groupby(['target','candidate_class']).size().unstack(fill_value=0).reset_index()
+    write(classes,'q2_stability_by_target.csv')
+    field_info=pd.read_csv(OUT/'chemical_name_mapping.csv').set_index('field_name_R')
+    table=pd.read_excel(FROZEN/'reference_supplement.xlsx',sheet_name='Supplementary Table S1').rename(columns=lambda c:str(c).strip())
+    names=table['Compound'].astype('string').str.strip().str.replace('Î±','α',regex=False).str.replace('Î²','β',regex=False)
+    unique=table.loc[~names.duplicated(keep=False)].copy();unique.index=names.loc[unique.index]
+    top['documented_compound_class']=[unique.at[field_info.at[f,'official_name'],'Compound class'] if field_info.at[f,'official_name'] in unique.index else pd.NA for f in top.field]
+    write(top,'q2_top3_all50_evidence.csv')
+    transfers=pd.read_csv(OUT/'q3_transferred_native_spectra.csv').set_index('source_beer')
+    registry=pd.read_csv(OUT/'calibrated_fields_transform_audit.csv')
+    native=[]
+    for beer in transfers.index:
+        for f in x.columns:
+            before=x.at[beer,f];after=transfers.at[beer,f]
+            r=registry.loc[registry.field.eq(f)&registry.n.gt(0)&registry.matched.eq(registry.n)]
+            relation=r.iloc[0].candidate_transform if len(r)==1 else 'unverified_or_conflicted'
+            native.append(dict(source_beer=beer,field=f,chemical_name=field_info.at[f,'official_name'],before_native=before,after_native=after,delta_native=after-before,delta_train_SD=(after-before)/x.loc[tr,f].std(ddof=0) if x.loc[tr,f].std(ddof=0)>0 else np.nan,unit_if_concentration=field_info.at[f,'unit'],native_transform_evidence=relation,is_defect=f in DEFECTS,interpretation='native coordinates; do not apply concentration units to log coordinates'))
+    write(pd.DataFrame(native),'q3_transfer_compound_changes.csv')
+    selected=['ethanol..v.v.','ethyl_acetate','ethyl_hexanoate','isoamyl_alcohol','bitterness','lactic_acid.mg.L.','acetic_acid.g.L.','pH']+DEFECTS
+    d=pd.DataFrame(native)
+    write(d.loc[d.field.isin(selected)].groupby(['field','chemical_name'],sort=False).agg(before_median=('before_native','median'),after_median=('after_native','median'),paired_delta_median=('delta_native','median'),known_pairs=('delta_native','count')).reset_index(),'q3_transfer_compound_summary.csv')
+    sensory=pd.read_csv(OUT/'q3_transfer_sensory.csv')
+    write(sensory.groupby('target',sort=False).agg(before_mean=('before','mean'),after_mean=('after','mean'),paired_mean_delta=('delta','mean')).reset_index(),'q3_transfer_sensory_summary.csv')
+    design={'version':'v3','target_groups':groups,'Q1_selection':'frozen training-CV choices; no new tuning','network_role':'auxiliary visualization and co-variation context only; not an input to Top3 ranking','generator':'same-style anchor + one of five nearest same-style donors + Beta(1,4) interpolation; missing propagates','transfer_evaluation':'distance reduction is the optimization objective, not independent evidence of genuine style conversion','native_change_fields_predeclared':selected,'style_classifier':'existing fixed training-only diagnostic; not used to choose transfer candidates'}
+    (OUT/'analysis_design.json').write_text(json.dumps(design,ensure_ascii=False,indent=2),encoding='utf-8')
+
+
 def run_audits():
     from build_competition_deliverables import reference_audit
     reference_audit()
     scoring_sources();defect_evidence();summary_consistency();guard_assessment()
     diagnostics=pd.read_csv(OUT/'q3_generation_heldout_validation.csv')
     write(diagnostics,'q3_style_diversity_coverage.csv')
+    candidate_tables()
     print('Review audits completed: score sources, four-defect flags, summary evidence, fixed guard CV, per-style coverage',flush=True)
 
 if __name__=='__main__':run_audits()

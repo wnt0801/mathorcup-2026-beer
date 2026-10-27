@@ -60,7 +60,7 @@ def save(df,name):
 def load():
     a=pd.read_csv(ROOT/'data/1.csv').set_index('beer').sort_index()
     y=pd.read_csv(ROOT/'data/4.csv').set_index('beer').sort_index()
-    assert a.index.equals(y.index) and a.index.is_unique
+    assert a.index.equals(y.index) and a.index.is_unique and y.index.is_unique
     # Attachment4 exports barcode identifiers in low-precision scientific notation.
     # beer is the stable, unique join key; never repair identifiers by guessing.
     barcode=pd.DataFrame({'beer':a.index,'a1_beer_id':a.beer_id.to_numpy(),'a4_beer_id':y.beer_id.to_numpy()})
@@ -71,6 +71,8 @@ def load():
     x=a.drop(columns=['beer_id','tasting_category_fine'])
     y=y.drop(columns=['beer_id','tasting_category_fine'])
     sel=pd.read_csv(FROZEN/'model_selection_cv_50.csv')
+    assert sel['指标'].is_unique and set(sel['指标'])==set(y.columns)
+    assert set(x.columns).isdisjoint(y.columns), 'Chemical inputs and sensory labels overlap'
     y=y[sel['指标'].tolist()]
     train,test=train_test_split(x.index,test_size=.2,random_state=SEED,stratify=a.tasting_category_fine)
     return x,y,a.tasting_category_fine,sel,pd.Index(train),pd.Index(test)
@@ -87,15 +89,39 @@ def predict(models,x):
     return pd.DataFrame({t:m.predict(x) for t,m in models.items()},index=x.index)
 
 
+def preprocessing_evidence(model,fit_x,valid_ids,target,fold):
+    """Inspect fitted statistics against the actual fit subset, including every OOF fold."""
+    ids=fit_x.index
+    assert set(ids).isdisjoint(valid_ids)
+    row=dict(target=target,fold=fold,n_fit=len(ids),fit_beers=json.dumps([int(i) for i in ids]),valid_beers=json.dumps([int(i) for i in valid_ids]),imputer_error=0.,scaler_error=0.,clip_error=0.)
+    if not isinstance(model,Pipeline):return row
+    arr=fit_x.to_numpy(dtype=float)
+    if 'clip' in model.named_steps:
+        clip=model.named_steps['clip']
+        low=np.nanquantile(arr,.01,axis=0);high=np.nanquantile(arr,.99,axis=0)
+        row['clip_error']=float(max(np.max(np.abs(low-clip.lower_bounds_)),np.max(np.abs(high-clip.upper_bounds_))))
+        assert np.allclose(low,clip.lower_bounds_,equal_nan=True) and np.allclose(high,clip.upper_bounds_,equal_nan=True)
+        arr=np.clip(arr,low,high)
+    med=np.nanmedian(arr,axis=0)
+    row['imputer_error']=float(np.nanmax(np.abs(med-model.named_steps['imputer'].statistics_)))
+    assert np.allclose(med,model.named_steps['imputer'].statistics_,equal_nan=True)
+    if 'scaler' in model.named_steps:
+        filled=np.where(np.isnan(arr),med,arr)
+        row['scaler_error']=float(np.max(np.abs(filled.mean(0)-model.named_steps['scaler'].mean_)))
+        assert np.allclose(filled.mean(0),model.named_steps['scaler'].mean_)
+        assert np.allclose(filled.var(0),model.named_steps['scaler'].var_)
+    return row
+
+
 def chemical_evidence(row):
     target,field,origin=row['target'],row['field'],str(row['origin'])
     direct={'dms':'DMS','diacetyl':'X2.3.butanedione','X4vg':'X4VG','t2n':'X.E..2.nonenal','alcohol':'ethanol..v.v.'}
     if direct.get(target)==field:
         reason='化学实体与感官描述直接对应；感知仍受基质、阈值与混合物作用影响'
     elif target.startswith(('A_malt','F_malt')):
-        reason='麦芽目标且附件标注Malt来源，具有同源解释' if origin=='Malt' else f'麦芽目标但附件来源为{origin}，应按共变代理解释，缺乏直接麦芽机制证据'
+        reason='Malt来源标注与目标类别相符，仅是机制线索，不是已证实致味机制' if origin=='Malt' else f'麦芽目标但附件来源为{origin}，可能是共变代理，缺乏直接麦芽机制证据'
     elif target.startswith(('A_hops','F_hops')):
-        reason='酒花目标且附件标注Hops来源，具有同源解释' if origin=='Hops' else f'酒花目标但附件来源为{origin}，可能由风格或共变结构产生，不建议据此添加'
+        reason='Hops来源标注与目标类别相符，仅是机制线索，不是已证实致味机制' if origin=='Hops' else f'酒花目标但附件来源为{origin}，可能由风格或共变结构产生，不建议据此添加'
     elif target.startswith(('A_esters','F_esters')):
         name=str(row['chemical_name']).lower()
         isester=any(t in name for t in ['acetate','butyrate','hexanoate','octanoate','decanoate','propionate','benzoate','formate'])
@@ -112,11 +138,12 @@ def chemical_evidence(row):
 def scoring():
     x,y,styles,sel,tr,te=load()
     reference=pd.read_csv(FROZEN/'test_predictions_50.csv')
-    models={}; records=[]; cuts=[]; metrics=[]
+    models={}; records=[]; cuts=[]; metrics=[];fit_evidence=[]
     fold=KFold(5,shuffle=True,random_state=SEED)
     for i,row in sel.iterrows():
         t,kind=row['指标'],row['候选模型']
         model=clone(templates()[kind]); model.fit(x.loc[tr],y.loc[tr,t]); models[t]=model
+        fit_evidence.append(preprocessing_evidence(model,x.loc[tr],te,t,0))
         testpred=model.predict(x.loc[te])
         ref=reference[reference['指标'].eq(t)].set_index('beer').loc[te,'预测值'].to_numpy()
         assert np.allclose(testpred,ref,atol=1e-8,rtol=1e-8), f'frozen-model reproduction failed: {t}'
@@ -129,6 +156,7 @@ def scoring():
         for fit,valid in fold.split(tr):
             ids,vids=tr[fit],tr[valid]
             m=clone(model).fit(x.loc[ids],y.loc[ids,t])
+            fit_evidence.append(preprocessing_evidence(m,x.loc[ids],vids,t,len([r for r in fit_evidence if r['target']==t])))
             p=m.predict(x.loc[vids]); oof.loc[vids]=p
             mu=y.loc[ids,t].mean(); oofbase.loc[vids]=mu
             c=y.loc[ids,t].quantile(np.arange(1,7)/7).to_numpy()
@@ -151,10 +179,11 @@ def scoring():
     save(pd.DataFrame(records),'q1_out_of_sample_predictions.csv')
     save(pd.DataFrame(cuts),'q1_train_quantile_cutpoints.csv')
     save(pd.DataFrame(metrics),'q1_metrics.csv')
+    save(pd.DataFrame(fit_evidence),'q1_preprocessing_fit_evidence.csv')
     joblib.dump({'models':models,'train':tr,'test':te,'features':x.columns.tolist(),'targets':y.columns.tolist()},OUT/'frozen_training_models.joblib')
     save(pd.DataFrame({'beer':x.index,'split':np.where(x.index.isin(tr),'training','heldout_test'),'style':styles}), 'split_manifest.csv')
     # Additional missingness is applied only to held-out inputs; model choices stay frozen.
-    rng=np.random.default_rng(SEED); sensitivity=[]
+    rng=np.random.default_rng(SEED); sensitivity=[];group_sensitivity=[]
     for rate in [0,.05,.1,.2]:
         for repeat in range(5):
             xx=x.loc[te].copy()
@@ -162,7 +191,10 @@ def scoring():
             xx=xx.mask(mask)
             pp=predict(models,xx)
             sensitivity.append(dict(additional_missing_rate=rate,repeat=repeat,MAE=float(np.abs(pp-y.loc[te]).to_numpy().mean())))
+            for group,columns in [('Aroma',[t for t in y if t.startswith('A_')]),('Flavour',[t for t in y if t.startswith('F_')]),('All50',list(y))]:
+                group_sensitivity.append(dict(additional_missing_rate=rate,repeat=repeat,group=group,MAE=float(np.abs(pp[columns]-y.loc[te,columns]).to_numpy().mean())))
     save(pd.DataFrame(sensitivity),'q1_missingness_sensitivity.csv')
+    save(pd.DataFrame(group_sensitivity),'q1_missingness_by_group.csv')
 
 
 def correlations():
@@ -186,7 +218,11 @@ def correlations():
     assert info.official_name.is_unique and info.official_name.notna().all()
     save(info.reset_index(),'chemical_name_mapping.csv')
     names=info.loc[x.columns,'official_name'].tolist()
-    official=pd.read_csv(ROOT/'data/2.csv',index_col=0).loc[names,names]
+    raw_official=pd.read_csv(ROOT/'data/2.csv',index_col=0)
+    assert raw_official.index.is_unique and raw_official.columns.is_unique
+    assert raw_official.shape==(len(names),len(names)) and set(raw_official.index)==set(names)==set(raw_official.columns)
+    official=raw_official.loc[names,names]
+    assert np.allclose(official,official.T,equal_nan=True) and np.allclose(np.diag(official),1.)
     official.index=x.columns;official.columns=x.columns
     check=[];upper=np.triu_indices(len(x.columns),1)
     for method in ['pearson','spearman']:
@@ -219,12 +255,12 @@ def correlations():
             adjusted=res.x.corr(res.y)
             meta=info.loc[f]
             origin=meta.get('origin_paper',np.nan);flavor=meta.get('off_flavors',np.nan)
-            family='酯类' if ('ate' in str(meta.get('chemical_name','')).lower() or 'ester' in f.lower()) else '按附件字典核查'
+            family='名称词根提示尚未核实；不作为化合物类别证据'
             evidence.append(dict(target=t,rank=rank,field=f,chemical_name=meta['official_name'],rho=c.loc[f,t],n=len(data),bootstrap_frequency=counts[idx,j]/200,bootstrap_rho_low=np.nanquantile(boot_values[:,j,rank-1],.025),bootstrap_rho_high=np.nanquantile(boot_values[:,j,rank-1],.975),style_adjusted_rho=adjusted,direction_agrees=bool(np.sign(adjusted)==np.sign(c.loc[f,t])),origin=origin,unit=meta.get('unit',np.nan),off_flavors=flavor,family_hint=family,interpretation='关联候选；同源代谢和风格混杂均可能解释，不能推断单体因果'))
     evidence=pd.DataFrame(evidence)
     evidence['chemical_plausibility']=evidence.apply(chemical_evidence,axis=1)
     evidence['ranking_stable_80pct']=evidence.bootstrap_frequency.ge(.8)
-    evidence['candidate_class']=np.where(evidence.ranking_stable_80pct & evidence.direction_agrees,'stable_association',np.where(evidence.ranking_stable_80pct,'stable_rank_direction_sensitive','exploratory_association'))
+    evidence['candidate_class']=np.where(~evidence.direction_agrees,'style_direction_reversal',np.where(evidence.ranking_stable_80pct,'stable_association','exploratory_association'))
     save(evidence,'q2_top3_all50_evidence.csv')
     save(pd.DataFrame(counts/200,index=compounds,columns=y.columns).reset_index(names='field'),'q2_all_candidate_frequencies.csv')
     # A faithful graph uses the provided matrix, not a newly estimated substitute.
@@ -239,7 +275,7 @@ def correlations():
                 edges.append(dict(left=f,right=h,rho=rho,existing_stable_retention=retention))
                 g.add_edge(f,h,rho=float(rho),weight=float(abs(rho)))
     save(pd.DataFrame(edges),'q2_official_graph_edges.csv');nx.write_graphml(g,OUT/'q2_official_compound_graph.graphml')
-    save(pd.DataFrame([dict(field=f,degree=g.degree(f),weighted_degree=g.degree(f,weight='weight'),component=i) for i,component in enumerate(nx.connected_components(g)) for f in component]),'q2_graph_nodes.csv')
+    save(pd.DataFrame([dict(field=f,degree=g.degree(f),weighted_degree=g.degree(f,weight='weight'),component=i) for i,component in enumerate(nx.connected_components(g)) for f in sorted(component)]),'q2_graph_nodes.csv')
     # Native Pearson is only a sensitivity analysis because the supplied matrix matches rank correlation.
     pear=pd.concat([x[compounds],y.add_prefix('sensory__')],axis=1).corr(method='pearson',min_periods=200)
     sens=[]
@@ -363,6 +399,7 @@ def generation():
     # Training-fitted, single validation attempt for target-style discriminability.
     from sklearn.ensemble import RandomForestClassifier
     classifier=Pipeline([('imputer',SimpleImputer(strategy='median')),('forest',RandomForestClassifier(n_estimators=300,max_depth=6,min_samples_leaf=2,max_features='sqrt',class_weight='balanced',random_state=SEED,n_jobs=-1))]).fit(x.loc[tr],styles.loc[tr])
+    joblib.dump(classifier,OUT/'style_diagnostic_classifier.joblib')
     from sklearn.metrics import accuracy_score,balanced_accuracy_score
     cp=classifier.predict(x.loc[te]);gp=classifier.predict(fake)
     save(pd.DataFrame([dict(heldout_style_accuracy=accuracy_score(styles.loc[te],cp),heldout_balanced_accuracy=balanced_accuracy_score(styles.loc[te],cp),generated_condition_agreement=accuracy_score(lineage['style'],gp))]),'q3_style_diagnostic.csv')
@@ -435,6 +472,9 @@ def transfer(gen,models,classifier,x,y,styles,tr,te):
             frontier.append(dict(source_beer=beer,donor_beer=int(donor),alpha=alpha,target_distance=distances[j],movement=movement[j],stale_predicted=preds.iloc[j]['stale_hops'],auxiliary_stale_guard=guarded_stale[j],feasible=bool(feasible[j]),chosen=j==chosen))
         donor,alpha=meta[chosen]
         rows.append(dict(source_beer=beer,source_split='training' if beer in tr else 'heldout_test',target_style='Tripel',target_donor_beer=int(donor),alpha=alpha,source_target_distance=source_distance,transferred_target_distance=distances[chosen],distance_improvement=gain,relative_distance_improvement=gain/source_distance if source_distance else 0,movement=movement[chosen],source_stale_predicted=sourcepred['stale_hops'],transferred_stale_predicted=p['stale_hops'],source_stale_auxiliary_guard=source_guard,transferred_stale_auxiliary_guard=guarded_stale[chosen],defect_native_exactly_preserved=bool(defect_ok[chosen]),source_trip_probability=float(classifier.predict_proba(x.loc[[beer]])[0,tripidx]),transferred_trip_probability=float(prob[chosen]),status='feasible_improvement' if alpha>0 and gain>1e-9 else 'no_supported_improvement'))
+        rows[-1]['before_diagnostic_style']=classifier.predict(x.loc[[beer]])[0]
+        rows[-1]['after_diagnostic_style']=classifier.predict(cand.iloc[[chosen]])[0]
+        rows[-1]['diagnostic_claim']='training-fitted classifier only, not independent validation'
         spectra.append({'source_beer':beer,**v.to_dict()})
         for t in y:
             sensory.append(dict(source_beer=beer,target=t,before=sourcepred[t],after=p[t],delta=p[t]-sourcepred[t]))
@@ -461,7 +501,7 @@ def inventory():
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--stage',choices=['scoring','correlations','generation','audit','all'],default='all');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--output');parser.add_argument('--stage',choices=['scoring','correlations','generation','audit','all'],default='all');args=parser.parse_args()
     OUT.mkdir(parents=True,exist_ok=True);inventory()
     for stage,fn in [('scoring',scoring),('correlations',correlations),('generation',generation)]:
         if args.stage in ['all',stage]: fn()

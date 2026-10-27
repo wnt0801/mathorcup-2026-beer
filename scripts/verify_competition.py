@@ -22,6 +22,12 @@ def main():
     assert set(pp.beer)==set(x.index) and set(pp.target)==set(y.columns)
     assert pp.groupby('target').size().eq(250).all()
     assert pp.predicted_relative_grade.between(0,6).all()
+    fits=pd.read_csv(OUT/'q1_preprocessing_fit_evidence.csv')
+    assert len(fits)==300 and fits.groupby('target').size().eq(6).all()
+    for _,r in fits.iterrows():
+        fit=set(json.loads(r.fit_beers));valid=set(json.loads(r.valid_beers))
+        assert fit.isdisjoint(valid) and fit.issubset(set(tr))
+        assert len(fit)==int(r.n_fit) and int(r.n_fit)==(200 if r.fold==0 else 160)
     assert set(pp.loc[pp['split'].eq('heldout_test'),'beer'])==set(te)
     old=pd.read_csv(FROZEN/'test_predictions_50.csv')
     join=pp.query("split=='heldout_test'").merge(old,left_on=['beer','target'],right_on=['beer','指标'],validate='one_to_one')
@@ -39,10 +45,14 @@ def main():
         assert np.allclose(rows.loc[x.index,'actual_standardized'],y[t])
         c=y.loc[tr,t].quantile(np.arange(1,7)/7).to_numpy()
         assert np.allclose(c,cuts.loc[t,[f'q{i}' for i in range(1,7)]].to_numpy(dtype=float))
+        assert np.allclose(rows.loc[te,'baseline_standardized'],y.loc[tr,t].mean())
+        assert np.array_equal(rows.loc[te,'baseline_relative_grade'],np.repeat(np.searchsorted(c,y.loc[tr,t].mean(),side='right'),len(te)))
         assert np.array_equal(rows.loc[te,'predicted_relative_grade'],np.searchsorted(c,rows.loc[te,'predicted_standardized'],side='right'))
         for fit,valid in KFold(5,shuffle=True,random_state=42).split(tr):
             ids,vids=tr[fit],tr[valid];c=y.loc[ids,t].quantile(np.arange(1,7)/7).to_numpy()
             assert set(ids).isdisjoint(set(vids)) and set(ids).isdisjoint(set(te))
+            assert np.allclose(rows.loc[vids,'baseline_standardized'],y.loc[ids,t].mean())
+            assert np.array_equal(rows.loc[vids,'baseline_relative_grade'],np.repeat(np.searchsorted(c,y.loc[ids,t].mean(),side='right'),len(vids)))
             assert np.array_equal(rows.loc[vids,'actual_relative_grade'],np.searchsorted(c,y.loc[vids,t],side='right'))
             assert np.array_equal(rows.loc[vids,'predicted_relative_grade'],np.searchsorted(c,rows.loc[vids,'predicted_standardized'],side='right'))
     top=pd.read_csv(OUT/'q2_top3_all50_evidence.csv')
@@ -50,6 +60,7 @@ def main():
     assert top.bootstrap_frequency.between(0,1).all()
     assert np.array_equal(top.ranking_stable_80pct,top.bootstrap_frequency.ge(.8))
     assert np.array_equal(top.candidate_class.eq('stable_association'),top.bootstrap_frequency.ge(.8)&top.direction_agrees)
+    assert np.array_equal(top.candidate_class.eq('style_direction_reversal'),~top.direction_agrees)
     corr=pd.read_csv(OUT/'q2_official_correlation_type_check.csv').set_index('method')
     assert corr.at['spearman','max_abs_difference']<1e-12
     fake=pd.read_csv(OUT/'q3_generated_native_spectra.csv').set_index('sample_id')
@@ -134,13 +145,44 @@ def main():
     assert len(notebooks)==3
     from pypdf import PdfReader
     paper=PdfReader(OUT/'competition_paper.pdf');papertext='\n'.join(p.extract_text() for p in paper.pages)
-    assert sum(len(p.images) for p in paper.pages)==7 and '![' not in papertext
+    assert sum(len(p.images) for p in paper.pages)==5 and '![' not in papertext
     metrics=pd.read_csv(OUT/'q1_metrics.csv').query("split=='heldout_test'")
     assert f'{metrics.MAE.mean():.4f}' in papertext
     assert '模型代理' in papertext and '未验证' in papertext
     provenance=json.loads((OUT/'figures/figure_sources.json').read_text(encoding='utf-8'))
     assert all(hashlib.sha256((OUT/k).read_bytes()).hexdigest()==v for k,v in provenance.items())
-    result={'status':'passed','verified_utc':datetime.now(timezone.utc).isoformat(),'verification_root':str(ROOT),'output':str(OUT),'protected_source_files':len(original),'exact_source_files':sum(r['status']=='exact' for r in integrity),'eol_only_source_files':sum(r['status']=='eol_only' for r in integrity),'q1_predictions':len(pp),'q2_top3_records':len(top),'generated_spectra':len(fake),'transferred_spectra':len(spectra),'executed_review_notebooks':notebooks,'paper_pages':len(paper.pages),'checks':['fresh source hashes, no rebaselining','frozen prediction equality','saved model round-trip','train-only relative cutpoints and OOF scopes','all50 Top3 and stable/exploratory labels','official matrix type','training-only donors','style-conditional donor labels','generated donor interpolation and missing mask','training support bounds','generated sensory predictions','replayed66 diversity/coverage baseline rows','unverified summary formulas not recomputed','four-defect missing/conflict states','fixed training-only guard CV assessment','transfer reconstruction','exact native defect preservation incl missing','model proxy guard constraint','executed review notebooks without errors','paper/CSV numerical scope and figure-source hashes'],'limits':['Raw0–6 intensity not identified','Stale hops guard has no demonstrated advantage, model proxy only','Summary constituent identities unverified','Actual brewing/causal experiments not performed; research limitations, not added contest submission requirements','No Linux/macOS execution claim']}
+    validate_candidate_tables(pp,groups=None)
+    result={'status':'passed','verified_utc':datetime.now(timezone.utc).isoformat(),'verification_root':str(ROOT),'output':str(OUT),'protected_source_files':len(original),'exact_source_files':sum(r['status']=='exact' for r in integrity),'eol_only_source_files':sum(r['status']=='eol_only' for r in integrity),'q1_predictions':len(pp),'q2_top3_records':len(top),'generated_spectra':len(fake),'transferred_spectra':len(spectra),'executed_review_notebooks':notebooks,'paper_pages':len(paper.pages),'checks':['fresh source hashes, no rebaselining','300 actual train/fold preprocessing statistic checks','frozen prediction equality','saved model round-trip','train-only relative cutpoints and OOF scopes','all50 Top3 and stability/reversal labels','Aroma/Flavour/All50 and relative-grade recomputation','official matrix type','training-only donors','style-conditional donor labels','generated donor interpolation and missing mask','training support bounds','generated sensory predictions','replayed66 diversity/coverage baseline rows','unverified summary formulas not recomputed','four-defect missing/conflict states','fixed training-only guard CV assessment','transfer reconstruction and compound/prediction deltas','exact native defect preservation incl missing','model proxy guard constraint','executed review notebooks without errors','paper/CSV numerical scope and figure-source hashes'],'limits':['Raw0–6 intensity not identified','Stale hops guard has no demonstrated advantage, model proxy only','Summary constituent identities unverified','Actual brewing/causal experiments not performed; research limitations, not added contest submission requirements','No Linux/macOS execution claim']}
     (OUT/'verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(result,ensure_ascii=False,indent=2))
+
+def validate_candidate_tables(predictions,groups=None):
+    summaries=pd.read_csv(OUT/'q1_group_metrics.csv')
+    for _,r in summaries.iterrows():
+        d=predictions.loc[predictions['split'].eq(r['split'])]
+        if r['group']=='Aroma':d=d.loc[d.target.str.startswith('A_')]
+        if r['group']=='Flavour':d=d.loc[d.target.str.startswith('F_')]
+        assert d.target.nunique()==r.n_targets and d.beer.nunique()==r.n_beers
+        mae=np.abs(d.actual_standardized-d.predicted_standardized).mean();base=np.abs(d.actual_standardized-d.baseline_standardized).mean()
+        assert np.isclose(mae,r.model_MAE) and np.isclose(base,r.baseline_MAE)
+        assert np.isclose(100*(1-mae/base),r.improvement_pct)
+        assert np.isclose(np.abs(d.actual_relative_grade-d.predicted_relative_grade).mean(),r.model_grade_MAE)
+        assert np.isclose(np.abs(d.actual_relative_grade-d.baseline_relative_grade).mean(),r.baseline_grade_MAE)
+        assert np.isclose((d.actual_relative_grade==d.predicted_relative_grade).mean(),r.model_grade_accuracy)
+        assert np.isclose((d.actual_relative_grade==d.baseline_relative_grade).mean(),r.baseline_grade_accuracy)
+    long=pd.read_csv(OUT/'q3_transfer_compound_changes.csv');source=pd.read_csv(ROOT/'data/1.csv').set_index('beer');after=pd.read_csv(OUT/'q3_transferred_native_spectra.csv').set_index('source_beer')
+    assert len(long)==11*231
+    for _,r in long.iterrows():
+        assert np.isclose(r.before_native,source.at[r.source_beer,r.field],equal_nan=True)
+        assert np.isclose(r.after_native,after.at[r.source_beer,r.field],equal_nan=True)
+        assert np.isclose(r.delta_native,r.after_native-r.before_native,equal_nan=True)
+    import joblib
+    diagnostic=joblib.load(OUT/'style_diagnostic_classifier.joblib')
+    xcols=joblib.load(OUT/'frozen_training_models.joblib')['features']
+    transfer=pd.read_csv(OUT/'q3_transfer_summary.csv').set_index('source_beer')
+    assert np.array_equal(diagnostic.predict(after[xcols]),transfer.loc[after.index,'after_diagnostic_style'])
+    grouped=pd.read_csv(OUT/'q1_missingness_by_group.csv');all50=grouped[grouped['group'].eq('All50')].sort_values(['additional_missing_rate','repeat'])
+    original=pd.read_csv(OUT/'q1_missingness_sensitivity.csv').sort_values(['additional_missing_rate','repeat'])
+    assert len(grouped)==60 and np.allclose(all50.MAE,original.MAE)
+
 
 if __name__=='__main__':main()

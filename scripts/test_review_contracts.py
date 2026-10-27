@@ -47,6 +47,29 @@ class IntegrityContracts(unittest.TestCase):
 
 
 class AuditContracts(unittest.TestCase):
+    def test_preprocessing_rejects_statistics_from_wrong_fit_data(self):
+        from competition_pipeline import templates,preprocessing_evidence
+        from sklearn.base import clone
+        tr=pd.DataFrame({'a':[1.,2.,np.nan,100.],'b':[2.,4.,5.,8.]},index=[1,2,3,4])
+        model=clone(templates()['岭回归']).fit(tr,np.arange(4.))
+        row=preprocessing_evidence(model,tr,[5],'unit',1)
+        self.assertEqual(row['n_fit'],4)
+        model.named_steps['imputer'].statistics_[0]+=1
+        with self.assertRaises(AssertionError):preprocessing_evidence(model,tr,[5],'unit',1)
+
+    def test_explicit_output_argument_is_shared(self):
+        from review_config import output_argument
+        self.assertEqual(output_argument(['--output','chosen']), 'chosen')
+        self.assertEqual(output_argument(['--output=chosen']), 'chosen')
+        with self.assertRaises(ValueError):output_argument(['--output'])
+
+    def test_archive_links_and_private_location_redaction(self):
+        from package_competition import check_links,portable_json
+        self.assertEqual(check_links({'README.md':b'[p](results/p.md)','results/p.md':b'ok'}),1)
+        with self.assertRaises(ValueError):check_links({'README.md':b'[p](missing.md)'})
+        result=portable_json({'verification_root':'C:/private/project','selected_font':'C:\\Windows\\Fonts\\font.ttf','output_relative':'outputs/private'})
+        self.assertEqual(result,{'verification_root':'.','selected_font':'font.ttf','output_relative':'results'})
+
     def test_one_holdout_does_not_create_zero_variance(self):
         from review_audits import coverage_diagnostics
         from sklearn.impute import SimpleImputer

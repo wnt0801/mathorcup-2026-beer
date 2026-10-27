@@ -1,11 +1,22 @@
-"""Shared paths and portable CJK font resolution for the audited v2 workflow."""
+"""Shared paths and portable CJK font resolution for the candidate workflow."""
 from pathlib import Path
 import os
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = Path(os.environ.get('MATHORCUP_OUTPUT', str(ROOT/'outputs/competition_completion_v2'))).resolve()
+def output_argument(argv=None):
+    argv=sys.argv[1:] if argv is None else argv
+    if '--output' in argv:
+        i=argv.index('--output')
+        if i+1>=len(argv):raise ValueError('--output requires a directory')
+        return argv[i+1]
+    for arg in argv:
+        if arg.startswith('--output='):return arg.split('=',1)[1]
+    return os.environ.get('MATHORCUP_OUTPUT',str(ROOT/'outputs/competition_candidate_v3'))
+
+OUT=Path(output_argument()).resolve()
 FROZEN = ROOT/'frozen_inputs'
-VERSION = 'v2'
+VERSION = 'v3'
 
 
 def chinese_font(explicit=None):

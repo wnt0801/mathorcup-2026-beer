@@ -13,6 +13,10 @@ __pycache__/
 # Disposable review copies and local execution caches (historical outputs are kept).
 tmp/
 .venv_review/
+.venv_candidate/
+outputs/competition_candidate_v*/.review/
+outputs/competition_candidate_v*/.runtime/
+outputs/competition_candidate_v*/.matplotlib/
 outputs/competition_completion_v*/.runtime/
 outputs/competition_completion_v*/.matplotlib/
 .venv/
