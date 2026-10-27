@@ -1,0 +1,5 @@
+﻿field,n,native_known,native_missing,calibrated_missing,presence_mismatch,numeric_source_conflict,zero_semantics_unknown,threshold_unknown,interpretation
+DMS,250,250,0,0,0,0,1,0,"counts are overlapping evidence flags, not mutually exclusive risk classes"
+X2.3.butanedione,250,241,9,0,9,3,9,0,"counts are overlapping evidence flags, not mutually exclusive risk classes"
+X4VG,250,250,0,0,0,0,168,0,"counts are overlapping evidence flags, not mutually exclusive risk classes"
+X.E..2.nonenal,250,250,0,1,1,2,0,250,"counts are overlapping evidence flags, not mutually exclusive risk classes"

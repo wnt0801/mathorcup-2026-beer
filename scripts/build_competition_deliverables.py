@@ -8,24 +8,25 @@ import json
 import re
 import sys
 import textwrap
+import argparse
+import os
 
 import numpy as np
 import pandas as pd
 
-ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'outputs/competition_completion_v1'
+from review_config import ROOT, OUT, FROZEN, chinese_font
 
 def table(df,columns=None):
     if columns is not None:df=df[columns]
     names=list(df.columns)
     rows=[]
     for row in df.itertuples(index=False,name=None):
-        rows.append([f'{v:.4f}' if isinstance(v,(float,np.floating)) else str(v) for v in row])
+        rows.append(['NA' if pd.isna(v) else f'{v:.4f}' if isinstance(v,(float,np.floating)) else str(v) for v in row])
     return '| '+' | '.join(map(str,names))+' |\n| '+' | '.join(['---']*len(names))+' |\n'+'\n'.join('| '+' | '.join(r)+' |' for r in rows)
 
 
 def reference_audit():
-    p=OUT/'reference_supplement.xlsx'
+    p=FROZEN/'reference_supplement.xlsx'
     assert hashlib.md5(p.read_bytes()).hexdigest()=='52645e38d90aafda272532e19e2fea1c'
     a=pd.read_csv(ROOT/'data/4.csv').set_index('beer').sort_index()
     b=pd.read_excel(p,sheet_name='Supplementary File S4').set_index('beer').sort_index()
@@ -56,8 +57,8 @@ def figures():
     from sklearn.impute import SimpleImputer
     from sklearn.preprocessing import StandardScaler
     import networkx as nx
-    font=Path('C:/Windows/Fonts/simhei.ttf')
-    if font.exists():font_manager.fontManager.addfont(str(font));plt.rcParams['font.family']=font_manager.FontProperties(fname=str(font)).get_name()
+    font=chinese_font()
+    font_manager.fontManager.addfont(str(font));plt.rcParams['font.family']=font_manager.FontProperties(fname=str(font)).get_name()
     plt.rcParams.update({'axes.unicode_minus':False,'font.size':10,'savefig.dpi':220,'axes.spines.top':False,'axes.spines.right':False})
     figdir=OUT/'figures';figdir.mkdir(exist_ok=True)
     def export(fig,name):
@@ -86,6 +87,18 @@ def figures():
         for j in range(len(targets)):ax.text(j,i,f'{mat.iloc[i,j]:.2f}',ha='center',va='center',fontsize=8)
     fig.colorbar(implot,ax=ax,label='预测标准化得分');ax.set_title('三种风格的生成感官画像（非原始0–6分）');fig.tight_layout();export(fig,'05_style_profiles')
     tr=pd.read_csv(OUT/'q3_transfer_summary.csv');fig,ax=plt.subplots(figsize=(8,4));p=np.arange(len(tr));ax.bar(p-.18,tr.source_target_distance,width=.36,label='迁移前',color='#b8c2ca');ax.bar(p+.18,tr.transferred_target_distance,width=.36,label='迁移后',color='#216869');ax.set_xticks(p,tr.source_beer);ax.set_xlabel('Pils/Lager beer编号');ax.set_ylabel('到Tripel训练谱的最小RMS距离');ax.set_title('带缺陷约束的跨风格迁移');ax.legend();fig.tight_layout();export(fig,'06_transfer')
+    cov=pd.read_csv(OUT/'q3_style_diversity_coverage.csv')
+    styles=sorted(cov['style'].unique());pos=np.arange(len(styles));fig,(a,b)=plt.subplots(2,1,figsize=(10,8),sharex=True)
+    for mode,label,color,offset in [('conditional_local','条件局部','#216869',-.18),('conditional_resample','条件重采样','#c39243',.18)]:
+        d=cov.loc[cov['mode'].eq(mode)].set_index('style').loc[styles]
+        a.bar(pos+offset,d.generated_train_total_scaled_variance_ratio,width=.36,label=label,color=color)
+        b.plot(pos,d.holdout_covered_at_train_nn95,marker='o',label=label,color=color)
+    a.axhline(1,color='gray',linewidth=.8);a.set_ylabel('生成/训练总标准化方差比');a.set_title('逐风格多样性及留出覆盖诊断（固定方法，非调参）');a.legend(fontsize=9)
+    b.set_ylabel('留出覆盖比例（训练NN95半径）');b.set_ylim(-.05,1.05);b.set_xticks(pos,styles,rotation=60,ha='right',fontsize=8);b.legend(fontsize=9);fig.tight_layout();export(fig,'07_diversity_coverage')
+    inputs=['q1_metrics.csv','q1_missingness_sensitivity.csv','q2_official_compound_graph.graphml','split_manifest.csv','q3_generated_native_spectra.csv','q3_generation_lineage.csv','q3_style_sensory_profiles.csv','q3_transfer_summary.csv','q3_style_diversity_coverage.csv']
+    inputs += [p.relative_to(OUT).as_posix() for p in figdir.glob('*') if p.suffix in ['.png','.svg']]
+    (figdir/'figure_sources.json').write_text(json.dumps({k:hashlib.sha256((OUT/k).read_bytes()).hexdigest() for k in inputs},ensure_ascii=False,indent=2),encoding='utf-8')
+    (OUT/'font_evidence.json').write_text(json.dumps({'selected_font':str(font),'sha256':hashlib.sha256(font.read_bytes()).hexdigest(),'glyph_validation':'啤酒评分模型约束审查','platform_limit':'tested on current host only; configurable lookup is not a Linux/macOS execution claim'},ensure_ascii=False,indent=2),encoding='utf-8')
 
 
 def notebooks():
@@ -107,12 +120,32 @@ def notebooks():
         ('复现','项目根目录执行：python scripts/competition_pipeline.py --stage all。随后执行 python scripts/build_competition_deliverables.py。模型载入前将 scripts 加入sys.path；只读取自己生成的joblib文件。')
     ])]
     for name,title,blocks in names:
-        p=ROOT/'notebooks'/name
-        if p.exists():raise FileExistsError(p)
-        nb=nbf.v4.new_notebook();nb.cells=[nbf.v4.new_markdown_cell('# '+title),nbf.v4.new_code_cell("from pathlib import Path\nimport pandas as pd\nfrom IPython.display import display, Image\nROOT=Path.cwd() if (Path.cwd()/'data').exists() else Path.cwd().parent\nOUT=ROOT/'outputs/competition_completion_v1'\npd.set_option('display.max_rows',160)\npd.set_option('display.max_columns',25)")]
-        for kind,text in blocks:nb.cells.append(nbf.v4.new_code_cell(text) if kind=='code' else nbf.v4.new_markdown_cell('## '+kind+'\n\n'+text))
+        folder=OUT/'review_notebooks';folder.mkdir(exist_ok=True)
+        p=folder/name
+        if p.exists():
+            old=nbf.read(p,as_version=4);nbf.validate(old)
+            assert all(c.execution_count is not None for c in old.cells if c.cell_type=='code')
+            print('Preserved existing review notebook:',p.name,flush=True)
+            continue
+        nb=nbf.v4.new_notebook();nb.cells=[nbf.v4.new_markdown_cell('# '+title+'\n\n这是结果复查Notebook，不是完整训练流程。完整计算入口为 scripts/run_review.py。'),nbf.v4.new_code_cell("from pathlib import Path\nimport os\nimport pandas as pd\nfrom IPython.display import display, Image\nOUT=next((p for p in [Path.cwd(),*Path.cwd().parents] if (p/'q1_metrics.csv').is_file()), None)\nif OUT is None:\n    ROOT=next((p for p in [Path.cwd(),*Path.cwd().parents] if (p/'scripts/run_review.py').is_file()), None)\n    if ROOT is None: raise FileNotFoundError('请从项目目录或输出目录启动Notebook')\n    OUT=Path(os.environ.get('MATHORCUP_OUTPUT',str(ROOT/'outputs/competition_completion_v2')))\npd.set_option('display.max_rows',160)\npd.set_option('display.max_columns',25)")]
+        if name.startswith('08_'):
+            blocks.append(('code',"display(pd.read_csv(OUT/'q3_style_diversity_coverage.csv')); display(pd.read_csv(OUT/'q3_summary_consistency_audit.csv')); display(pd.read_csv(OUT/'q3_defect_evidence_summary.csv')); import json; print(json.loads((OUT/'q3_stale_guard_assessment.json').read_text(encoding='utf-8')))"))
+        for kind,text in blocks:
+            if kind=='复现':text='完整流程：python scripts/run_review.py。这里仅读取结果；需要13项受校验输入，其中两项是冻结历史策略/比较文件，详见REPRODUCIBILITY.md。'
+            nb.cells.append(nbf.v4.new_code_cell(text) if kind=='code' else nbf.v4.new_markdown_cell('## '+kind+'\n\n'+text))
         nb.metadata['kernelspec']={'display_name':'Python 3','language':'python','name':'python3'}
-        NotebookClient(nb,timeout=120,resources={'metadata':{'path':str(ROOT)}}).execute();nbf.write(nb,p);print('executed notebook',name,flush=True)
+        from jupyter_client import KernelManager
+        (OUT/'.runtime/ipython').mkdir(parents=True,exist_ok=True)
+        (OUT/'.runtime/jupyter').mkdir(parents=True,exist_ok=True)
+        os.environ['IPYTHONDIR']=str(OUT/'.runtime/ipython')
+        os.environ['JUPYTER_RUNTIME_DIR']=str(OUT/'.runtime/jupyter')
+        km=KernelManager(kernel_name='python3');km.kernel_spec.argv[0]=sys.executable
+        try:
+            NotebookClient(nb,km=km,timeout=120,resources={'metadata':{'path':str(OUT)}}).execute()
+        finally:
+            if km.has_kernel:km.shutdown_kernel(now=True)
+            km.cleanup_resources()
+        nbf.write(nb,p);print('executed review notebook',name,flush=True)
 
 
 def report():
@@ -250,7 +283,9 @@ def report():
     AI参与赛题提取、代码编写、材料组织及解释草拟；所有报告数值来自实际程序输出，旧结果用于冻结复现。AI提出的代理方法、推断与实验未知项已分开标注；队伍需按赛事最新AI规范核对使用声明和对话记录要求。该记录描述实际使用，不冒充人工独立完成。
     ''')
     title='混合尺度啤酒数据的感官预测、化合物网络与受约束风味谱生成'
-    md='# '+title+'\n\n研究稿 v1；真实0–6分与部分缺陷阈值尚待补证，非已核准最终提交版。\n\n'+'\n\n'.join('## '+t+'\n\n'+b for t,b in sections)+'\n'
+    from review_report import revised_sections
+    sections=revised_sections(sections,table)
+    md='# '+title+'\n\n审核稿 v2；评分校准及部分阈值仍待主办方确认。酿造/因果实验属研究局限，并非已给题面的额外硬性提交条件。\n\n'+'\n\n'.join('## '+t+'\n\n'+b for t,b in sections)+'\n'
     (OUT/'competition_paper.md').write_text(md,encoding='utf-8')
     return title,sections
 
@@ -263,15 +298,17 @@ def pdf(title,sections):
     from reportlab.pdfbase import pdfmetrics
     from reportlab.pdfbase.ttfonts import TTFont
     from reportlab.lib.pagesizes import A4
-    pdfmetrics.registerFont(TTFont('CN','C:/Windows/Fonts/simhei.ttf'))
+    font=chinese_font()
+    pdfmetrics.registerFont(TTFont('CN',str(font),subfontIndex=0))
     styles=getSampleStyleSheet()
     body=ParagraphStyle('CNBody',fontName='CN',fontSize=9.2,leading=15.5,spaceAfter=7,wordWrap='CJK')
     head=ParagraphStyle('CNHead',parent=body,fontSize=14,leading=20,spaceBefore=14,spaceAfter=9,keepWithNext=True,textColor=colors.HexColor('#164748'))
+    subhead=ParagraphStyle('CNSubHead',parent=head,fontSize=11,leading=16,spaceBefore=8,spaceAfter=6)
     small=ParagraphStyle('CNSmall',parent=body,fontSize=7.2,leading=11,spaceAfter=0)
     caption=ParagraphStyle('CNCap',parent=body,fontSize=8.3,leading=13,alignment=TA_CENTER,spaceAfter=12)
     title_style=ParagraphStyle('CNTitle',parent=head,fontSize=20,leading=29,alignment=TA_CENTER,spaceAfter=18)
     doc=SimpleDocTemplate(str(OUT/'competition_paper.pdf'),pagesize=A4,rightMargin=43,leftMargin=43,topMargin=42,bottomMargin=43,title=title,author='MathorCup project research draft; AI-assisted')
-    width=A4[0]-86;story=[Paragraph(html.escape(title),title_style),Paragraph('研究稿 v1 | 真实0–6分校准及部分缺陷阈值仍待补证',caption),Spacer(1,12)]
+    width=A4[0]-86;story=[Paragraph(html.escape(title),title_style),Paragraph('审核稿 v2 | 评分校准及部分阈值仍待主办方确认',caption),Spacer(1,12)]
     for heading,text in sections:
         section_start=len(story)
         story.append(Paragraph(html.escape(heading),head))
@@ -296,15 +333,17 @@ def pdf(title,sections):
                 scale=min(width/w,550/h);story.append(KeepTogether([Image(str(p),width=w*scale,height=h*scale),Paragraph(html.escape(match.group(1)),caption)]))
             else:
                 for line in para.splitlines():
-                    if line.strip():story.append(Paragraph(html.escape(line.strip()),body))
+                    if line.strip():
+                        stripped=line.strip()
+                        story.append(Paragraph(html.escape(stripped[4:]),subhead) if stripped.startswith('### ') else Paragraph(html.escape(stripped),body))
         if heading.startswith('附录B'):
             story[section_start:]=[KeepTogether(story[section_start:])]
     def footer(canvas,doc):
-        canvas.setFont('CN',8);canvas.setFillColor(colors.HexColor('#667777'));canvas.drawString(43,25,'MathorCup 啤酒项目 | 研究稿 v1');canvas.drawRightString(A4[0]-43,25,str(doc.page))
+        canvas.setFont('CN',8);canvas.setFillColor(colors.HexColor('#667777'));canvas.drawString(43,25,'MathorCup 啤酒项目 | 审核稿 v2');canvas.drawRightString(A4[0]-43,25,str(doc.page))
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
 
 
-def checklist():
+def _historical_v1_checklist_not_used():
     rows=[
         ('赛题与真实附件结构核验','完成','task_text、条码审计、原文件哈希与外部来源记录'),
         ('问题1 连续感官预测','完成','50项冻结复现；原测试集不再用于模型选择'),
@@ -327,9 +366,15 @@ def checklist():
     (OUT/'START_HERE.md').write_text(text,encoding='utf-8')
 
 
+def checklist():
+    from review_report import write_status
+    write_status(table)
+
+
 def main():
-    reference_audit();figures();title,sections=report();pdf(title,sections);checklist()
-    if not all((ROOT/'notebooks'/n).exists() for n in ['06_competition_scoring_review.ipynb','07_competition_network_all50.ipynb','08_competition_conditional_generation.ipynb']): notebooks()
+    parser=argparse.ArgumentParser();parser.add_argument('--font');args=parser.parse_args()
+    if args.font:os.environ['MATHORCUP_CJK_FONT']=args.font
+    reference_audit();figures();title,sections=report();pdf(title,sections);checklist();notebooks()
     print('Paper and deliverables built:',OUT,flush=True)
 
 if __name__=='__main__':main()

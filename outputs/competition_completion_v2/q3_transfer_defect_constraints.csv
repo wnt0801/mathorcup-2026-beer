@@ -1,0 +1,45 @@
+﻿source_beer,field,before_native,after_native,known,guarantee
+28,DMS,1.437078075,1.437078075,True,native value unchanged; concentration non-worsening only under common monotone inverse
+28,X2.3.butanedione,,,False,"unknown retained, no safety claim"
+28,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+28,X.E..2.nonenal,0.011530408,0.011530408,True,native value unchanged; concentration non-worsening only under common monotone inverse
+81,DMS,0.947369259,0.947369259,True,native value unchanged; concentration non-worsening only under common monotone inverse
+81,X2.3.butanedione,0.284814332,0.284814332,True,native value unchanged; concentration non-worsening only under common monotone inverse
+81,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+81,X.E..2.nonenal,0.003422001,0.003422001,True,native value unchanged; concentration non-worsening only under common monotone inverse
+90,DMS,0.89944375,0.89944375,True,native value unchanged; concentration non-worsening only under common monotone inverse
+90,X2.3.butanedione,0.236137339,0.236137339,True,native value unchanged; concentration non-worsening only under common monotone inverse
+90,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+90,X.E..2.nonenal,0.001816275,0.001816275,True,native value unchanged; concentration non-worsening only under common monotone inverse
+96,DMS,1.191966329,1.191966329,True,native value unchanged; concentration non-worsening only under common monotone inverse
+96,X2.3.butanedione,0.523885941,0.523885941,True,native value unchanged; concentration non-worsening only under common monotone inverse
+96,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+96,X.E..2.nonenal,0.011935009,0.011935009,True,native value unchanged; concentration non-worsening only under common monotone inverse
+119,DMS,1.221713967,1.221713967,True,native value unchanged; concentration non-worsening only under common monotone inverse
+119,X2.3.butanedione,,,False,"unknown retained, no safety claim"
+119,X4VG,-0.842377041,-0.842377041,True,native value unchanged; concentration non-worsening only under common monotone inverse
+119,X.E..2.nonenal,0.004837684,0.004837684,True,native value unchanged; concentration non-worsening only under common monotone inverse
+124,DMS,1.155214236,1.155214236,True,native value unchanged; concentration non-worsening only under common monotone inverse
+124,X2.3.butanedione,0.051620797,0.051620797,True,native value unchanged; concentration non-worsening only under common monotone inverse
+124,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+124,X.E..2.nonenal,0.000803907,0.000803907,True,native value unchanged; concentration non-worsening only under common monotone inverse
+139,DMS,1.304481264,1.304481264,True,native value unchanged; concentration non-worsening only under common monotone inverse
+139,X2.3.butanedione,0.032551284,0.032551284,True,native value unchanged; concentration non-worsening only under common monotone inverse
+139,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+139,X.E..2.nonenal,0.002011718,0.002011718,True,native value unchanged; concentration non-worsening only under common monotone inverse
+185,DMS,0.823676657,0.823676657,True,native value unchanged; concentration non-worsening only under common monotone inverse
+185,X2.3.butanedione,0.035773067,0.035773067,True,native value unchanged; concentration non-worsening only under common monotone inverse
+185,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+185,X.E..2.nonenal,0.001743376,0.001743376,True,native value unchanged; concentration non-worsening only under common monotone inverse
+209,DMS,1.148358604,1.148358604,True,native value unchanged; concentration non-worsening only under common monotone inverse
+209,X2.3.butanedione,0.026185308,0.026185308,True,native value unchanged; concentration non-worsening only under common monotone inverse
+209,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+209,X.E..2.nonenal,0.00271219,0.00271219,True,native value unchanged; concentration non-worsening only under common monotone inverse
+218,DMS,1.426105161,1.426105161,True,native value unchanged; concentration non-worsening only under common monotone inverse
+218,X2.3.butanedione,0.056959527,0.056959527,True,native value unchanged; concentration non-worsening only under common monotone inverse
+218,X4VG,-2.013157381,-2.013157381,True,native value unchanged; concentration non-worsening only under common monotone inverse
+218,X.E..2.nonenal,0.001110656,0.001110656,True,native value unchanged; concentration non-worsening only under common monotone inverse
+230,DMS,1.179344439,1.179344439,True,native value unchanged; concentration non-worsening only under common monotone inverse
+230,X2.3.butanedione,0.041743092,0.041743092,True,native value unchanged; concentration non-worsening only under common monotone inverse
+230,X4VG,-1.712127385,-1.712127385,True,native value unchanged; concentration non-worsening only under common monotone inverse
+230,X.E..2.nonenal,0.001499421,0.001499421,True,native value unchanged; concentration non-worsening only under common monotone inverse

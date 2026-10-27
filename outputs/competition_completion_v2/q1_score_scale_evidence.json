@@ -1,0 +1,23 @@
+{
+  "attachment3_card_sheets": 12,
+  "attachment3_summary_rows": 12,
+  "attachment3_summary_numeric_nonzero": 0,
+  "attachment3_summary_numeric_missing": 0,
+  "attachment3_cards_only_differ_in_beer_number": true,
+  "attachment4_targets": 50,
+  "attachment4_negative_cells": 7617,
+  "attachment4_noninteger_cells": 12500,
+  "attachment7_rows": 250,
+  "attachment7_attribute_columns": 186,
+  "attachment7_negative_cells": 34376,
+  "public_s4_matches_a4_max_absolute_error": 1.1102230246251565e-16,
+  "public_supplement_md5": "52645e38d90aafda272532e19e2fea1c",
+  "reliable_original_0to6_calibration_found": false,
+  "calibration_status": "not_identifiable_from_supplied_materials",
+  "output_definitions": {
+    "predicted_standardized": "continuous target scale supplied in attachment4",
+    "predicted_relative_grade": "training/fold quantile rank category; NOT original intensity",
+    "actual_relative_grade": "observed standardized target categorized with the same training/fold cut points; NOT original label"
+  },
+  "evidence_limit": "Worksheet/header inspection and scorecard formulas do not provide a verified paired original panel-score table or its inverse-transform parameters. Validation-experiment results cannot be silently treated as original250 training labels."
+}

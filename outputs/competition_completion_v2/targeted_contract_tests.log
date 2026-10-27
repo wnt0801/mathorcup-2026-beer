@@ -1,0 +1,13 @@
+test_invalid_font_gives_actionable_error (__main__.AuditContracts.test_invalid_font_gives_actionable_error) ... ok
+test_one_holdout_does_not_create_zero_variance (__main__.AuditContracts.test_one_holdout_does_not_create_zero_variance) ... ok
+test_western_font_is_not_a_cjk_fallback (__main__.AuditContracts.test_western_font_is_not_a_cjk_fallback) ... ok
+test_binary_does_not_get_eol_exception (__main__.IntegrityContracts.test_binary_does_not_get_eol_exception) ... ok
+test_content_change_rejected (__main__.IntegrityContracts.test_content_change_rejected) ... ok
+test_crlf_lf_is_reported_not_rebaselined (__main__.IntegrityContracts.test_crlf_lf_is_reported_not_rebaselined) ... ok
+test_invalid_paths_and_collisions (__main__.IntegrityContracts.test_invalid_paths_and_collisions) ... ok
+test_windows_keys_and_path_only_migration (__main__.IntegrityContracts.test_windows_keys_and_path_only_migration) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.395s
+
+OK

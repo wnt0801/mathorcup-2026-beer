@@ -1,0 +1,94 @@
+Protected source check: 13 inputs verified
+scoring 1/50 A_malt_all: reproduced
+scoring 2/50 A_malt_grain: reproduced
+scoring 3/50 A_malt_bread: reproduced
+scoring 4/50 A_malt_cara: reproduced
+scoring 5/50 A_malt_burn: reproduced
+scoring 6/50 A_hops_all: reproduced
+scoring 7/50 A_hops_citrus: reproduced
+scoring 8/50 A_hops_tropical: reproduced
+scoring 9/50 A_hops_noble: reproduced
+scoring 10/50 A_hops_woody: reproduced
+scoring 11/50 A_esters_all: reproduced
+scoring 12/50 A_esters_ethac: reproduced
+scoring 13/50 A_esters_isoaa: reproduced
+scoring 14/50 A_esters_flower: reproduced
+scoring 15/50 A_esters_fruity: reproduced
+scoring 16/50 F_malt_all: reproduced
+scoring 17/50 F_malt_grain: reproduced
+scoring 18/50 F_malt_bread: reproduced
+scoring 19/50 F_malt_cara: reproduced
+scoring 20/50 F_malt_burn: reproduced
+scoring 21/50 F_hops_all: reproduced
+scoring 22/50 F_hops_citrus: reproduced
+scoring 23/50 F_hops_tropical: reproduced
+scoring 24/50 F_hops_noble: reproduced
+scoring 25/50 F_hops_woody: reproduced
+scoring 26/50 F_esters_all: reproduced
+scoring 27/50 F_esters_ethac: reproduced
+scoring 28/50 F_esters_isoaa: reproduced
+scoring 29/50 F_esters_flower: reproduced
+scoring 30/50 F_esters_fruity: reproduced
+scoring 31/50 body: reproduced
+scoring 32/50 bitternes: reproduced
+scoring 33/50 co2: reproduced
+scoring 34/50 aftertaste: reproduced
+scoring 35/50 alcohol: reproduced
+scoring 36/50 sweetness: reproduced
+scoring 37/50 acidity: reproduced
+scoring 38/50 dms: reproduced
+scoring 39/50 metallic: reproduced
+scoring 40/50 X4vg: reproduced
+scoring 41/50 t2n: reproduced
+scoring 42/50 diacetyl: reproduced
+scoring 43/50 stale_hops: reproduced
+scoring 44/50 orange: reproduced
+scoring 45/50 coriander: reproduced
+scoring 46/50 clove: reproduced
+scoring 47/50 lactic: reproduced
+scoring 48/50 acetic: reproduced
+scoring 49/50 barnyard: reproduced
+scoring 50/50 overall: reproduced
+bootstrap 25/200
+bootstrap 50/200
+bootstrap 75/200
+bootstrap 100/200
+bootstrap 125/200
+bootstrap 150/200
+bootstrap 175/200
+bootstrap 200/200
+generated Amber
+generated Blond
+generated Brett/cofermented
+generated Brown
+generated Brut
+generated Christmas
+generated Dubbel
+generated Faro
+generated Flanders old brown
+generated Fruitbeer
+generated Hoppy
+generated Kriek
+generated Lambic
+generated Low/No alcohol
+generated Pils/Lager
+generated Saison
+generated Scotch
+generated Stout/Porter
+generated Strong ale
+generated Tripel
+generated West Flanders ale
+generated Wheat
+transfer 28 feasible_improvement
+transfer 81 feasible_improvement
+transfer 90 feasible_improvement
+transfer 96 feasible_improvement
+transfer 119 feasible_improvement
+transfer 124 feasible_improvement
+transfer 139 feasible_improvement
+transfer 185 feasible_improvement
+transfer 209 feasible_improvement
+transfer 218 feasible_improvement
+transfer 230 feasible_improvement
+Review audits completed: score sources, four-defect flags, summary evidence, fixed guard CV, per-style coverage
+Protected source check: 13 inputs verified

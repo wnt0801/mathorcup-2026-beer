@@ -1,0 +1,64 @@
+{
+  "started_utc": "2026-10-26T22:00:43.988457+00:00",
+  "finished_utc": "2026-10-26T22:05:09.847061+00:00",
+  "root": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3",
+  "output": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3\\outputs\\competition_completion_v2",
+  "python": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\.venv\\Scripts\\python.exe",
+  "stages": [
+    {
+      "stage": "dependency_check",
+      "command": [
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 2.1783943999907933,
+      "log": "dependency_check.log"
+    },
+    {
+      "stage": "targeted_contract_tests",
+      "command": [
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3\\scripts\\test_review_contracts.py"
+      ],
+      "returncode": 0,
+      "seconds": 4.917968900001142,
+      "log": "targeted_contract_tests.log"
+    },
+    {
+      "stage": "pipeline",
+      "command": [
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3\\scripts\\competition_pipeline.py",
+        "--stage",
+        "all"
+      ],
+      "returncode": 0,
+      "seconds": 220.3975805999944,
+      "log": "pipeline.log"
+    },
+    {
+      "stage": "build",
+      "command": [
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3\\scripts\\build_competition_deliverables.py"
+      ],
+      "returncode": 0,
+      "seconds": 23.940080800035503,
+      "log": "build.log"
+    },
+    {
+      "stage": "verify",
+      "command": [
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3\\scripts\\verify_competition.py"
+      ],
+      "returncode": 0,
+      "seconds": 14.41861669998616,
+      "log": "verify.log"
+    }
+  ],
+  "status": "passed"
+}

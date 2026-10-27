@@ -1,0 +1,67 @@
+{
+  "verified_utc": "2026-10-26T22:05:45.292394+00:00",
+  "clean_root": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3",
+  "output": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3\\outputs\\competition_completion_v2",
+  "returncode": 0,
+  "status": "passed",
+  "inputs_only_initial_copy": true,
+  "copied_legacy_outputs": false,
+  "copied_pretrained_models": false,
+  "fresh_environment_install": false,
+  "environment_note": "Fresh project copy, using the current existing Python environment; no Linux/macOS runtime or empty-venv install claim.",
+  "packaging_runs": [
+    {
+      "attempt": 1,
+      "returncode": 0
+    },
+    {
+      "attempt": 2,
+      "returncode": 0
+    }
+  ],
+  "new_archives": [
+    {
+      "path": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3\\outputs\\mathorcup_support_v2_20261026T220524267443Z_b61cb0.zip",
+      "sha256": "8c599de6d7cfef6e2731487bf941230c20e292b6be0f53e69aa530bb0f3cfed1"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\tmp\\review_clean_20261026T220043_c166c3\\outputs\\mathorcup_support_v2_20261026T220542358465Z_15ae13.zip",
+      "sha256": "112a7c99071b01e199bfcb3f7afe1d9c5990ba5ecfc4e2789aa1accaa7123a5d"
+    }
+  ],
+  "initial_file_sha256": {
+    "README.md": "70d6e34491e0008fbf74e92afef32ae176b52027dda08a3e8877b4eb346295da",
+    "README_competition.md": "c20fcead5acfa908b79c536d35cdb779ee56af01a78de42f6d998440153564e7",
+    "REPRODUCIBILITY.md": "e1c158ca2669e72fde34bd6c6f29cef873cd527402054824917b3c5c338e51ae",
+    "requirements.txt": "ad3fcc006bd25c5a6b6a5bc3ca479b9c96c552f250a8a428d989c7749a188d30",
+    "requirements_competition.txt": "2872d34793eafe4125c62c484c02bfce3253d0cab669b11a68e27ad350bc1e43",
+    "data/1.csv": "419849227a02e0c792cd405e6865035b7f58af1a92efa362dbb68a7ca2882f69",
+    "data/2.csv": "415709ac10f2f730d31f249bd6ac108250bdfbfd62e0055f4d8db9b41ec9cc4c",
+    "data/2026年MathorCup大数据挑战赛-赛道A初赛.pdf": "494025cf76c5d47af576927fcf6cd3a073d61db5842d56aaf0ad4da5f4660a78",
+    "data/3.xlsx": "fe4dcabd48431e6d677c095962ea9c447e10e509c4f3f8dd511a48c5541ab587",
+    "data/4.csv": "43a7b38682ed81ce64d97ebc1874c09dffac023ade4877f34e3c83ef7d42dc1c",
+    "data/5.csv": "c512eed108de6f98e0c6ed66497ed2319745d30ca7f6f4acac4f175a4bdcde9a",
+    "data/6.csv": "a55004fb0390299a5c8089f0c37d3bfc006e7049963c84d7d9652affabe614ae",
+    "data/7.csv": "2083138df46640e20b46f7e76ec32cf9b380fd34e019269afd819edeb546ff5e",
+    "data/8.xlsx": "f2316766792111d98281bd35c8403682be8c8069d166a7a7d5887ffbb227700a",
+    "data/数据说明.txt": "40813e273e081ae0dc6d6fa76838c5cdbaa721335df3648b4b29d5f76b6378d7",
+    "frozen_inputs/legacy_original_sha256.json": "c7ef6e94af4ce5c0e3577819f0f83b9a456cf0e9e8bf3345a6101e532e7e2101",
+    "frozen_inputs/model_selection_cv_50.csv": "9bdb7fc1c73f4724912ffb7ad384f12800c02dd8a822501a5d1635030f644d3b",
+    "frozen_inputs/provenance.json": "73f5844943924b96970239c400e4330a71eaa93141a7fbdcf7c0aae84aa195d5",
+    "frozen_inputs/reference_supplement.xlsx": "e0a10635c4fbc3c62dc7e06e553cce9fad98c768ea6af5c8adc8a836098d1474",
+    "frozen_inputs/source_sha256.json": "940343a06bf6badf1d8dfc4ab9bbe0fb10e2ae3d838c4c76e2c7b94bb1befa1f",
+    "frozen_inputs/test_predictions_50.csv": "c2ff173b22d47621200796d2f9242a43026745b6af9d2e55c4d5fd42de645974",
+    "scripts/build_competition_deliverables.py": "0bf20712147718c76bca4293243120425b5674019008c421590f2d6f6f7b6356",
+    "scripts/clean_copy_reproduce.py": "d633ef503d387ade1c65512f08a33a2ceb334ce7be9d925c50341716b05eee5d",
+    "scripts/competition_pipeline.py": "723e50d8582cac2e4d355139ac74959520c9b50f235a0bb179a4dfd4676b2387",
+    "scripts/integrity.py": "9d1da12eb6fd0db42c147694bfbb1a09748272e1567929ca05a4b3fbbb280266",
+    "scripts/package_competition.py": "e61db064607b53dd41bb8f6d1f45f88bd6a01d6f4295e6c92943521a90401c5e",
+    "scripts/prepare_review_inputs.py": "d09a7ca4c2ddacc657fc336e0d282d764b439049f4c6b46f55601bb9b57b9a1a",
+    "scripts/review_audits.py": "eb5018259e123132e328b143d395b5aa7282b3d4cbb1b403565495b033263249",
+    "scripts/review_config.py": "380b9b7ee41bef4b1573f8e8e59693412271365651c0af4896940be710edef8d",
+    "scripts/review_report.py": "90b420b8f890201f709f51dff974a4cce8b439c05aae70f990e522b4b38aa6a5",
+    "scripts/run_review.py": "a874c6adecdb59ad715ab6b26a0a3b7326584e89b6bc74ace4bcf7d9ddedef1d",
+    "scripts/test_review_contracts.py": "ff02141aa07c12a8a52220a325d669bd8c96e74d691d13449d143ebf328f730d",
+    "scripts/verify_competition.py": "0fea3773b97a8a09a2b137c42bdd67e9d0366871bfe7bb70e36669c08b5114b3"
+  }
+}

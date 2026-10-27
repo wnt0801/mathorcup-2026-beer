@@ -9,6 +9,12 @@ __pycache__/
 !.env.example
 *.pem
 *.key
+
+# Disposable review copies and local execution caches (historical outputs are kept).
+tmp/
+.venv_review/
+outputs/competition_completion_v*/.runtime/
+outputs/competition_completion_v*/.matplotlib/
 .venv/
 venv/
 .idea/

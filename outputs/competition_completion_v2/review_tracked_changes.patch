@@ -1,0 +1,676 @@
+diff --git a/.gitignore b/.gitignore
+index 18ad5a5..9dde599 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -9,6 +9,12 @@ __pycache__/
+ !.env.example
+ *.pem
+ *.key
++
++# Disposable review copies and local execution caches (historical outputs are kept).
++tmp/
++.venv_review/
++outputs/competition_completion_v*/.runtime/
++outputs/competition_completion_v*/.matplotlib/
+ .venv/
+ venv/
+ .idea/
+diff --git a/README.md b/README.md
+index acb37d1..5fc3c8b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,44 +1,19 @@
+-# MathorCup 2026：啤酒化合物与感官分析
++# MathorCup 啤酒竞赛项目
+ 
+-当前阶段：数据核验与单目标预测入门；尚未完成比赛三问。
++**唯一推荐入口：[审核版 v2 材料与状态](outputs/competition_completion_v2/START_HERE.md)**。
+ 
+-## 手机查看
++项目依据实际赛题PDF与附件，实现50维标准化感官预测、化合物关联网络、风格条件统计谱生成及受约束迁移。原始附件、历史Notebook、v1论文和旧ZIP均保留。本轮没有提交、推送Git或向赛事平台上传。
+ 
+-打开 [分析笔记本](notebooks/01_data_check.ipynb)，可查看代码和已保存的输出。GitHub 的预览用于阅读，不会运行代码。手机端若未显示预览，可切换浏览器桌面模式。
++当前主要结果与口径：
+ 
+-## 文件
++- 第一问沿用冻结的训练CV模型选择，50维测试MAE约0.3380，均值基准约0.4120，42维改善。测试集在历史工作中已被查看，本轮是冻结复现，不是全新盲测。
++- **相对0–6级是训练分位数等级，不是评分卡原始强度还原。** 当前资料没有可靠的配对原始标签或逆变换参数；维度范围与允许的评分口径需要主办方确认。
++- 第二问保留50维全部150条Top-3，提供200轮bootstrap、风格调整和稳定/探索候选标记；关联不是因果。
++- 第三问沿用局部条件生成方法，输出22风格共2200条统计谱及预测画像，演示11款Pils/Lager→Tripel迁移。四个缺陷原生字段保持不变；未知值及来源冲突不被当作安全。Stale hops辅助模型没有平均CV优势，只能称模型代理约束。
++- 生成汇总指标与组成成分一致性仍有5项未验证。统计谱诊断、感官模型预测、实际酿造有效性分开陈述；实际酿造与因果实验属于研究局限，给定题面未把它们列为额外强制提交条件。
+ 
+-- `notebooks/01_data_check.ipynb`：上传时的原始笔记本，保留13个单元格和已有输出。
+-- `data/`：附件1—8及数据说明，保留原文件。
+-- `requirements.txt`：运行所需包；尚未锁定版本。
++完整计算入口是 `scripts/run_review.py`；[复现说明](REPRODUCIBILITY.md)包含虚拟环境、依赖、字体、运行、验证和重复打包命令。流程需要原附件及明确列出的冻结输入，不能称为仅靠原附件重新完成全部历史选模。
+ 
+-## 运行
++02、04是保留的空白占位Notebook；notebooks/中的06–08属于v1结果复查。v2的结果复查副本位于输出目录的 `review_notebooks/`，均不替代脚本中的训练与生成流程。状态详见 [Notebook清单](notebooks/STATUS.md)。
+ 
+-建议使用 Python 3.12。项目根目录执行：
+-
+-```bash
+-python -m pip install -r requirements.txt
+-python -m jupyterlab
+-```
+-
+-打开笔记本，重启内核后按顺序运行全部单元格。数据路径兼容项目根目录和 notebooks 目录。
+-
+-## 当前结果与限制
+-
+-- 化学数据250×234，感官数据250×53，编号一一对应。
+-- 候选化学输入231列，感官评分50项；输入列还需进一步核验。
+-- 化学数据73个缺失单元格，感官评分无缺失。
+-- 数据字典匹配50项，其中numeric 26项、categorical 24项；原始类型不能直接决定当前汇总数据的模型类型。
+-- 当前演示目标：A_malt_all。训练200款、测试50款，按风格分层，random_state=42。
+-- 测试集均值基准：MAE约0.562、RMSE约0.742、R²约-0.045。
+-- 当前笔记本尚不包含后续讨论的岭回归代码和结果。
+-- 感官数据使用变换后的尺度，尚未解决原始0—6分还原。不得将线性缩放称为真实还原。
+-- AI参与代码草拟与解释。已按当前学习阶段保留笔记本；最终提交前须据实际使用补齐代码标注、使用声明和交互记录。
+-
+-## 参考研究
+-
+-Schreurs et al. (2024), Predicting and improving complex beer flavor through machine learning. DOI: https://doi.org/10.1038/s41467-024-46346-0
+-
+-## 同步
+-
+-本仓库是本次上传的快照。电脑后续修改不会自动同步，需要提交并推送。比赛期间保持私有。
++AI参与情况如实记录；完整历史交互导出未在仓库中发现，是否必须补交应核对正式规则。真实评分校准、部分阈值和正式提交格式仍待确认；本地审核通过不等于主办方已认可这些口径。
+diff --git a/README_competition.md b/README_competition.md
+index e5cde74..fbc7235 100644
+--- a/README_competition.md
++++ b/README_competition.md
+@@ -1,33 +1,5 @@
+-# MathorCup 啤酒项目：三问研究实现
++# MathorCup 材料入口（兼容链接）
+ 
+-当前材料入口：[START_HERE](outputs/competition_completion_v1/START_HERE.md)
++唯一推荐入口：[审核版 v2 的 START_HERE](outputs/competition_completion_v2/START_HERE.md)。
+ 
+-- [完整论文PDF研究稿](outputs/competition_completion_v1/competition_paper.pdf)
+-- [可编辑Markdown论文](outputs/competition_completion_v1/competition_paper.md)
+-- [逐项要求与未决问题](outputs/competition_completion_v1/requirements_status.csv)
+-- [独立验证记录](outputs/competition_completion_v1/verification.json)
+-
+-新增Notebook：
+-
+-- [06 冻结预测、缺失评估与相对分级](notebooks/06_competition_scoring_review.ipynb)
+-- [07 全50维Top-3与化合物网络](notebooks/07_competition_network_all50.ipynb)
+-- [08 条件生成与缺陷约束迁移](notebooks/08_competition_conditional_generation.ipynb)
+-
+-原始文件及旧输出保留。新结果单独存放于outputs/competition_completion_v1。
+-
+-注意：真实原始0–6评分的逆变换仍缺少证据，相对分位数等级不是还原；反式-2-壬烯醛与Stale hops阈值尚未解决。生成与迁移属于统计研究实现，不是已完成酿造/盲评验证的配方，不能宣称所有比赛硬要求已满足。
+-
+-## 复现
+-
+-使用Python 3.13与requirements_competition.txt中的实际环境版本。在项目根目录执行：
+-
+-```powershell
+-.venv/Scripts/python.exe -m pip install -r requirements_competition.txt
+-.venv/Scripts/python.exe scripts/competition_pipeline.py --stage all
+-.venv/Scripts/python.exe scripts/build_competition_deliverables.py
+-.venv/Scripts/python.exe scripts/verify_competition.py
+-```
+-
+-生成模型对象前后使用固定随机种子42；模型按历史训练集选择冻结，本轮没有用测试集成绩继续选模。公开补充表用于溯源，文件随支撑材料附带，MD5已验证。
+-
+-该流程可重算本次独立目录中的派生文件，不写入旧outputs顶层文件、data文件或旧Notebook。若要保留本轮目录的多次运行快照，先复制该目录。已有新增复查Notebook不覆盖，完整计算请以脚本为准。
++本文件保留原链接位置，避免历史引用失效。项目首页为README.md；完整运行命令见REPRODUCIBILITY.md。v1论文、结果、原Notebook和旧ZIP保留历史状态，不作为本轮新验证证据。
+diff --git a/requirements_competition.txt b/requirements_competition.txt
+index a151dab..8351aca 100644
+--- a/requirements_competition.txt
++++ b/requirements_competition.txt
+@@ -7,6 +7,7 @@ openpyxl==3.1.5
+ joblib==1.6.0
+ networkx==3.7
+ jupyterlab==4.6.4
++jupyter-client==8.10.0
+ nbformat==5.11.1
+ nbclient==0.11.0
+ ipykernel==7.4.0
+diff --git a/scripts/build_competition_deliverables.py b/scripts/build_competition_deliverables.py
+index 0c0473c..1e8653b 100644
+--- a/scripts/build_competition_deliverables.py
++++ b/scripts/build_competition_deliverables.py
+@@ -8,24 +8,25 @@ import json
+ import re
+ import sys
+ import textwrap
++import argparse
++import os
+ 
+ import numpy as np
+ import pandas as pd
+ 
+-ROOT=Path(__file__).resolve().parents[1]
+-OUT=ROOT/'outputs/competition_completion_v1'
++from review_config import ROOT, OUT, FROZEN, chinese_font
+ 
+ def table(df,columns=None):
+     if columns is not None:df=df[columns]
+     names=list(df.columns)
+     rows=[]
+     for row in df.itertuples(index=False,name=None):
+-        rows.append([f'{v:.4f}' if isinstance(v,(float,np.floating)) else str(v) for v in row])
++        rows.append(['NA' if pd.isna(v) else f'{v:.4f}' if isinstance(v,(float,np.floating)) else str(v) for v in row])
+     return '| '+' | '.join(map(str,names))+' |\n| '+' | '.join(['---']*len(names))+' |\n'+'\n'.join('| '+' | '.join(r)+' |' for r in rows)
+ 
+ 
+ def reference_audit():
+-    p=OUT/'reference_supplement.xlsx'
++    p=FROZEN/'reference_supplement.xlsx'
+     assert hashlib.md5(p.read_bytes()).hexdigest()=='52645e38d90aafda272532e19e2fea1c'
+     a=pd.read_csv(ROOT/'data/4.csv').set_index('beer').sort_index()
+     b=pd.read_excel(p,sheet_name='Supplementary File S4').set_index('beer').sort_index()
+@@ -56,8 +57,8 @@ def figures():
+     from sklearn.impute import SimpleImputer
+     from sklearn.preprocessing import StandardScaler
+     import networkx as nx
+-    font=Path('C:/Windows/Fonts/simhei.ttf')
+-    if font.exists():font_manager.fontManager.addfont(str(font));plt.rcParams['font.family']=font_manager.FontProperties(fname=str(font)).get_name()
++    font=chinese_font()
++    font_manager.fontManager.addfont(str(font));plt.rcParams['font.family']=font_manager.FontProperties(fname=str(font)).get_name()
+     plt.rcParams.update({'axes.unicode_minus':False,'font.size':10,'savefig.dpi':220,'axes.spines.top':False,'axes.spines.right':False})
+     figdir=OUT/'figures';figdir.mkdir(exist_ok=True)
+     def export(fig,name):
+@@ -86,6 +87,18 @@ def figures():
+         for j in range(len(targets)):ax.text(j,i,f'{mat.iloc[i,j]:.2f}',ha='center',va='center',fontsize=8)
+     fig.colorbar(implot,ax=ax,label='预测标准化得分');ax.set_title('三种风格的生成感官画像（非原始0–6分）');fig.tight_layout();export(fig,'05_style_profiles')
+     tr=pd.read_csv(OUT/'q3_transfer_summary.csv');fig,ax=plt.subplots(figsize=(8,4));p=np.arange(len(tr));ax.bar(p-.18,tr.source_target_distance,width=.36,label='迁移前',color='#b8c2ca');ax.bar(p+.18,tr.transferred_target_distance,width=.36,label='迁移后',color='#216869');ax.set_xticks(p,tr.source_beer);ax.set_xlabel('Pils/Lager beer编号');ax.set_ylabel('到Tripel训练谱的最小RMS距离');ax.set_title('带缺陷约束的跨风格迁移');ax.legend();fig.tight_layout();export(fig,'06_transfer')
++    cov=pd.read_csv(OUT/'q3_style_diversity_coverage.csv')
++    styles=sorted(cov['style'].unique());pos=np.arange(len(styles));fig,(a,b)=plt.subplots(2,1,figsize=(10,8),sharex=True)
++    for mode,label,color,offset in [('conditional_local','条件局部','#216869',-.18),('conditional_resample','条件重采样','#c39243',.18)]:
++        d=cov.loc[cov['mode'].eq(mode)].set_index('style').loc[styles]
++        a.bar(pos+offset,d.generated_train_total_scaled_variance_ratio,width=.36,label=label,color=color)
++        b.plot(pos,d.holdout_covered_at_train_nn95,marker='o',label=label,color=color)
++    a.axhline(1,color='gray',linewidth=.8);a.set_ylabel('生成/训练总标准化方差比');a.set_title('逐风格多样性及留出覆盖诊断（固定方法，非调参）');a.legend(fontsize=9)
++    b.set_ylabel('留出覆盖比例（训练NN95半径）');b.set_ylim(-.05,1.05);b.set_xticks(pos,styles,rotation=60,ha='right',fontsize=8);b.legend(fontsize=9);fig.tight_layout();export(fig,'07_diversity_coverage')
++    inputs=['q1_metrics.csv','q1_missingness_sensitivity.csv','q2_official_compound_graph.graphml','split_manifest.csv','q3_generated_native_spectra.csv','q3_generation_lineage.csv','q3_style_sensory_profiles.csv','q3_transfer_summary.csv','q3_style_diversity_coverage.csv']
++    inputs += [p.relative_to(OUT).as_posix() for p in figdir.glob('*') if p.suffix in ['.png','.svg']]
++    (figdir/'figure_sources.json').write_text(json.dumps({k:hashlib.sha256((OUT/k).read_bytes()).hexdigest() for k in inputs},ensure_ascii=False,indent=2),encoding='utf-8')
++    (OUT/'font_evidence.json').write_text(json.dumps({'selected_font':str(font),'sha256':hashlib.sha256(font.read_bytes()).hexdigest(),'glyph_validation':'啤酒评分模型约束审查','platform_limit':'tested on current host only; configurable lookup is not a Linux/macOS execution claim'},ensure_ascii=False,indent=2),encoding='utf-8')
+ 
+ 
+ def notebooks():
+@@ -107,12 +120,32 @@ def notebooks():
+         ('复现','项目根目录执行：python scripts/competition_pipeline.py --stage all。随后执行 python scripts/build_competition_deliverables.py。模型载入前将 scripts 加入sys.path；只读取自己生成的joblib文件。')
+     ])]
+     for name,title,blocks in names:
+-        p=ROOT/'notebooks'/name
+-        if p.exists():raise FileExistsError(p)
+-        nb=nbf.v4.new_notebook();nb.cells=[nbf.v4.new_markdown_cell('# '+title),nbf.v4.new_code_cell("from pathlib import Path\nimport pandas as pd\nfrom IPython.display import display, Image\nROOT=Path.cwd() if (Path.cwd()/'data').exists() else Path.cwd().parent\nOUT=ROOT/'outputs/competition_completion_v1'\npd.set_option('display.max_rows',160)\npd.set_option('display.max_columns',25)")]
+-        for kind,text in blocks:nb.cells.append(nbf.v4.new_code_cell(text) if kind=='code' else nbf.v4.new_markdown_cell('## '+kind+'\n\n'+text))
++        folder=OUT/'review_notebooks';folder.mkdir(exist_ok=True)
++        p=folder/name
++        if p.exists():
++            old=nbf.read(p,as_version=4);nbf.validate(old)
++            assert all(c.execution_count is not None for c in old.cells if c.cell_type=='code')
++            print('Preserved existing review notebook:',p.name,flush=True)
++            continue
++        nb=nbf.v4.new_notebook();nb.cells=[nbf.v4.new_markdown_cell('# '+title+'\n\n这是结果复查Notebook，不是完整训练流程。完整计算入口为 scripts/run_review.py。'),nbf.v4.new_code_cell("from pathlib import Path\nimport os\nimport pandas as pd\nfrom IPython.display import display, Image\nOUT=next((p for p in [Path.cwd(),*Path.cwd().parents] if (p/'q1_metrics.csv').is_file()), None)\nif OUT is None:\n    ROOT=next((p for p in [Path.cwd(),*Path.cwd().parents] if (p/'scripts/run_review.py').is_file()), None)\n    if ROOT is None: raise FileNotFoundError('请从项目目录或输出目录启动Notebook')\n    OUT=Path(os.environ.get('MATHORCUP_OUTPUT',str(ROOT/'outputs/competition_completion_v2')))\npd.set_option('display.max_rows',160)\npd.set_option('display.max_columns',25)")]
++        if name.startswith('08_'):
++            blocks.append(('code',"display(pd.read_csv(OUT/'q3_style_diversity_coverage.csv')); display(pd.read_csv(OUT/'q3_summary_consistency_audit.csv')); display(pd.read_csv(OUT/'q3_defect_evidence_summary.csv')); import json; print(json.loads((OUT/'q3_stale_guard_assessment.json').read_text(encoding='utf-8')))"))
++        for kind,text in blocks:
++            if kind=='复现':text='完整流程：python scripts/run_review.py。这里仅读取结果；需要13项受校验输入，其中两项是冻结历史策略/比较文件，详见REPRODUCIBILITY.md。'
++            nb.cells.append(nbf.v4.new_code_cell(text) if kind=='code' else nbf.v4.new_markdown_cell('## '+kind+'\n\n'+text))
+         nb.metadata['kernelspec']={'display_name':'Python 3','language':'python','name':'python3'}
+-        NotebookClient(nb,timeout=120,resources={'metadata':{'path':str(ROOT)}}).execute();nbf.write(nb,p);print('executed notebook',name,flush=True)
++        from jupyter_client import KernelManager
++        (OUT/'.runtime/ipython').mkdir(parents=True,exist_ok=True)
++        (OUT/'.runtime/jupyter').mkdir(parents=True,exist_ok=True)
++        os.environ['IPYTHONDIR']=str(OUT/'.runtime/ipython')
++        os.environ['JUPYTER_RUNTIME_DIR']=str(OUT/'.runtime/jupyter')
++        km=KernelManager(kernel_name='python3');km.kernel_spec.argv[0]=sys.executable
++        try:
++            NotebookClient(nb,km=km,timeout=120,resources={'metadata':{'path':str(OUT)}}).execute()
++        finally:
++            if km.has_kernel:km.shutdown_kernel(now=True)
++            km.cleanup_resources()
++        nbf.write(nb,p);print('executed review notebook',name,flush=True)
+ 
+ 
+ def report():
+@@ -250,7 +283,9 @@ def report():
+     AI参与赛题提取、代码编写、材料组织及解释草拟；所有报告数值来自实际程序输出，旧结果用于冻结复现。AI提出的代理方法、推断与实验未知项已分开标注；队伍需按赛事最新AI规范核对使用声明和对话记录要求。该记录描述实际使用，不冒充人工独立完成。
+     ''')
+     title='混合尺度啤酒数据的感官预测、化合物网络与受约束风味谱生成'
+-    md='# '+title+'\n\n研究稿 v1；真实0–6分与部分缺陷阈值尚待补证，非已核准最终提交版。\n\n'+'\n\n'.join('## '+t+'\n\n'+b for t,b in sections)+'\n'
++    from review_report import revised_sections
++    sections=revised_sections(sections,table)
++    md='# '+title+'\n\n审核稿 v2；评分校准及部分阈值仍待主办方确认。酿造/因果实验属研究局限，并非已给题面的额外硬性提交条件。\n\n'+'\n\n'.join('## '+t+'\n\n'+b for t,b in sections)+'\n'
+     (OUT/'competition_paper.md').write_text(md,encoding='utf-8')
+     return title,sections
+ 
+@@ -263,15 +298,17 @@ def pdf(title,sections):
+     from reportlab.pdfbase import pdfmetrics
+     from reportlab.pdfbase.ttfonts import TTFont
+     from reportlab.lib.pagesizes import A4
+-    pdfmetrics.registerFont(TTFont('CN','C:/Windows/Fonts/simhei.ttf'))
++    font=chinese_font()
++    pdfmetrics.registerFont(TTFont('CN',str(font),subfontIndex=0))
+     styles=getSampleStyleSheet()
+     body=ParagraphStyle('CNBody',fontName='CN',fontSize=9.2,leading=15.5,spaceAfter=7,wordWrap='CJK')
+     head=ParagraphStyle('CNHead',parent=body,fontSize=14,leading=20,spaceBefore=14,spaceAfter=9,keepWithNext=True,textColor=colors.HexColor('#164748'))
++    subhead=ParagraphStyle('CNSubHead',parent=head,fontSize=11,leading=16,spaceBefore=8,spaceAfter=6)
+     small=ParagraphStyle('CNSmall',parent=body,fontSize=7.2,leading=11,spaceAfter=0)
+     caption=ParagraphStyle('CNCap',parent=body,fontSize=8.3,leading=13,alignment=TA_CENTER,spaceAfter=12)
+     title_style=ParagraphStyle('CNTitle',parent=head,fontSize=20,leading=29,alignment=TA_CENTER,spaceAfter=18)
+     doc=SimpleDocTemplate(str(OUT/'competition_paper.pdf'),pagesize=A4,rightMargin=43,leftMargin=43,topMargin=42,bottomMargin=43,title=title,author='MathorCup project research draft; AI-assisted')
+-    width=A4[0]-86;story=[Paragraph(html.escape(title),title_style),Paragraph('研究稿 v1 | 真实0–6分校准及部分缺陷阈值仍待补证',caption),Spacer(1,12)]
++    width=A4[0]-86;story=[Paragraph(html.escape(title),title_style),Paragraph('审核稿 v2 | 评分校准及部分阈值仍待主办方确认',caption),Spacer(1,12)]
+     for heading,text in sections:
+         section_start=len(story)
+         story.append(Paragraph(html.escape(heading),head))
+@@ -296,15 +333,17 @@ def pdf(title,sections):
+                 scale=min(width/w,550/h);story.append(KeepTogether([Image(str(p),width=w*scale,height=h*scale),Paragraph(html.escape(match.group(1)),caption)]))
+             else:
+                 for line in para.splitlines():
+-                    if line.strip():story.append(Paragraph(html.escape(line.strip()),body))
++                    if line.strip():
++                        stripped=line.strip()
++                        story.append(Paragraph(html.escape(stripped[4:]),subhead) if stripped.startswith('### ') else Paragraph(html.escape(stripped),body))
+         if heading.startswith('附录B'):
+             story[section_start:]=[KeepTogether(story[section_start:])]
+     def footer(canvas,doc):
+-        canvas.setFont('CN',8);canvas.setFillColor(colors.HexColor('#667777'));canvas.drawString(43,25,'MathorCup 啤酒项目 | 研究稿 v1');canvas.drawRightString(A4[0]-43,25,str(doc.page))
++        canvas.setFont('CN',8);canvas.setFillColor(colors.HexColor('#667777'));canvas.drawString(43,25,'MathorCup 啤酒项目 | 审核稿 v2');canvas.drawRightString(A4[0]-43,25,str(doc.page))
+     doc.build(story,onFirstPage=footer,onLaterPages=footer)
+ 
+ 
+-def checklist():
++def _historical_v1_checklist_not_used():
+     rows=[
+         ('赛题与真实附件结构核验','完成','task_text、条码审计、原文件哈希与外部来源记录'),
+         ('问题1 连续感官预测','完成','50项冻结复现；原测试集不再用于模型选择'),
+@@ -327,9 +366,15 @@ def checklist():
+     (OUT/'START_HERE.md').write_text(text,encoding='utf-8')
+ 
+ 
++def checklist():
++    from review_report import write_status
++    write_status(table)
++
++
+ def main():
+-    reference_audit();figures();title,sections=report();pdf(title,sections);checklist()
+-    if not all((ROOT/'notebooks'/n).exists() for n in ['06_competition_scoring_review.ipynb','07_competition_network_all50.ipynb','08_competition_conditional_generation.ipynb']): notebooks()
++    parser=argparse.ArgumentParser();parser.add_argument('--font');args=parser.parse_args()
++    if args.font:os.environ['MATHORCUP_CJK_FONT']=args.font
++    reference_audit();figures();title,sections=report();pdf(title,sections);checklist();notebooks()
+     print('Paper and deliverables built:',OUT,flush=True)
+ 
+ if __name__=='__main__':main()
+diff --git a/scripts/competition_pipeline.py b/scripts/competition_pipeline.py
+index 5ca55b8..f8596b6 100644
+--- a/scripts/competition_pipeline.py
++++ b/scripts/competition_pipeline.py
+@@ -10,6 +10,7 @@ import platform
+ from pathlib import Path
+ import sys
+ import warnings
++from datetime import datetime, timezone
+ 
+ if __name__ == '__main__':
+     # Stable import path for joblib artifacts when this file is run as a CLI.
+@@ -30,8 +31,8 @@ from sklearn.model_selection import KFold, train_test_split
+ from sklearn.pipeline import Pipeline
+ from sklearn.preprocessing import StandardScaler
+ 
+-ROOT = Path(__file__).resolve().parents[1]
+-OUT = ROOT/'outputs/competition_completion_v1'
++from review_config import ROOT, OUT, FROZEN
++from integrity import read_manifest, verify_manifest
+ SEED = 42
+ DEFECTS = ['DMS','X2.3.butanedione','X4VG','X.E..2.nonenal']
+ SUMMARY = ['esters_sum','aroma_hops_sum','acids_sum','sulfur_sum']
+@@ -69,7 +70,7 @@ def load():
+     assert a.tasting_category_fine.equals(y.tasting_category_fine)
+     x=a.drop(columns=['beer_id','tasting_category_fine'])
+     y=y.drop(columns=['beer_id','tasting_category_fine'])
+-    sel=pd.read_csv(ROOT/'outputs/model_selection_cv_50.csv')
++    sel=pd.read_csv(FROZEN/'model_selection_cv_50.csv')
+     y=y[sel['指标'].tolist()]
+     train,test=train_test_split(x.index,test_size=.2,random_state=SEED,stratify=a.tasting_category_fine)
+     return x,y,a.tasting_category_fine,sel,pd.Index(train),pd.Index(test)
+@@ -110,7 +111,7 @@ def chemical_evidence(row):
+ 
+ def scoring():
+     x,y,styles,sel,tr,te=load()
+-    reference=pd.read_csv(ROOT/'outputs/test_predictions_50.csv')
++    reference=pd.read_csv(FROZEN/'test_predictions_50.csv')
+     models={}; records=[]; cuts=[]; metrics=[]
+     fold=KFold(5,shuffle=True,random_state=SEED)
+     for i,row in sel.iterrows():
+@@ -167,9 +168,23 @@ def scoring():
+ def correlations():
+     import networkx as nx
+     x,y,styles,sel,tr,te=load()
+-    roles=pd.read_csv(ROOT/'outputs/feature_roles.csv')
++    # Rebuild definitions from the supplied attachment fields; no legacy output dependency.
++    def role(f):
++        if f in SUMMARY:return '汇总指标'
++        if f in ['pH','color.EBC.','bitterness','CO2.PSI.','kcalperc']:return '理化或整体测量'
++        if f in ['GFS','unfermentables','protein.g.L.','betaglucan.mg.L.']:return '混合成分或定义待核实'
++        return '单项化学测量候选'
++    roles=pd.DataFrame({'字段':x.columns,'暂定角色':[role(f) for f in x.columns]})
++    save(roles,'feature_roles.csv')
+     compounds=roles.loc[roles['暂定角色'].eq('单项化学测量候选'),'字段'].tolist()
+-    info=pd.read_csv(ROOT/'outputs/chemical_name_mapping.csv').set_index('field_name_R')
++    dictionary=pd.read_excel(ROOT/'data/8.xlsx',sheet_name='Sensory thresholds')
++    for col in ['field_name_R','chemical_name','chemical_name_short']:
++        dictionary[col]=dictionary[col].astype('string').str.strip()
++    info=dictionary.loc[dictionary.field_name_R.isin(x.columns)].set_index('field_name_R').loc[x.columns].copy()
++    assert info.index.is_unique and len(info)==len(x.columns)
++    info['official_name']=info.chemical_name.str.replace('Î±','α',regex=False).str.replace('Î²','β',regex=False)
++    assert info.official_name.is_unique and info.official_name.notna().all()
++    save(info.reset_index(),'chemical_name_mapping.csv')
+     names=info.loc[x.columns,'official_name'].tolist()
+     official=pd.read_csv(ROOT/'data/2.csv',index_col=0).loc[names,names]
+     official.index=x.columns;official.columns=x.columns
+@@ -208,11 +223,13 @@ def correlations():
+             evidence.append(dict(target=t,rank=rank,field=f,chemical_name=meta['official_name'],rho=c.loc[f,t],n=len(data),bootstrap_frequency=counts[idx,j]/200,bootstrap_rho_low=np.nanquantile(boot_values[:,j,rank-1],.025),bootstrap_rho_high=np.nanquantile(boot_values[:,j,rank-1],.975),style_adjusted_rho=adjusted,direction_agrees=bool(np.sign(adjusted)==np.sign(c.loc[f,t])),origin=origin,unit=meta.get('unit',np.nan),off_flavors=flavor,family_hint=family,interpretation='关联候选；同源代谢和风格混杂均可能解释，不能推断单体因果'))
+     evidence=pd.DataFrame(evidence)
+     evidence['chemical_plausibility']=evidence.apply(chemical_evidence,axis=1)
++    evidence['ranking_stable_80pct']=evidence.bootstrap_frequency.ge(.8)
++    evidence['candidate_class']=np.where(evidence.ranking_stable_80pct & evidence.direction_agrees,'stable_association',np.where(evidence.ranking_stable_80pct,'stable_rank_direction_sensitive','exploratory_association'))
+     save(evidence,'q2_top3_all50_evidence.csv')
+     save(pd.DataFrame(counts/200,index=compounds,columns=y.columns).reset_index(names='field'),'q2_all_candidate_frequencies.csv')
+     # A faithful graph uses the provided matrix, not a newly estimated substitute.
+     edges=[];g=nx.Graph();g.add_nodes_from(compounds)
+-    stable=pd.read_csv(ROOT/'outputs/network_edges_stable.csv')
++    stable=rebuild_network_stability(x,compounds,official)
+     stablekeys={frozenset([r['指标1'],r['指标2']]):r['重抽样保留率'] for _,r in stable.iterrows()}
+     for i,f in enumerate(compounds):
+         for h in compounds[i+1:]:
+@@ -233,6 +250,26 @@ def correlations():
+     save(pd.DataFrame(sens),'q2_method_sensitivity.csv')
+ 
+ 
++def rebuild_network_stability(x,compounds,official):
++    """Rebuild the historical edge diagnostic from attachments, with its original row order."""
++    order=pd.read_csv(ROOT/'data/1.csv',usecols=['beer'])['beer']
++    data=x.loc[order,compounds]
++    subset=official.loc[compounds,compounds].to_numpy()
++    left,right=np.triu_indices(len(compounds),1)
++    keep=np.abs(subset[left,right])>=.6
++    left,right=left[keep],right[keep]
++    rho=subset[left,right]
++    rng=np.random.default_rng(SEED);count=np.zeros(len(left),int)
++    for k in range(100):
++        c=data.iloc[rng.integers(0,len(data),len(data))].corr(method='spearman',min_periods=200).to_numpy()[left,right]
++        count+=np.isfinite(c)&(np.abs(c)>=.6)&(np.sign(c)==np.sign(rho))
++    edges=pd.DataFrame({'指标1':np.asarray(compounds)[left],'指标2':np.asarray(compounds)[right],'Spearman相关系数':rho,'相关强度':np.abs(rho),'重抽样保留率':count/100})
++    save(edges,'q2_network_edges_bootstrap.csv')
++    stable=edges.loc[edges['重抽样保留率'].ge(.8)].copy()
++    save(stable,'q2_network_edges_stable.csv')
++    return stable
++
++
+ class LocalConditionalGenerator:
+     """Empirical conditional kernel: draw anchor, one of k nearest same-style donors,
+     and Beta(1,4) weight. Missing values propagate; imputation is distance-only.
+@@ -283,6 +320,7 @@ def distribution_metrics(real,fake,train,imputer,scaler):
+ 
+ 
+ def generation():
++    from review_audits import coverage_diagnostics
+     x,y,styles,sel,tr,te=load()
+     bundle=joblib.load(OUT/'frozen_training_models.joblib');models=bundle['models']
+     gen=LocalConditionalGenerator().fit(x.loc[tr],styles.loc[tr]);rng=np.random.default_rng(SEED)
+@@ -291,7 +329,8 @@ def generation():
+         real=x.loc[te[styles.loc[te].eq(style).to_numpy()]]
+         for mode in ['conditional_local','conditional_resample','unconditional_local']:
+             fake,lineage=gen.sample(style,100,rng,mode)
+-            validation.append(dict(style=style,mode=mode,n_train=int((styles.loc[tr]==style).sum()),n_test=len(real),**distribution_metrics(real,fake,x.loc[tr],gen.imputer,gen.scaler)))
++            style_train=x.loc[tr[styles.loc[tr].eq(style).to_numpy()]]
++            validation.append(dict(style=style,mode=mode,n_train=len(style_train),n_test=len(real),**distribution_metrics(real,fake,x.loc[tr],gen.imputer,gen.scaler),**coverage_diagnostics(real,fake,style_train,gen.imputer,gen.scaler)))
+             if mode=='conditional_local':
+                 ids=[f'{style.replace("/","_")}_{i:03d}' for i in range(len(fake))]
+                 fake.index=ids;fake.index.name='sample_id';lineage.index=ids;lineage.index.name='sample_id'
+@@ -328,7 +367,7 @@ def generation():
+     cp=classifier.predict(x.loc[te]);gp=classifier.predict(fake)
+     save(pd.DataFrame([dict(heldout_style_accuracy=accuracy_score(styles.loc[te],cp),heldout_balanced_accuracy=balanced_accuracy_score(styles.loc[te],cp),generated_condition_agreement=accuracy_score(lineage['style'],gp))]),'q3_style_diagnostic.csv')
+     # Correlation preservation on stable graph edges, not global mean alone.
+-    edges=pd.read_csv(ROOT/'outputs/network_edges_stable.csv');corr=[]
++    edges=pd.read_csv(OUT/'q2_network_edges_stable.csv');corr=[]
+     for s in ['Tripel','Kriek','Lambic']:
+         ids=lineage.index[lineage['style'].eq(s)];train=x.loc[tr[styles.loc[tr].eq(s).to_numpy()]]
+         for _,e in edges.iterrows():
+@@ -408,25 +447,27 @@ def transfer(gen,models,classifier,x,y,styles,tr,te):
+ 
+ 
+ def inventory():
+-    original={}
+-    for folder in ['data','notebooks','outputs']:
+-        for p in (ROOT/folder).rglob('*'):
+-            if not p.is_file() or OUT in p.parents or p.name.startswith(('06_','07_','08_')):continue
+-            original[str(p.relative_to(ROOT))]=hashlib.sha256(p.read_bytes()).hexdigest()
++    # Historical expected values are frozen in source_sha256.json, never recaptured here.
++    original=read_manifest(FROZEN/'source_sha256.json')
++    audit=verify_manifest(ROOT,original)
+     path=OUT/'original_sha256.json'
+     if path.exists():
+-        old=json.loads(path.read_text(encoding='utf-8'));assert all(original.get(k)==v for k,v in old.items()),'original file modified'
++        assert read_manifest(path)==original,'Manifest contents changed; refusing to rebaseline'
+     else: path.write_text(json.dumps(original,ensure_ascii=False,indent=2),encoding='utf-8')
++    save(pd.DataFrame(audit),'source_integrity_audit.csv')
+     versions={m:__import__(m).__version__ for m in ['numpy','pandas','scipy','sklearn','joblib','nbformat','nbclient','networkx']}
+-    (OUT/'environment.json').write_text(json.dumps({'python':sys.version,'platform':platform.platform(),'packages':versions},indent=2),encoding='utf-8')
+-    print('Original file hash check:',len(original),'files intact',flush=True)
++    (OUT/'environment.json').write_text(json.dumps({'python':sys.version,'platform':platform.platform(),'packages':versions,'run_utc':datetime.now(timezone.utc).isoformat(),'output':str(OUT),'root':str(ROOT)},indent=2),encoding='utf-8')
++    print('Protected source check:',len(original),'inputs verified',flush=True)
+ 
+ 
+ def main():
+-    parser=argparse.ArgumentParser();parser.add_argument('--stage',choices=['scoring','correlations','generation','all'],default='all');args=parser.parse_args()
+-    OUT.mkdir(exist_ok=True);inventory()
++    parser=argparse.ArgumentParser();parser.add_argument('--stage',choices=['scoring','correlations','generation','audit','all'],default='all');args=parser.parse_args()
++    OUT.mkdir(parents=True,exist_ok=True);inventory()
+     for stage,fn in [('scoring',scoring),('correlations',correlations),('generation',generation)]:
+         if args.stage in ['all',stage]: fn()
++    if args.stage in ['all','audit']:
++        from review_audits import run_audits
++        run_audits()
+     inventory()
+ 
+ if __name__=='__main__': main()
+diff --git a/scripts/package_competition.py b/scripts/package_competition.py
+index 1f1344e..db4e71e 100644
+--- a/scripts/package_competition.py
++++ b/scripts/package_competition.py
+@@ -3,35 +3,44 @@ from pathlib import Path
+ import hashlib
+ import json
+ import zipfile
+-
+-ROOT=Path(__file__).resolve().parents[1]
+-OUT=ROOT/'outputs/competition_completion_v1'
++from datetime import datetime,timezone
++from uuid import uuid4
++from review_config import ROOT,OUT
+ 
+ def main():
+     import verify_competition
+     verify_competition.main()
+     files=[]
+-    for folder in ['data','notebooks','scripts','outputs']:
++    for folder in ['data','frozen_inputs','scripts']:
+         for p in (ROOT/folder).rglob('*'):
+             if not p.is_file():continue
+             relative=p.relative_to(ROOT)
+             if any(part.startswith('.') or part=='__pycache__' for part in relative.parts):continue
+             if p.suffix=='.zip':continue
+-            if p.name.startswith(('task_page-','paper_review-','review_contact_','final_review-','final_contact_','last_check-')):continue
+             files.append(p)
+-    for name in ['README.md','README_competition.md','competition_plan.md','requirements.txt','requirements_competition.txt','build_defect_audit.py']:
+-        files.append(ROOT/name)
++    for p in OUT.rglob('*'):
++        if not p.is_file() or any(part.startswith('.') for part in p.relative_to(OUT).parts):continue
++        if p.suffix=='.zip' or 'package_manifests' in p.parts or 'pdf_review' in p.parts:continue
++        files.append(p)
++    for name in ['README.md','README_competition.md','REPRODUCIBILITY.md','REVIEW_SUMMARY.md','requirements.txt','requirements_competition.txt']:
++        p=ROOT/name
++        if p.is_file():files.append(p)
++    if (ROOT/'notebooks/STATUS.md').is_file():files.append(ROOT/'notebooks/STATUS.md')
+     files=sorted(set(files))
+-    manifest={str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in files if p.name!='support_file_manifest.json'}
+-    mp=OUT/'support_file_manifest.json';mp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+-    if mp not in files:files.append(mp)
+-    archive=ROOT/'outputs/mathorcup_support_v1.zip'
+-    if archive.exists():raise FileExistsError('Preserving existing archive: '+str(archive))
++    manifest={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
++    tag=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')+'_'+uuid4().hex[:6]
++    archive=ROOT/'outputs'/('mathorcup_support_v2_'+tag+'.zip')
++    archive.parent.mkdir(exist_ok=True)
+     with zipfile.ZipFile(archive,'x',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+-        for p in files:z.write(p,str(p.relative_to(ROOT)))
++        for p in files:z.write(p,p.relative_to(ROOT).as_posix())
++        z.writestr('SUPPORT_MANIFEST.json',json.dumps(manifest,ensure_ascii=False,indent=2))
+     with zipfile.ZipFile(archive) as z:
+         assert z.testzip() is None
+         for path,digest in manifest.items():assert hashlib.sha256(z.read(path)).hexdigest()==digest
++    record={'archive':archive.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'files':len(files),'verified_crc':True,'verified_individual_sha256':True,'verified_utc':datetime.now(timezone.utc).isoformat(),'manifest':manifest}
++    directory=OUT/'package_manifests';directory.mkdir(exist_ok=True)
++    (directory/(archive.stem+'.json')).write_text(json.dumps(record,ensure_ascii=False,indent=2),encoding='utf-8')
+     print('Support archive verified:',archive,'bytes=',archive.stat().st_size,'files=',len(files))
++    return record
+ 
+ if __name__=='__main__':main()
+diff --git a/scripts/verify_competition.py b/scripts/verify_competition.py
+index b54d8a2..1e03887 100644
+--- a/scripts/verify_competition.py
++++ b/scripts/verify_competition.py
+@@ -7,14 +7,15 @@ import joblib
+ import nbformat
+ import numpy as np
+ import pandas as pd
+-
+-ROOT=Path(__file__).resolve().parents[1]
+-OUT=ROOT/'outputs/competition_completion_v1'
++from datetime import datetime,timezone
++from review_config import ROOT,OUT,FROZEN
++from integrity import verify_manifest,read_manifest
+ 
+ def main():
+     import competition_pipeline as cp
+-    original=json.loads((OUT/'original_sha256.json').read_text(encoding='utf-8'))
+-    assert all(hashlib.sha256((ROOT/k).read_bytes()).hexdigest()==v for k,v in original.items())
++    original=read_manifest(OUT/'original_sha256.json')
++    assert original==read_manifest(FROZEN/'source_sha256.json')
++    integrity=verify_manifest(ROOT,original)
+     x,y,s,sel,tr,te=cp.load()
+     pp=pd.read_csv(OUT/'q1_out_of_sample_predictions.csv')
+     assert len(pp)==250*50 and not pp.duplicated(['beer','target']).any()
+@@ -22,7 +23,7 @@ def main():
+     assert pp.groupby('target').size().eq(250).all()
+     assert pp.predicted_relative_grade.between(0,6).all()
+     assert set(pp.loc[pp['split'].eq('heldout_test'),'beer'])==set(te)
+-    old=pd.read_csv(ROOT/'outputs/test_predictions_50.csv')
++    old=pd.read_csv(FROZEN/'test_predictions_50.csv')
+     join=pp.query("split=='heldout_test'").merge(old,left_on=['beer','target'],right_on=['beer','指标'],validate='one_to_one')
+     assert len(join)==2500 and np.allclose(join.predicted_standardized,join['预测值'],atol=1e-8,rtol=1e-8)
+     models=joblib.load(OUT/'frozen_training_models.joblib')['models']
+@@ -30,9 +31,25 @@ def main():
+         current=models[t].predict(x.loc[te])
+         expected=pp.query("split=='heldout_test' and target==@t").set_index('beer').loc[te,'predicted_standardized']
+         assert np.allclose(current,expected,atol=1e-8,rtol=1e-8)
++    # Independent target/grade reconstruction checks train-only cutpoints and fold scope.
++    from sklearn.model_selection import KFold
++    cuts=pd.read_csv(OUT/'q1_train_quantile_cutpoints.csv').set_index('target')
++    for t in y.columns:
++        rows=pp.loc[pp.target.eq(t)].set_index('beer')
++        assert np.allclose(rows.loc[x.index,'actual_standardized'],y[t])
++        c=y.loc[tr,t].quantile(np.arange(1,7)/7).to_numpy()
++        assert np.allclose(c,cuts.loc[t,[f'q{i}' for i in range(1,7)]].to_numpy(dtype=float))
++        assert np.array_equal(rows.loc[te,'predicted_relative_grade'],np.searchsorted(c,rows.loc[te,'predicted_standardized'],side='right'))
++        for fit,valid in KFold(5,shuffle=True,random_state=42).split(tr):
++            ids,vids=tr[fit],tr[valid];c=y.loc[ids,t].quantile(np.arange(1,7)/7).to_numpy()
++            assert set(ids).isdisjoint(set(vids)) and set(ids).isdisjoint(set(te))
++            assert np.array_equal(rows.loc[vids,'actual_relative_grade'],np.searchsorted(c,y.loc[vids,t],side='right'))
++            assert np.array_equal(rows.loc[vids,'predicted_relative_grade'],np.searchsorted(c,rows.loc[vids,'predicted_standardized'],side='right'))
+     top=pd.read_csv(OUT/'q2_top3_all50_evidence.csv')
+     assert len(top)==150 and top.groupby('target').size().eq(3).all()
+     assert top.bootstrap_frequency.between(0,1).all()
++    assert np.array_equal(top.ranking_stable_80pct,top.bootstrap_frequency.ge(.8))
++    assert np.array_equal(top.candidate_class.eq('stable_association'),top.bootstrap_frequency.ge(.8)&top.direction_agrees)
+     corr=pd.read_csv(OUT/'q2_official_correlation_type_check.csv').set_index('method')
+     assert corr.at['spearman','max_abs_difference']<1e-12
+     fake=pd.read_csv(OUT/'q3_generated_native_spectra.csv').set_index('sample_id')
+@@ -46,6 +63,51 @@ def main():
+     assert np.allclose(fake[x.columns],expected,equal_nan=True,atol=1e-8,rtol=1e-8)
+     assert (fake[x.columns].min()>=x.loc[tr].min()-1e-8).all() and (fake[x.columns].max()<=x.loc[tr].max()+1e-8).all()
+     assert np.array_equal(fake[x.columns].isna(),np.isnan(va)|np.isnan(vb))
++    sensory=pd.read_csv(OUT/'q3_generated_sensory_standardized.csv').set_index('sample_id')
++    generated_predictions=cp.predict(models,fake[x.columns])
++    assert np.allclose(generated_predictions,sensory.loc[fake.index,y.columns],atol=1e-8,rtol=1e-8)
++    # Replay fixed sampling solely to verify baseline diagnostics, never to select a method.
++    generator=joblib.load(OUT/'conditional_generator.joblib');rng=np.random.default_rng(42)
++    from scipy.spatial.distance import cdist
++    diagnostics=pd.read_csv(OUT/'q3_style_diversity_coverage.csv').set_index(['style','mode'])
++    assert len(diagnostics)==66
++    for style in sorted(s.unique()):
++        styletrain=x.loc[tr[s.loc[tr].eq(style).to_numpy()]]
++        real=x.loc[te[s.loc[te].eq(style).to_numpy()]]
++        for mode in ['conditional_local','conditional_resample','unconditional_local']:
++            generated,_=generator.sample(style,100,rng,mode)
++            d=diagnostics.loc[(style,mode)]
++            assert int(d.n_train)==len(styletrain) and int(d.n_test)==len(real)
++            vt=styletrain.var(ddof=1);vf=generated.var(ddof=1)
++            eligible=vt.gt(1e-12)&vf.notna();scales=pd.Series(generator.scaler.scale_**2,index=x.columns)
++            ratio=float((vf[eligible]/scales[eligible]).sum()/(vt[eligible]/scales[eligible]).sum())
++            assert np.isclose(d.generated_train_total_scaled_variance_ratio,ratio,rtol=1e-10,atol=1e-10)
++            zz=generator.scaler.transform(generator.imputer.transform(styletrain))
++            gg=generator.scaler.transform(generator.imputer.transform(generated))
++            hh=generator.scaler.transform(generator.imputer.transform(real))
++            dist=cdist(zz,zz)/np.sqrt(x.shape[1]);np.fill_diagonal(dist,np.inf)
++            radius=float(np.quantile(dist.min(1),.95))
++            covered=((cdist(hh,gg)/np.sqrt(x.shape[1])).min(1)<=radius).mean()
++            assert np.isclose(d.holdout_covered_at_train_nn95,covered)
++            if len(real)<2:assert pd.isna(d.holdout_total_scaled_variance)
++    summaries=pd.read_csv(OUT/'q3_summary_consistency_audit.csv')
++    assert len(summaries)==5 and summaries.consistency_error.isna().all() and (~summaries.recomputed).all()
++    evidence=pd.read_csv(OUT/'q3_transfer_defect_evidence.csv')
++    assert len(evidence)==44 and evidence.native_preserved.all()
++    rawdef=pd.read_csv(OUT/'q3_observed_defect_threshold_audit.csv')
++    assert len(rawdef)==1000
++    cal=pd.read_excel(ROOT/'data/8.xlsx',sheet_name='Calibrated chemical dataset').set_index('beer')
++    for f in cp.DEFECTS:
++        g=rawdef.loc[rawdef.field.eq(f)].set_index('beer').loc[x.index]
++        assert np.array_equal(g.a1_missing,x[f].isna())
++        assert np.array_equal(g.a8_missing,cal.loc[x.index,f].isna())
++        if f in ['X2.3.butanedione','X.E..2.nonenal']:
++            valid=x[f].notna()&cal.loc[x.index,f].notna()
++            expected=valid&(~np.isclose(x[f],cal.loc[x.index,f],atol=1e-6,rtol=0))
++            assert np.array_equal(g.numeric_source_conflict,expected)
++    guardcv=pd.read_csv(OUT/'q3_stale_guard_training_cv.csv')
++    assessment=json.loads((OUT/'q3_stale_guard_assessment.json').read_text(encoding='utf-8'))
++    assert assessment['has_mean_MAE_advantage']==bool(guardcv.MAE.mean()<guardcv.baseline_MAE.mean())
+     transfer=pd.read_csv(OUT/'q3_transfer_summary.csv')
+     spectra=pd.read_csv(OUT/'q3_transferred_native_spectra.csv').set_index('source_beer')
+     assert len(transfer)==len(spectra)==11
+@@ -63,14 +125,22 @@ def main():
+             z=src+r.alpha*(donor-src);z.loc[src.isna()]=np.nan;z.loc[cp.DEFECTS]=src[cp.DEFECTS]
+             assert np.allclose(z,v,equal_nan=True,atol=1e-8,rtol=1e-8)
+     notebooks=[]
+-    for p in sorted((ROOT/'notebooks').glob('0[678]_*.ipynb')):
++    for p in sorted((OUT/'review_notebooks').glob('0[678]_*.ipynb')):
+         n=nbformat.read(p,as_version=4);nbformat.validate(n)
+         codes=[c for c in n.cells if c.cell_type=='code']
+         assert all(c.execution_count is not None for c in codes)
+         assert not any(o.output_type=='error' for c in codes for o in c.outputs)
+         notebooks.append(p.name)
+     assert len(notebooks)==3
+-    result={'status':'passed','original_files_unchanged':len(original),'q1_predictions':len(pp),'q2_top3_records':len(top),'generated_spectra':len(fake),'transferred_spectra':len(spectra),'executed_review_notebooks':notebooks,'checks':['original hashes','frozen prediction equality','saved model round-trip','all50 Top3','official matrix type','training-only donors','style-conditional donor labels','generated donor interpolation and missing mask','training support bounds','transfer reconstruction','exact defect preservation','nonconstant auxiliary stale guard constraint','executed notebooks without errors'],'limits':['No raw0–6 recovery claim','No experimental brewing or sensory safety validation','Unknown thresholds remain unknown']}
++    from pypdf import PdfReader
++    paper=PdfReader(OUT/'competition_paper.pdf');papertext='\n'.join(p.extract_text() for p in paper.pages)
++    assert sum(len(p.images) for p in paper.pages)==7 and '![' not in papertext
++    metrics=pd.read_csv(OUT/'q1_metrics.csv').query("split=='heldout_test'")
++    assert f'{metrics.MAE.mean():.4f}' in papertext
++    assert '模型代理' in papertext and '未验证' in papertext
++    provenance=json.loads((OUT/'figures/figure_sources.json').read_text(encoding='utf-8'))
++    assert all(hashlib.sha256((OUT/k).read_bytes()).hexdigest()==v for k,v in provenance.items())
++    result={'status':'passed','verified_utc':datetime.now(timezone.utc).isoformat(),'verification_root':str(ROOT),'output':str(OUT),'protected_source_files':len(original),'exact_source_files':sum(r['status']=='exact' for r in integrity),'eol_only_source_files':sum(r['status']=='eol_only' for r in integrity),'q1_predictions':len(pp),'q2_top3_records':len(top),'generated_spectra':len(fake),'transferred_spectra':len(spectra),'executed_review_notebooks':notebooks,'paper_pages':len(paper.pages),'checks':['fresh source hashes, no rebaselining','frozen prediction equality','saved model round-trip','train-only relative cutpoints and OOF scopes','all50 Top3 and stable/exploratory labels','official matrix type','training-only donors','style-conditional donor labels','generated donor interpolation and missing mask','training support bounds','generated sensory predictions','replayed66 diversity/coverage baseline rows','unverified summary formulas not recomputed','four-defect missing/conflict states','fixed training-only guard CV assessment','transfer reconstruction','exact native defect preservation incl missing','model proxy guard constraint','executed review notebooks without errors','paper/CSV numerical scope and figure-source hashes'],'limits':['Raw0–6 intensity not identified','Stale hops guard has no demonstrated advantage, model proxy only','Summary constituent identities unverified','Actual brewing/causal experiments not performed; research limitations, not added contest submission requirements','No Linux/macOS execution claim']}
+     (OUT/'verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(result,ensure_ascii=False,indent=2))
+ 
+ if __name__=='__main__':main()

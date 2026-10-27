@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-26T22:08:20.501407+00:00",
+  "changes": "scorecard cell-by-cell evidence and document formatting after full clean computation",
+  "reexecuted_stages": [
+    "source audit",
+    "paper/figures build",
+    "independent verification"
+  ],
+  "unchanged_scientific_choices": [
+    "split",
+    "frozen model selections",
+    "hyperparameters",
+    "generator sampling",
+    "transfer objective and constraints"
+  ],
+  "current_script_sha256": {
+    "scripts/build_competition_deliverables.py": "e7f90e02ca05f1e9fb2b10b97fcbf917d55ee5967aca03df11ffab64f0ac1449",
+    "scripts/clean_copy_reproduce.py": "d633ef503d387ade1c65512f08a33a2ceb334ce7be9d925c50341716b05eee5d",
+    "scripts/competition_pipeline.py": "723e50d8582cac2e4d355139ac74959520c9b50f235a0bb179a4dfd4676b2387",
+    "scripts/integrity.py": "9d1da12eb6fd0db42c147694bfbb1a09748272e1567929ca05a4b3fbbb280266",
+    "scripts/package_competition.py": "e61db064607b53dd41bb8f6d1f45f88bd6a01d6f4295e6c92943521a90401c5e",
+    "scripts/prepare_review_inputs.py": "d09a7ca4c2ddacc657fc336e0d282d764b439049f4c6b46f55601bb9b57b9a1a",
+    "scripts/review_audits.py": "8b93e7b6c087326ec7461f0ddfeaec1a9de848ab13eae85ba35cf91ea726dd0b",
+    "scripts/review_config.py": "380b9b7ee41bef4b1573f8e8e59693412271365651c0af4896940be710edef8d",
+    "scripts/review_report.py": "78e56eda0a29f38ba3eeb0bd218b5161788285f9df47c51540cc043bd8230a2a",
+    "scripts/run_review.py": "a874c6adecdb59ad715ab6b26a0a3b7326584e89b6bc74ace4bcf7d9ddedef1d",
+    "scripts/test_review_contracts.py": "ff02141aa07c12a8a52220a325d669bd8c96e74d691d13449d143ebf328f730d",
+    "scripts/verify_competition.py": "0fea3773b97a8a09a2b137c42bdd67e9d0366871bfe7bb70e36669c08b5114b3"
+  }
+}

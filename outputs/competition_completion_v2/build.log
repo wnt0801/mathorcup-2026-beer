@@ -1,0 +1,7 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+executed review notebook 06_competition_scoring_review.ipynb
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+executed review notebook 07_competition_network_all50.ipynb
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+executed review notebook 08_competition_conditional_generation.ipynb
+Paper and deliverables built: C:\Users\Lenovo\PycharmProjects\PythonProject2\tmp\review_clean_20261026T220043_c166c3\outputs\competition_completion_v2

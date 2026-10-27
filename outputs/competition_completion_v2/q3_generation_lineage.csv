@@ -1,0 +1,2201 @@
+﻿sample_id,style,anchor_beer,neighbor_beer,weight,mode
+Amber_000,Amber,63,210,0.3152070679510838,conditional_local
+Amber_001,Amber,210,43,0.2697747186201504,conditional_local
+Amber_002,Amber,92,19,0.2451988647113835,conditional_local
+Amber_003,Amber,32,6,0.2797413932686038,conditional_local
+Amber_004,Amber,32,210,0.06969787440009483,conditional_local
+Amber_005,Amber,19,6,0.15241185226033752,conditional_local
+Amber_006,Amber,63,92,0.24001372593940973,conditional_local
+Amber_007,Amber,92,43,0.18254039306149258,conditional_local
+Amber_008,Amber,137,19,0.010073540935202446,conditional_local
+Amber_009,Amber,63,92,0.039045647744836105,conditional_local
+Amber_010,Amber,11,63,0.27189448798938415,conditional_local
+Amber_011,Amber,6,210,0.2502569974374649,conditional_local
+Amber_012,Amber,210,6,0.7264289558713134,conditional_local
+Amber_013,Amber,210,6,0.02644081823503138,conditional_local
+Amber_014,Amber,210,6,0.43697556501923335,conditional_local
+Amber_015,Amber,210,6,0.1854197869363267,conditional_local
+Amber_016,Amber,11,6,0.15261437284924426,conditional_local
+Amber_017,Amber,43,210,0.4267482741603647,conditional_local
+Amber_018,Amber,19,210,0.05640199333822784,conditional_local
+Amber_019,Amber,32,6,0.07538941760344062,conditional_local
+Amber_020,Amber,11,32,0.06404024859174162,conditional_local
+Amber_021,Amber,128,210,0.10533364738973239,conditional_local
+Amber_022,Amber,43,92,0.25610891208416814,conditional_local
+Amber_023,Amber,6,11,0.07365851930779638,conditional_local
+Amber_024,Amber,210,128,0.1791434636329957,conditional_local
+Amber_025,Amber,92,63,0.09438901353779773,conditional_local
+Amber_026,Amber,32,6,0.11133094666807936,conditional_local
+Amber_027,Amber,19,6,0.21870469369656173,conditional_local
+Amber_028,Amber,11,32,0.43447609296573875,conditional_local
+Amber_029,Amber,32,210,0.012012193166821313,conditional_local
+Amber_030,Amber,32,63,0.600844676040092,conditional_local
+Amber_031,Amber,137,19,0.23939468267782546,conditional_local
+Amber_032,Amber,63,6,0.12431004741441182,conditional_local
+Amber_033,Amber,11,32,0.13039400368393425,conditional_local
+Amber_034,Amber,19,6,0.0434563728244383,conditional_local
+Amber_035,Amber,63,128,0.029001712106004798,conditional_local
+Amber_036,Amber,19,6,0.23103332886209377,conditional_local
+Amber_037,Amber,19,137,0.08661065729510807,conditional_local
+Amber_038,Amber,137,6,0.317105843979291,conditional_local
+Amber_039,Amber,92,63,0.08238290037139497,conditional_local
+Amber_040,Amber,43,63,0.1529447160530759,conditional_local
+Amber_041,Amber,210,137,0.295761395617688,conditional_local
+Amber_042,Amber,210,137,0.2726232668691569,conditional_local
+Amber_043,Amber,128,92,0.05497059631111207,conditional_local
+Amber_044,Amber,63,210,0.12586923691834773,conditional_local
+Amber_045,Amber,6,137,0.13090389023389182,conditional_local
+Amber_046,Amber,32,6,0.015009350143864324,conditional_local
+Amber_047,Amber,19,210,0.1526576768683328,conditional_local
+Amber_048,Amber,92,19,0.0780314927293009,conditional_local
+Amber_049,Amber,210,43,0.07408626412208022,conditional_local
+Amber_050,Amber,210,128,0.585787661673264,conditional_local
+Amber_051,Amber,43,128,0.3456498537783833,conditional_local
+Amber_052,Amber,128,137,0.10660362879681184,conditional_local
+Amber_053,Amber,32,11,0.008676814021595078,conditional_local
+Amber_054,Amber,32,63,0.02069505743580329,conditional_local
+Amber_055,Amber,63,92,0.2594277640428112,conditional_local
+Amber_056,Amber,11,6,0.02759657442650577,conditional_local
+Amber_057,Amber,43,137,0.04543503567783302,conditional_local
+Amber_058,Amber,210,6,0.13648072713459158,conditional_local
+Amber_059,Amber,92,43,0.5447473094690389,conditional_local
+Amber_060,Amber,6,137,0.008831451771990125,conditional_local
+Amber_061,Amber,210,19,0.06823246525223456,conditional_local
+Amber_062,Amber,128,92,0.07890017551071818,conditional_local
+Amber_063,Amber,6,11,0.1879258795835841,conditional_local
+Amber_064,Amber,32,63,0.04237363798482305,conditional_local
+Amber_065,Amber,128,137,0.4434290339097363,conditional_local
+Amber_066,Amber,6,128,0.3552720328449639,conditional_local
+Amber_067,Amber,128,6,0.22712172742900175,conditional_local
+Amber_068,Amber,63,128,0.19187043908198895,conditional_local
+Amber_069,Amber,32,6,0.23123633565344262,conditional_local
+Amber_070,Amber,210,43,0.04978376241706308,conditional_local
+Amber_071,Amber,43,210,0.25032360813285554,conditional_local
+Amber_072,Amber,32,210,0.16379553738066968,conditional_local
+Amber_073,Amber,43,92,0.04784456142080848,conditional_local
+Amber_074,Amber,92,43,0.06881838829225081,conditional_local
+Amber_075,Amber,32,63,0.23372268357035833,conditional_local
+Amber_076,Amber,128,210,0.07276068142417884,conditional_local
+Amber_077,Amber,137,210,0.06667482172847149,conditional_local
+Amber_078,Amber,11,210,0.011383246773293047,conditional_local
+Amber_079,Amber,92,63,0.3047484089053194,conditional_local
+Amber_080,Amber,6,137,0.07256408805547444,conditional_local
+Amber_081,Amber,32,6,0.24648061906822788,conditional_local
+Amber_082,Amber,43,137,0.5203910292031195,conditional_local
+Amber_083,Amber,19,6,0.11527399840665256,conditional_local
+Amber_084,Amber,92,63,0.225028779498738,conditional_local
+Amber_085,Amber,210,6,0.22781122099629628,conditional_local
+Amber_086,Amber,63,6,0.12023055821329011,conditional_local
+Amber_087,Amber,128,63,0.06239380963579601,conditional_local
+Amber_088,Amber,210,137,0.18931152548017882,conditional_local
+Amber_089,Amber,19,210,0.1867551593447535,conditional_local
+Amber_090,Amber,32,210,0.1267304287148368,conditional_local
+Amber_091,Amber,19,6,0.02945538801724467,conditional_local
+Amber_092,Amber,19,6,0.07466291804375601,conditional_local
+Amber_093,Amber,128,63,0.5166377485302359,conditional_local
+Amber_094,Amber,19,63,0.0882074376419898,conditional_local
+Amber_095,Amber,137,210,0.06283534084473004,conditional_local
+Amber_096,Amber,137,6,0.7752418198345933,conditional_local
+Amber_097,Amber,92,128,0.4036837071704622,conditional_local
+Amber_098,Amber,92,137,0.4345154036680443,conditional_local
+Amber_099,Amber,43,63,0.06804588470812623,conditional_local
+Blond_000,Blond,215,113,0.3145370291531766,conditional_local
+Blond_001,Blond,46,113,0.08234772225589745,conditional_local
+Blond_002,Blond,246,110,0.07536529099998934,conditional_local
+Blond_003,Blond,248,246,0.08270923743665488,conditional_local
+Blond_004,Blond,125,94,0.08342630535275532,conditional_local
+Blond_005,Blond,49,35,0.1472864307316928,conditional_local
+Blond_006,Blond,49,94,0.17094980489271605,conditional_local
+Blond_007,Blond,246,249,0.25305742190321007,conditional_local
+Blond_008,Blond,35,193,0.15517347137154403,conditional_local
+Blond_009,Blond,46,246,0.240796580121325,conditional_local
+Blond_010,Blond,73,94,0.6400733016282246,conditional_local
+Blond_011,Blond,64,35,0.04026554388580415,conditional_local
+Blond_012,Blond,249,35,0.08128102136772385,conditional_local
+Blond_013,Blond,59,113,0.32615405646263174,conditional_local
+Blond_014,Blond,215,121,0.1662644021345382,conditional_local
+Blond_015,Blond,73,110,0.17346125789092376,conditional_local
+Blond_016,Blond,64,238,0.3137933594617091,conditional_local
+Blond_017,Blond,70,121,0.49479686488756414,conditional_local
+Blond_018,Blond,70,3,0.02017723010797601,conditional_local
+Blond_019,Blond,101,3,0.28332227287363115,conditional_local
+Blond_020,Blond,149,94,0.03773432078731645,conditional_local
+Blond_021,Blond,125,215,0.28751789360875385,conditional_local
+Blond_022,Blond,238,35,0.059439604300718527,conditional_local
+Blond_023,Blond,248,110,0.13514025037702454,conditional_local
+Blond_024,Blond,3,110,0.3403387423786357,conditional_local
+Blond_025,Blond,101,234,0.08152210421472202,conditional_local
+Blond_026,Blond,3,248,0.14256229301601975,conditional_local
+Blond_027,Blond,71,94,0.1718297734830365,conditional_local
+Blond_028,Blond,113,121,0.13461367770220087,conditional_local
+Blond_029,Blond,3,110,0.42104729937360996,conditional_local
+Blond_030,Blond,110,125,0.19011719669624713,conditional_local
+Blond_031,Blond,110,94,0.2880375472481067,conditional_local
+Blond_032,Blond,101,121,0.09108553587691057,conditional_local
+Blond_033,Blond,249,94,0.24031570957546305,conditional_local
+Blond_034,Blond,73,110,0.11701454670825509,conditional_local
+Blond_035,Blond,3,113,0.23529962799369425,conditional_local
+Blond_036,Blond,110,246,0.3174172670958316,conditional_local
+Blond_037,Blond,238,249,0.34731655189159977,conditional_local
+Blond_038,Blond,35,238,0.06851053348886776,conditional_local
+Blond_039,Blond,215,113,0.06423405600252247,conditional_local
+Blond_040,Blond,234,101,0.1546855583616125,conditional_local
+Blond_041,Blond,94,215,0.08319483901563772,conditional_local
+Blond_042,Blond,113,110,0.1926323496376909,conditional_local
+Blond_043,Blond,101,113,0.24315089032048084,conditional_local
+Blond_044,Blond,101,121,0.35469032891254243,conditional_local
+Blond_045,Blond,101,76,0.0599536154866712,conditional_local
+Blond_046,Blond,246,94,0.08597415658830068,conditional_local
+Blond_047,Blond,77,35,0.11598405205547117,conditional_local
+Blond_048,Blond,113,121,0.47435297119770253,conditional_local
+Blond_049,Blond,94,110,0.29816727054573666,conditional_local
+Blond_050,Blond,71,46,0.10170280989136125,conditional_local
+Blond_051,Blond,125,215,0.200955847947724,conditional_local
+Blond_052,Blond,234,113,0.1987476172391757,conditional_local
+Blond_053,Blond,113,121,0.13411563254874315,conditional_local
+Blond_054,Blond,73,125,0.0879916897975004,conditional_local
+Blond_055,Blond,238,215,0.08894656562634723,conditional_local
+Blond_056,Blond,59,94,0.148880651425782,conditional_local
+Blond_057,Blond,193,110,0.3058933384224217,conditional_local
+Blond_058,Blond,94,215,0.35787192593754014,conditional_local
+Blond_059,Blond,46,110,0.033833844617610444,conditional_local
+Blond_060,Blond,215,125,0.03496976002210319,conditional_local
+Blond_061,Blond,59,125,0.09370071056120478,conditional_local
+Blond_062,Blond,110,215,0.10058754490240865,conditional_local
+Blond_063,Blond,248,110,0.26670233615962946,conditional_local
+Blond_064,Blond,113,3,0.2238756605542757,conditional_local
+Blond_065,Blond,193,246,0.18699201044346134,conditional_local
+Blond_066,Blond,215,125,0.0941454518323292,conditional_local
+Blond_067,Blond,64,46,0.6739306545443706,conditional_local
+Blond_068,Blond,70,3,0.0697288800515561,conditional_local
+Blond_069,Blond,94,110,0.0030167971217108596,conditional_local
+Blond_070,Blond,215,113,0.08301952999251629,conditional_local
+Blond_071,Blond,121,110,0.028281689389582396,conditional_local
+Blond_072,Blond,234,3,0.1546352046541492,conditional_local
+Blond_073,Blond,215,94,0.47448645987001276,conditional_local
+Blond_074,Blond,215,113,0.4704917956142659,conditional_local
+Blond_075,Blond,193,35,0.27861038648600633,conditional_local
+Blond_076,Blond,77,94,0.4583010579331224,conditional_local
+Blond_077,Blond,234,113,0.29069736172634053,conditional_local
+Blond_078,Blond,73,94,0.240102151033366,conditional_local
+Blond_079,Blond,35,238,0.09924392578778067,conditional_local
+Blond_080,Blond,46,94,0.38822128537899087,conditional_local
+Blond_081,Blond,238,215,0.4053617635244502,conditional_local
+Blond_082,Blond,193,110,0.1467114604110445,conditional_local
+Blond_083,Blond,76,3,0.13566565464023356,conditional_local
+Blond_084,Blond,76,49,0.13597844808655737,conditional_local
+Blond_085,Blond,35,246,0.013415175536850125,conditional_local
+Blond_086,Blond,248,110,0.19134477202668881,conditional_local
+Blond_087,Blond,46,110,0.05909385713594351,conditional_local
+Blond_088,Blond,64,110,0.18129438802104889,conditional_local
+Blond_089,Blond,193,238,0.17713113353094972,conditional_local
+Blond_090,Blond,77,49,0.08784298047802279,conditional_local
+Blond_091,Blond,71,248,0.6307132423851287,conditional_local
+Blond_092,Blond,71,3,0.0670624422818615,conditional_local
+Blond_093,Blond,246,94,0.012523851595840975,conditional_local
+Blond_094,Blond,71,94,0.2701005308139891,conditional_local
+Blond_095,Blond,49,94,0.056665086758595946,conditional_local
+Blond_096,Blond,246,110,0.3016601126725476,conditional_local
+Blond_097,Blond,248,3,0.2821104899180931,conditional_local
+Blond_098,Blond,46,246,0.8427726061919428,conditional_local
+Blond_099,Blond,70,110,0.35086989206469027,conditional_local
+Brett_cofermented_000,Brett/cofermented,122,150,0.21675590187572744,conditional_local
+Brett_cofermented_001,Brett/cofermented,203,236,0.022297457830698874,conditional_local
+Brett_cofermented_002,Brett/cofermented,222,236,0.7774976870780127,conditional_local
+Brett_cofermented_003,Brett/cofermented,122,236,0.09261979327199828,conditional_local
+Brett_cofermented_004,Brett/cofermented,222,150,0.09641179161297611,conditional_local
+Brett_cofermented_005,Brett/cofermented,236,122,0.26001766680694927,conditional_local
+Brett_cofermented_006,Brett/cofermented,122,150,0.07326232127684289,conditional_local
+Brett_cofermented_007,Brett/cofermented,203,150,0.4172397816917086,conditional_local
+Brett_cofermented_008,Brett/cofermented,203,122,0.24985729792865016,conditional_local
+Brett_cofermented_009,Brett/cofermented,236,222,0.3586551667101624,conditional_local
+Brett_cofermented_010,Brett/cofermented,122,150,0.14017467462227215,conditional_local
+Brett_cofermented_011,Brett/cofermented,122,222,0.27305056966323044,conditional_local
+Brett_cofermented_012,Brett/cofermented,222,122,0.5851290272939724,conditional_local
+Brett_cofermented_013,Brett/cofermented,222,150,0.4075763356052433,conditional_local
+Brett_cofermented_014,Brett/cofermented,222,150,0.24320057572606835,conditional_local
+Brett_cofermented_015,Brett/cofermented,203,222,0.19828083779021946,conditional_local
+Brett_cofermented_016,Brett/cofermented,203,150,0.08437385088956406,conditional_local
+Brett_cofermented_017,Brett/cofermented,122,150,0.05186476951111966,conditional_local
+Brett_cofermented_018,Brett/cofermented,203,222,0.09010122363693673,conditional_local
+Brett_cofermented_019,Brett/cofermented,122,203,0.010558732627956233,conditional_local
+Brett_cofermented_020,Brett/cofermented,222,150,0.1740477840705199,conditional_local
+Brett_cofermented_021,Brett/cofermented,150,203,0.037299390421421476,conditional_local
+Brett_cofermented_022,Brett/cofermented,122,203,0.2572963036767779,conditional_local
+Brett_cofermented_023,Brett/cofermented,236,203,0.39683360801729894,conditional_local
+Brett_cofermented_024,Brett/cofermented,222,122,0.093611111053416,conditional_local
+Brett_cofermented_025,Brett/cofermented,203,150,0.06901280602950427,conditional_local
+Brett_cofermented_026,Brett/cofermented,150,203,0.04564047968702144,conditional_local
+Brett_cofermented_027,Brett/cofermented,203,236,0.2005439422091953,conditional_local
+Brett_cofermented_028,Brett/cofermented,122,150,0.18966752129043055,conditional_local
+Brett_cofermented_029,Brett/cofermented,203,122,0.23153271086079616,conditional_local
+Brett_cofermented_030,Brett/cofermented,236,122,0.050246886952729816,conditional_local
+Brett_cofermented_031,Brett/cofermented,222,236,0.05857964705667693,conditional_local
+Brett_cofermented_032,Brett/cofermented,150,236,0.09435510989544235,conditional_local
+Brett_cofermented_033,Brett/cofermented,222,122,0.11276502666398083,conditional_local
+Brett_cofermented_034,Brett/cofermented,150,236,0.30439471953188085,conditional_local
+Brett_cofermented_035,Brett/cofermented,222,122,0.13802519735481072,conditional_local
+Brett_cofermented_036,Brett/cofermented,150,236,0.3172883114291686,conditional_local
+Brett_cofermented_037,Brett/cofermented,203,122,0.08468016830192285,conditional_local
+Brett_cofermented_038,Brett/cofermented,122,236,0.563365405609783,conditional_local
+Brett_cofermented_039,Brett/cofermented,122,222,0.11428425916993208,conditional_local
+Brett_cofermented_040,Brett/cofermented,150,222,0.25136159319339335,conditional_local
+Brett_cofermented_041,Brett/cofermented,236,122,0.33245504217038185,conditional_local
+Brett_cofermented_042,Brett/cofermented,236,222,0.07577606493191709,conditional_local
+Brett_cofermented_043,Brett/cofermented,236,203,0.01882777573346153,conditional_local
+Brett_cofermented_044,Brett/cofermented,150,122,0.12728410918937272,conditional_local
+Brett_cofermented_045,Brett/cofermented,122,222,0.23029350715024444,conditional_local
+Brett_cofermented_046,Brett/cofermented,236,203,0.21266460814947197,conditional_local
+Brett_cofermented_047,Brett/cofermented,222,122,0.1722741233252908,conditional_local
+Brett_cofermented_048,Brett/cofermented,150,122,0.09827874616050573,conditional_local
+Brett_cofermented_049,Brett/cofermented,150,203,0.06018741678604134,conditional_local
+Brett_cofermented_050,Brett/cofermented,122,150,0.05104143664112044,conditional_local
+Brett_cofermented_051,Brett/cofermented,236,222,0.3857092631322476,conditional_local
+Brett_cofermented_052,Brett/cofermented,150,203,0.2578558451080419,conditional_local
+Brett_cofermented_053,Brett/cofermented,236,222,0.26116898675344996,conditional_local
+Brett_cofermented_054,Brett/cofermented,203,236,0.3099225804452625,conditional_local
+Brett_cofermented_055,Brett/cofermented,236,122,0.08994083506308748,conditional_local
+Brett_cofermented_056,Brett/cofermented,236,150,0.03686358329579047,conditional_local
+Brett_cofermented_057,Brett/cofermented,122,236,0.0364776002065926,conditional_local
+Brett_cofermented_058,Brett/cofermented,236,222,0.003508071198920104,conditional_local
+Brett_cofermented_059,Brett/cofermented,150,236,0.09770563070305785,conditional_local
+Brett_cofermented_060,Brett/cofermented,122,150,0.049560898184476704,conditional_local
+Brett_cofermented_061,Brett/cofermented,122,222,0.09091646493688187,conditional_local
+Brett_cofermented_062,Brett/cofermented,150,222,0.0035797938463447017,conditional_local
+Brett_cofermented_063,Brett/cofermented,150,203,0.03576702128393778,conditional_local
+Brett_cofermented_064,Brett/cofermented,150,222,0.13210752097284723,conditional_local
+Brett_cofermented_065,Brett/cofermented,150,222,0.29025630516924844,conditional_local
+Brett_cofermented_066,Brett/cofermented,122,203,0.01762366615147874,conditional_local
+Brett_cofermented_067,Brett/cofermented,150,122,0.004052002691866542,conditional_local
+Brett_cofermented_068,Brett/cofermented,150,203,0.022169741366143848,conditional_local
+Brett_cofermented_069,Brett/cofermented,236,150,0.06342176597803975,conditional_local
+Brett_cofermented_070,Brett/cofermented,150,222,0.06385291504191727,conditional_local
+Brett_cofermented_071,Brett/cofermented,150,236,0.07783130216876163,conditional_local
+Brett_cofermented_072,Brett/cofermented,150,122,0.2533083849644453,conditional_local
+Brett_cofermented_073,Brett/cofermented,150,236,0.12086946003392797,conditional_local
+Brett_cofermented_074,Brett/cofermented,222,203,0.06495216844974475,conditional_local
+Brett_cofermented_075,Brett/cofermented,236,203,0.06616158010581338,conditional_local
+Brett_cofermented_076,Brett/cofermented,203,122,0.26730242878129984,conditional_local
+Brett_cofermented_077,Brett/cofermented,222,150,0.20385813149082896,conditional_local
+Brett_cofermented_078,Brett/cofermented,150,222,0.20291444538659845,conditional_local
+Brett_cofermented_079,Brett/cofermented,203,236,0.28331499301040897,conditional_local
+Brett_cofermented_080,Brett/cofermented,150,222,0.24042579732034486,conditional_local
+Brett_cofermented_081,Brett/cofermented,203,122,0.17020185401444315,conditional_local
+Brett_cofermented_082,Brett/cofermented,222,122,0.4932175602325544,conditional_local
+Brett_cofermented_083,Brett/cofermented,236,203,0.06457563886874561,conditional_local
+Brett_cofermented_084,Brett/cofermented,122,150,0.11928148090783995,conditional_local
+Brett_cofermented_085,Brett/cofermented,203,122,0.050983736190079815,conditional_local
+Brett_cofermented_086,Brett/cofermented,222,203,0.07014411553156588,conditional_local
+Brett_cofermented_087,Brett/cofermented,222,203,0.06488998730285638,conditional_local
+Brett_cofermented_088,Brett/cofermented,236,222,0.34604557653715934,conditional_local
+Brett_cofermented_089,Brett/cofermented,203,122,0.5248445615817917,conditional_local
+Brett_cofermented_090,Brett/cofermented,222,122,0.0354733359944933,conditional_local
+Brett_cofermented_091,Brett/cofermented,222,236,0.09902429345700924,conditional_local
+Brett_cofermented_092,Brett/cofermented,203,122,0.07541962522912128,conditional_local
+Brett_cofermented_093,Brett/cofermented,122,150,0.2004569804696338,conditional_local
+Brett_cofermented_094,Brett/cofermented,150,236,0.011520086839327828,conditional_local
+Brett_cofermented_095,Brett/cofermented,222,236,0.12299313766553131,conditional_local
+Brett_cofermented_096,Brett/cofermented,150,122,0.09574620064121542,conditional_local
+Brett_cofermented_097,Brett/cofermented,150,236,0.11140574396951256,conditional_local
+Brett_cofermented_098,Brett/cofermented,222,150,0.2366417746068177,conditional_local
+Brett_cofermented_099,Brett/cofermented,203,150,0.0871867471370124,conditional_local
+Brown_000,Brown,112,53,0.013755064953708391,conditional_local
+Brown_001,Brown,108,112,0.357808654645889,conditional_local
+Brown_002,Brown,109,237,0.2438019832211804,conditional_local
+Brown_003,Brown,109,78,0.20416877835043723,conditional_local
+Brown_004,Brown,53,78,0.06932544943710856,conditional_local
+Brown_005,Brown,109,98,0.08838158304566929,conditional_local
+Brown_006,Brown,108,25,0.03986976222162666,conditional_local
+Brown_007,Brown,108,206,0.007202550219470956,conditional_local
+Brown_008,Brown,237,25,0.28491102909694205,conditional_local
+Brown_009,Brown,89,237,0.1283002025139079,conditional_local
+Brown_010,Brown,53,206,0.07736345160043365,conditional_local
+Brown_011,Brown,108,206,0.000693948628663135,conditional_local
+Brown_012,Brown,206,112,0.05637900944955453,conditional_local
+Brown_013,Brown,206,25,0.13054006237965496,conditional_local
+Brown_014,Brown,108,25,0.07272287863694508,conditional_local
+Brown_015,Brown,98,206,0.03037265567450585,conditional_local
+Brown_016,Brown,25,108,0.4610526547934495,conditional_local
+Brown_017,Brown,25,108,0.11225337979629574,conditional_local
+Brown_018,Brown,108,78,0.4053019863588714,conditional_local
+Brown_019,Brown,89,25,0.3962125324095677,conditional_local
+Brown_020,Brown,237,78,0.1440032216492917,conditional_local
+Brown_021,Brown,78,25,0.25237864900797113,conditional_local
+Brown_022,Brown,206,237,0.2390809873559034,conditional_local
+Brown_023,Brown,89,109,0.536954804224491,conditional_local
+Brown_024,Brown,98,25,0.1176174720186352,conditional_local
+Brown_025,Brown,112,206,0.26363220623460154,conditional_local
+Brown_026,Brown,112,206,0.11261087170827334,conditional_local
+Brown_027,Brown,237,89,0.014943543150299275,conditional_local
+Brown_028,Brown,109,78,0.24180968329326022,conditional_local
+Brown_029,Brown,237,109,0.4796425266571373,conditional_local
+Brown_030,Brown,53,237,0.03794765529187442,conditional_local
+Brown_031,Brown,108,78,0.6437477045240905,conditional_local
+Brown_032,Brown,112,237,0.25558953658927525,conditional_local
+Brown_033,Brown,206,112,0.3483660809275545,conditional_local
+Brown_034,Brown,98,78,0.07480494005706241,conditional_local
+Brown_035,Brown,78,25,0.11659240870123579,conditional_local
+Brown_036,Brown,25,78,0.1151501723304116,conditional_local
+Brown_037,Brown,108,206,0.029715384258590872,conditional_local
+Brown_038,Brown,78,206,0.08978940621233701,conditional_local
+Brown_039,Brown,25,108,0.49588388411400547,conditional_local
+Brown_040,Brown,112,25,0.013590357879265661,conditional_local
+Brown_041,Brown,237,25,0.6096951905579356,conditional_local
+Brown_042,Brown,53,25,0.15290089550859937,conditional_local
+Brown_043,Brown,237,78,0.18576037946010604,conditional_local
+Brown_044,Brown,109,25,0.07571517317285084,conditional_local
+Brown_045,Brown,109,89,0.1325967611441126,conditional_local
+Brown_046,Brown,112,206,0.08912895304336796,conditional_local
+Brown_047,Brown,237,206,0.3734127366511679,conditional_local
+Brown_048,Brown,109,89,0.028717989199321142,conditional_local
+Brown_049,Brown,109,89,0.0022843610422670856,conditional_local
+Brown_050,Brown,112,206,0.3744925919827193,conditional_local
+Brown_051,Brown,78,206,0.16067965620910532,conditional_local
+Brown_052,Brown,53,112,0.33988791779360455,conditional_local
+Brown_053,Brown,109,89,0.1123630870682521,conditional_local
+Brown_054,Brown,109,25,0.02812031605437268,conditional_local
+Brown_055,Brown,53,112,0.0046746412984907115,conditional_local
+Brown_056,Brown,25,109,0.5480785909868316,conditional_local
+Brown_057,Brown,108,237,0.42916963726062557,conditional_local
+Brown_058,Brown,206,78,0.14347583668602604,conditional_local
+Brown_059,Brown,53,112,0.18618451559089003,conditional_local
+Brown_060,Brown,112,25,0.3399837308279266,conditional_local
+Brown_061,Brown,112,53,0.015958294459389396,conditional_local
+Brown_062,Brown,98,25,0.005278081381310117,conditional_local
+Brown_063,Brown,78,112,0.0009581162299363323,conditional_local
+Brown_064,Brown,89,109,0.08033802465566295,conditional_local
+Brown_065,Brown,78,206,0.12024326055466704,conditional_local
+Brown_066,Brown,109,78,0.05736566633182704,conditional_local
+Brown_067,Brown,98,108,0.0630561597006327,conditional_local
+Brown_068,Brown,53,112,0.5422719911621411,conditional_local
+Brown_069,Brown,108,206,0.05055046355281083,conditional_local
+Brown_070,Brown,237,109,0.29184466693374056,conditional_local
+Brown_071,Brown,237,25,0.18888607891973036,conditional_local
+Brown_072,Brown,53,78,0.3243263729698607,conditional_local
+Brown_073,Brown,89,237,0.0319414092025982,conditional_local
+Brown_074,Brown,89,78,0.09072580696769234,conditional_local
+Brown_075,Brown,53,206,0.15856077931474408,conditional_local
+Brown_076,Brown,25,89,0.1591191453940883,conditional_local
+Brown_077,Brown,108,112,0.18557156890783927,conditional_local
+Brown_078,Brown,78,206,0.023827606375500635,conditional_local
+Brown_079,Brown,108,78,0.5821992940063679,conditional_local
+Brown_080,Brown,89,78,0.012059564081287817,conditional_local
+Brown_081,Brown,78,112,0.45272794948677936,conditional_local
+Brown_082,Brown,78,237,0.1976888031064108,conditional_local
+Brown_083,Brown,237,109,0.36653855706279936,conditional_local
+Brown_084,Brown,112,237,0.003086274810649879,conditional_local
+Brown_085,Brown,25,78,0.02450606712795446,conditional_local
+Brown_086,Brown,206,78,0.08297471844996335,conditional_local
+Brown_087,Brown,206,53,0.07907703336575146,conditional_local
+Brown_088,Brown,237,109,0.2132394086866463,conditional_local
+Brown_089,Brown,206,112,0.209152037867127,conditional_local
+Brown_090,Brown,109,237,0.15031882748065553,conditional_local
+Brown_091,Brown,53,237,0.2667297575928054,conditional_local
+Brown_092,Brown,78,206,0.0781025397973814,conditional_local
+Brown_093,Brown,237,89,0.04606637405750381,conditional_local
+Brown_094,Brown,78,25,0.2570035144702037,conditional_local
+Brown_095,Brown,78,53,0.06339427252976483,conditional_local
+Brown_096,Brown,237,25,0.18738286821712605,conditional_local
+Brown_097,Brown,237,25,0.13522293192244103,conditional_local
+Brown_098,Brown,112,53,0.7140917758902442,conditional_local
+Brown_099,Brown,206,53,0.05433734835176064,conditional_local
+Brut_000,Brut,205,1,0.1315448005145215,conditional_local
+Brut_001,Brut,205,130,0.025995381762970598,conditional_local
+Brut_002,Brut,1,130,0.042877996452622476,conditional_local
+Brut_003,Brut,205,130,0.1750317899089028,conditional_local
+Brut_004,Brut,1,130,0.4439900545919379,conditional_local
+Brut_005,Brut,130,205,0.010284091377871162,conditional_local
+Brut_006,Brut,130,205,0.18956656229482646,conditional_local
+Brut_007,Brut,1,205,0.5824224175288922,conditional_local
+Brut_008,Brut,130,1,0.09667352345286474,conditional_local
+Brut_009,Brut,1,130,0.2434904062812586,conditional_local
+Brut_010,Brut,205,130,0.03378571819721583,conditional_local
+Brut_011,Brut,205,130,0.14795883023665396,conditional_local
+Brut_012,Brut,205,130,0.19763394277478727,conditional_local
+Brut_013,Brut,130,205,0.20012884310070533,conditional_local
+Brut_014,Brut,130,205,0.08260056357109108,conditional_local
+Brut_015,Brut,130,205,0.14163808166423697,conditional_local
+Brut_016,Brut,205,130,0.12449391267746553,conditional_local
+Brut_017,Brut,130,1,0.269824603910418,conditional_local
+Brut_018,Brut,130,205,0.2497217424459134,conditional_local
+Brut_019,Brut,130,1,0.03670476023579948,conditional_local
+Brut_020,Brut,130,205,0.2924905972356712,conditional_local
+Brut_021,Brut,130,205,0.04711039004072118,conditional_local
+Brut_022,Brut,205,130,0.020380999268605062,conditional_local
+Brut_023,Brut,130,1,0.06870027111129362,conditional_local
+Brut_024,Brut,205,130,0.5549750570043932,conditional_local
+Brut_025,Brut,205,1,0.1806059074517375,conditional_local
+Brut_026,Brut,130,205,0.3859327000036759,conditional_local
+Brut_027,Brut,205,1,0.19114403311344733,conditional_local
+Brut_028,Brut,1,205,0.08565498636592615,conditional_local
+Brut_029,Brut,205,130,0.035038411918780786,conditional_local
+Brut_030,Brut,1,130,0.018785804985702776,conditional_local
+Brut_031,Brut,130,1,0.19739206186383793,conditional_local
+Brut_032,Brut,1,205,0.043365325957876,conditional_local
+Brut_033,Brut,130,1,0.30463885234875393,conditional_local
+Brut_034,Brut,130,205,0.16484814613467857,conditional_local
+Brut_035,Brut,205,1,0.14644388501736127,conditional_local
+Brut_036,Brut,1,205,0.006917160650733727,conditional_local
+Brut_037,Brut,205,1,0.020291122627094614,conditional_local
+Brut_038,Brut,205,1,0.010613755250976506,conditional_local
+Brut_039,Brut,130,1,0.4498285078460461,conditional_local
+Brut_040,Brut,130,205,0.023158887445626084,conditional_local
+Brut_041,Brut,205,130,0.057005613681896425,conditional_local
+Brut_042,Brut,1,205,0.3406227282460001,conditional_local
+Brut_043,Brut,205,130,0.14814638187268453,conditional_local
+Brut_044,Brut,1,130,0.22747950109765414,conditional_local
+Brut_045,Brut,205,1,0.14145056797490174,conditional_local
+Brut_046,Brut,1,130,0.08295522557647825,conditional_local
+Brut_047,Brut,205,130,0.44659809127706473,conditional_local
+Brut_048,Brut,205,130,0.154919576070987,conditional_local
+Brut_049,Brut,1,205,0.2255124721540379,conditional_local
+Brut_050,Brut,130,1,0.050677790667175295,conditional_local
+Brut_051,Brut,130,1,0.2102709828945975,conditional_local
+Brut_052,Brut,1,205,0.1864796248026997,conditional_local
+Brut_053,Brut,130,205,0.5116133895482311,conditional_local
+Brut_054,Brut,205,130,0.18890152805245938,conditional_local
+Brut_055,Brut,1,130,0.17339567414686483,conditional_local
+Brut_056,Brut,205,130,0.45025540358933125,conditional_local
+Brut_057,Brut,205,130,0.015721888163231904,conditional_local
+Brut_058,Brut,130,1,0.41559118946369594,conditional_local
+Brut_059,Brut,130,1,0.12176576951782325,conditional_local
+Brut_060,Brut,130,1,0.01729700814983781,conditional_local
+Brut_061,Brut,1,205,0.36031476401039814,conditional_local
+Brut_062,Brut,130,205,0.35493745237586116,conditional_local
+Brut_063,Brut,205,1,0.028833747857049334,conditional_local
+Brut_064,Brut,1,205,0.3786030731370713,conditional_local
+Brut_065,Brut,205,1,0.0071348483075766396,conditional_local
+Brut_066,Brut,205,130,0.2099725481001625,conditional_local
+Brut_067,Brut,205,130,0.23175883649476509,conditional_local
+Brut_068,Brut,130,1,0.5047063893319929,conditional_local
+Brut_069,Brut,130,1,0.31142076670668173,conditional_local
+Brut_070,Brut,130,1,0.603441835233355,conditional_local
+Brut_071,Brut,205,130,0.3622700958781373,conditional_local
+Brut_072,Brut,205,1,0.45746054023284005,conditional_local
+Brut_073,Brut,130,205,0.16634641471085165,conditional_local
+Brut_074,Brut,205,130,0.0904988660675768,conditional_local
+Brut_075,Brut,130,205,0.1474420381712991,conditional_local
+Brut_076,Brut,130,1,0.23314909942009623,conditional_local
+Brut_077,Brut,1,205,0.017690487010992028,conditional_local
+Brut_078,Brut,130,1,0.01693416661777843,conditional_local
+Brut_079,Brut,130,205,0.33002366525276683,conditional_local
+Brut_080,Brut,205,1,0.07109070003667257,conditional_local
+Brut_081,Brut,205,1,0.22168499671117078,conditional_local
+Brut_082,Brut,1,205,0.10423253883141535,conditional_local
+Brut_083,Brut,130,205,0.019548875697822835,conditional_local
+Brut_084,Brut,205,130,0.21892078820820227,conditional_local
+Brut_085,Brut,130,1,0.255349395915851,conditional_local
+Brut_086,Brut,130,205,0.2640750562567121,conditional_local
+Brut_087,Brut,205,130,0.037290264665296315,conditional_local
+Brut_088,Brut,130,205,0.11682486769828786,conditional_local
+Brut_089,Brut,205,130,0.2153949578231901,conditional_local
+Brut_090,Brut,130,1,0.10236310312462445,conditional_local
+Brut_091,Brut,1,130,0.14908298199588974,conditional_local
+Brut_092,Brut,130,205,0.4974960928237374,conditional_local
+Brut_093,Brut,205,130,0.04453142828617991,conditional_local
+Brut_094,Brut,130,205,0.07398867731442663,conditional_local
+Brut_095,Brut,205,130,0.2833173667743186,conditional_local
+Brut_096,Brut,1,205,0.15424413110401264,conditional_local
+Brut_097,Brut,205,130,0.2453825139598927,conditional_local
+Brut_098,Brut,1,130,0.14198823770704205,conditional_local
+Brut_099,Brut,205,1,0.25956465208234236,conditional_local
+Christmas_000,Christmas,181,38,0.1855896511512561,conditional_local
+Christmas_001,Christmas,38,60,0.2883827237567992,conditional_local
+Christmas_002,Christmas,102,180,0.12190779296343766,conditional_local
+Christmas_003,Christmas,106,60,0.023499160848875142,conditional_local
+Christmas_004,Christmas,38,60,0.7778291150663846,conditional_local
+Christmas_005,Christmas,180,38,0.09648395364190314,conditional_local
+Christmas_006,Christmas,106,180,0.018212934413193847,conditional_local
+Christmas_007,Christmas,214,106,0.21013292387827437,conditional_local
+Christmas_008,Christmas,181,60,0.11635369143120032,conditional_local
+Christmas_009,Christmas,106,214,0.02978417144848902,conditional_local
+Christmas_010,Christmas,60,38,0.16659502575141533,conditional_local
+Christmas_011,Christmas,106,60,0.00658881596504702,conditional_local
+Christmas_012,Christmas,38,180,0.6596747164292665,conditional_local
+Christmas_013,Christmas,106,180,0.3461882867276129,conditional_local
+Christmas_014,Christmas,214,106,0.01463919443183144,conditional_local
+Christmas_015,Christmas,180,214,0.03742092175703431,conditional_local
+Christmas_016,Christmas,181,106,0.49707533319925185,conditional_local
+Christmas_017,Christmas,214,38,0.28755969680793275,conditional_local
+Christmas_018,Christmas,38,180,0.04421386579572614,conditional_local
+Christmas_019,Christmas,106,60,0.0729226880012824,conditional_local
+Christmas_020,Christmas,106,180,0.07904730639297097,conditional_local
+Christmas_021,Christmas,106,102,0.3358975785928597,conditional_local
+Christmas_022,Christmas,181,180,0.18399658848125847,conditional_local
+Christmas_023,Christmas,180,38,0.32838450456708296,conditional_local
+Christmas_024,Christmas,106,60,0.2941520385533026,conditional_local
+Christmas_025,Christmas,60,102,0.3406165460377204,conditional_local
+Christmas_026,Christmas,180,106,0.320356158202801,conditional_local
+Christmas_027,Christmas,214,60,0.05918923498978162,conditional_local
+Christmas_028,Christmas,102,60,0.1809720238908403,conditional_local
+Christmas_029,Christmas,38,180,0.008935624313366109,conditional_local
+Christmas_030,Christmas,38,106,0.13262051140372388,conditional_local
+Christmas_031,Christmas,214,180,0.3072119297163717,conditional_local
+Christmas_032,Christmas,180,38,0.057486029188145826,conditional_local
+Christmas_033,Christmas,38,106,0.21732664167564486,conditional_local
+Christmas_034,Christmas,214,60,0.04647848505790566,conditional_local
+Christmas_035,Christmas,180,106,0.01745696100809259,conditional_local
+Christmas_036,Christmas,180,102,0.00819448562647999,conditional_local
+Christmas_037,Christmas,214,102,0.05332970788613566,conditional_local
+Christmas_038,Christmas,180,214,0.23800481410106952,conditional_local
+Christmas_039,Christmas,60,102,0.07275675168216007,conditional_local
+Christmas_040,Christmas,38,106,0.1908685063633897,conditional_local
+Christmas_041,Christmas,106,102,0.408286823880486,conditional_local
+Christmas_042,Christmas,181,60,0.012318557946329573,conditional_local
+Christmas_043,Christmas,181,106,0.19262503650849488,conditional_local
+Christmas_044,Christmas,181,60,0.05671712195851748,conditional_local
+Christmas_045,Christmas,106,60,0.12012339395610308,conditional_local
+Christmas_046,Christmas,180,214,0.3879395630268487,conditional_local
+Christmas_047,Christmas,38,180,0.3065554359720037,conditional_local
+Christmas_048,Christmas,60,214,0.017538214609848193,conditional_local
+Christmas_049,Christmas,181,60,0.22574512155476764,conditional_local
+Christmas_050,Christmas,38,180,0.27447367408682843,conditional_local
+Christmas_051,Christmas,38,214,0.2981029872741537,conditional_local
+Christmas_052,Christmas,180,38,0.017998530040382352,conditional_local
+Christmas_053,Christmas,102,180,0.15214661736712518,conditional_local
+Christmas_054,Christmas,181,180,0.3077390768317132,conditional_local
+Christmas_055,Christmas,180,102,0.09830813075984482,conditional_local
+Christmas_056,Christmas,181,38,0.386067831688199,conditional_local
+Christmas_057,Christmas,214,180,0.162770795284618,conditional_local
+Christmas_058,Christmas,181,60,0.06548153417164886,conditional_local
+Christmas_059,Christmas,60,106,0.11720935715842686,conditional_local
+Christmas_060,Christmas,214,102,0.09329034792374918,conditional_local
+Christmas_061,Christmas,180,106,0.0811943977015799,conditional_local
+Christmas_062,Christmas,38,106,0.22817621399174337,conditional_local
+Christmas_063,Christmas,181,38,0.19745148005763888,conditional_local
+Christmas_064,Christmas,38,60,0.0032580404804581123,conditional_local
+Christmas_065,Christmas,38,102,0.13592377170677875,conditional_local
+Christmas_066,Christmas,38,106,0.011012061638002509,conditional_local
+Christmas_067,Christmas,214,60,0.03472853882507404,conditional_local
+Christmas_068,Christmas,181,102,0.0008224565494908883,conditional_local
+Christmas_069,Christmas,106,102,0.1380016275739448,conditional_local
+Christmas_070,Christmas,102,214,0.05314924739822402,conditional_local
+Christmas_071,Christmas,180,38,0.19790879701856554,conditional_local
+Christmas_072,Christmas,214,106,0.061680083809049616,conditional_local
+Christmas_073,Christmas,181,106,0.5687982178274542,conditional_local
+Christmas_074,Christmas,180,60,0.054657644045833516,conditional_local
+Christmas_075,Christmas,60,180,0.03248713354055454,conditional_local
+Christmas_076,Christmas,214,102,0.19311510382832003,conditional_local
+Christmas_077,Christmas,180,38,0.5417901755636546,conditional_local
+Christmas_078,Christmas,106,60,0.09572265597013113,conditional_local
+Christmas_079,Christmas,60,106,0.24686184281188364,conditional_local
+Christmas_080,Christmas,38,106,0.015094326197214384,conditional_local
+Christmas_081,Christmas,106,180,0.13953355618736157,conditional_local
+Christmas_082,Christmas,102,60,0.07270110133500024,conditional_local
+Christmas_083,Christmas,180,214,0.25912265461217204,conditional_local
+Christmas_084,Christmas,106,60,0.12379469952781841,conditional_local
+Christmas_085,Christmas,60,106,0.10102908319469787,conditional_local
+Christmas_086,Christmas,38,60,0.3200117858334215,conditional_local
+Christmas_087,Christmas,181,60,0.18269849125899398,conditional_local
+Christmas_088,Christmas,60,106,0.12680895458936622,conditional_local
+Christmas_089,Christmas,60,106,0.010764974440064743,conditional_local
+Christmas_090,Christmas,102,60,0.2209311223458575,conditional_local
+Christmas_091,Christmas,214,180,0.1704268457109078,conditional_local
+Christmas_092,Christmas,214,38,0.02669957888023258,conditional_local
+Christmas_093,Christmas,60,180,0.19654194288373128,conditional_local
+Christmas_094,Christmas,214,180,0.07405875459553053,conditional_local
+Christmas_095,Christmas,38,60,0.044063951357840504,conditional_local
+Christmas_096,Christmas,60,106,0.049864206112141936,conditional_local
+Christmas_097,Christmas,106,180,0.20973248798765454,conditional_local
+Christmas_098,Christmas,38,214,0.46903833234102926,conditional_local
+Christmas_099,Christmas,180,60,0.09806054111618841,conditional_local
+Dubbel_000,Dubbel,48,198,0.5035819749701607,conditional_local
+Dubbel_001,Dubbel,174,198,0.022985804624868454,conditional_local
+Dubbel_002,Dubbel,111,187,0.16941085389164748,conditional_local
+Dubbel_003,Dubbel,187,194,0.007392754584807211,conditional_local
+Dubbel_004,Dubbel,194,100,0.033832188294720136,conditional_local
+Dubbel_005,Dubbel,194,111,0.1780897815804386,conditional_local
+Dubbel_006,Dubbel,111,198,0.2753698349122871,conditional_local
+Dubbel_007,Dubbel,16,174,0.34546471240190657,conditional_local
+Dubbel_008,Dubbel,100,48,0.06326483781657942,conditional_local
+Dubbel_009,Dubbel,198,48,0.010383578047236807,conditional_local
+Dubbel_010,Dubbel,174,100,0.2678713605189077,conditional_local
+Dubbel_011,Dubbel,194,100,0.21419236174597187,conditional_local
+Dubbel_012,Dubbel,111,194,0.10191595107931287,conditional_local
+Dubbel_013,Dubbel,100,187,0.06295379928780209,conditional_local
+Dubbel_014,Dubbel,16,187,0.27042794476882887,conditional_local
+Dubbel_015,Dubbel,100,174,0.005833290805404308,conditional_local
+Dubbel_016,Dubbel,194,187,0.13784295738107546,conditional_local
+Dubbel_017,Dubbel,187,48,0.15297615203354775,conditional_local
+Dubbel_018,Dubbel,194,100,0.20583365674602735,conditional_local
+Dubbel_019,Dubbel,100,48,0.1963690340175361,conditional_local
+Dubbel_020,Dubbel,111,198,0.2557978648422066,conditional_local
+Dubbel_021,Dubbel,48,198,0.1486253693617911,conditional_local
+Dubbel_022,Dubbel,174,16,0.06823312923472849,conditional_local
+Dubbel_023,Dubbel,48,111,0.534491003049605,conditional_local
+Dubbel_024,Dubbel,194,111,0.2863462467534547,conditional_local
+Dubbel_025,Dubbel,174,48,0.2558589604130838,conditional_local
+Dubbel_026,Dubbel,100,198,0.4972600566868014,conditional_local
+Dubbel_027,Dubbel,48,187,0.09220056391495489,conditional_local
+Dubbel_028,Dubbel,111,198,0.27627204324930776,conditional_local
+Dubbel_029,Dubbel,48,174,0.21056733502101313,conditional_local
+Dubbel_030,Dubbel,174,16,0.0446911360807535,conditional_local
+Dubbel_031,Dubbel,187,174,0.1214202958129017,conditional_local
+Dubbel_032,Dubbel,16,187,0.0754563753784071,conditional_local
+Dubbel_033,Dubbel,100,111,0.136949251143301,conditional_local
+Dubbel_034,Dubbel,100,111,0.01836836657139436,conditional_local
+Dubbel_035,Dubbel,174,100,0.13401324395523903,conditional_local
+Dubbel_036,Dubbel,16,198,0.505611127679471,conditional_local
+Dubbel_037,Dubbel,174,16,0.02748455678763358,conditional_local
+Dubbel_038,Dubbel,194,198,0.3004999268612808,conditional_local
+Dubbel_039,Dubbel,187,111,0.021976930387583846,conditional_local
+Dubbel_040,Dubbel,198,100,0.3370609606826536,conditional_local
+Dubbel_041,Dubbel,187,100,0.053697592443659375,conditional_local
+Dubbel_042,Dubbel,100,48,0.0007839485726502674,conditional_local
+Dubbel_043,Dubbel,187,111,0.22789934955371274,conditional_local
+Dubbel_044,Dubbel,198,48,0.13090745570653853,conditional_local
+Dubbel_045,Dubbel,48,198,0.2630493225705067,conditional_local
+Dubbel_046,Dubbel,194,187,0.042684214065041186,conditional_local
+Dubbel_047,Dubbel,194,198,0.04132162044694837,conditional_local
+Dubbel_048,Dubbel,48,174,0.039136253478057076,conditional_local
+Dubbel_049,Dubbel,48,187,0.055473608958967906,conditional_local
+Dubbel_050,Dubbel,187,194,0.5717067379493803,conditional_local
+Dubbel_051,Dubbel,48,198,0.07468631277311999,conditional_local
+Dubbel_052,Dubbel,194,174,0.3577096679498939,conditional_local
+Dubbel_053,Dubbel,198,48,0.0746425031727097,conditional_local
+Dubbel_054,Dubbel,16,100,0.5410926650437151,conditional_local
+Dubbel_055,Dubbel,48,198,0.2309590751288055,conditional_local
+Dubbel_056,Dubbel,187,48,0.012854875161682558,conditional_local
+Dubbel_057,Dubbel,48,198,0.2634904035171204,conditional_local
+Dubbel_058,Dubbel,187,194,0.08116844998484306,conditional_local
+Dubbel_059,Dubbel,187,111,0.15668046078848277,conditional_local
+Dubbel_060,Dubbel,16,198,0.37258979518799734,conditional_local
+Dubbel_061,Dubbel,187,174,0.3539532016597691,conditional_local
+Dubbel_062,Dubbel,174,16,0.45729603254568707,conditional_local
+Dubbel_063,Dubbel,100,111,0.2246612567087408,conditional_local
+Dubbel_064,Dubbel,48,198,0.09710298772569474,conditional_local
+Dubbel_065,Dubbel,48,111,0.052176901937490666,conditional_local
+Dubbel_066,Dubbel,194,174,0.007461598775370617,conditional_local
+Dubbel_067,Dubbel,100,187,0.14122805483448225,conditional_local
+Dubbel_068,Dubbel,48,187,0.31265504743935274,conditional_local
+Dubbel_069,Dubbel,100,48,0.045858930374785715,conditional_local
+Dubbel_070,Dubbel,174,198,0.0799872780536415,conditional_local
+Dubbel_071,Dubbel,16,198,0.027489870572387016,conditional_local
+Dubbel_072,Dubbel,48,100,0.04806881945775917,conditional_local
+Dubbel_073,Dubbel,174,187,0.3174072049781161,conditional_local
+Dubbel_074,Dubbel,100,198,0.12366453008557327,conditional_local
+Dubbel_075,Dubbel,187,48,0.28227313289110495,conditional_local
+Dubbel_076,Dubbel,194,187,0.29429909216070105,conditional_local
+Dubbel_077,Dubbel,187,111,0.4573808762694325,conditional_local
+Dubbel_078,Dubbel,16,198,0.3604717791853958,conditional_local
+Dubbel_079,Dubbel,111,187,0.12393271747783188,conditional_local
+Dubbel_080,Dubbel,198,111,0.32614949893801143,conditional_local
+Dubbel_081,Dubbel,111,187,0.08089430985018317,conditional_local
+Dubbel_082,Dubbel,111,187,0.07977345655887973,conditional_local
+Dubbel_083,Dubbel,100,48,0.25774988572168017,conditional_local
+Dubbel_084,Dubbel,187,174,0.07992422283887866,conditional_local
+Dubbel_085,Dubbel,48,187,0.1177146312965848,conditional_local
+Dubbel_086,Dubbel,111,174,0.06366261706373062,conditional_local
+Dubbel_087,Dubbel,187,111,0.01917907688155821,conditional_local
+Dubbel_088,Dubbel,111,198,0.10549335091900743,conditional_local
+Dubbel_089,Dubbel,198,111,0.10911534853162409,conditional_local
+Dubbel_090,Dubbel,194,174,0.002983096590229956,conditional_local
+Dubbel_091,Dubbel,100,174,0.08727669426898914,conditional_local
+Dubbel_092,Dubbel,174,198,0.28505777882916994,conditional_local
+Dubbel_093,Dubbel,194,100,0.17729838750511248,conditional_local
+Dubbel_094,Dubbel,48,187,0.2612314961439369,conditional_local
+Dubbel_095,Dubbel,194,198,0.14316440703207958,conditional_local
+Dubbel_096,Dubbel,174,187,0.26909460810869584,conditional_local
+Dubbel_097,Dubbel,194,174,0.14702570368673074,conditional_local
+Dubbel_098,Dubbel,174,16,0.20693019201973017,conditional_local
+Dubbel_099,Dubbel,187,174,0.12585601464174456,conditional_local
+Faro_000,Faro,74,250,0.016639981548925126,conditional_local
+Faro_001,Faro,74,250,0.20679609504783278,conditional_local
+Faro_002,Faro,74,250,0.21606112916430142,conditional_local
+Faro_003,Faro,250,74,0.0002495189248777086,conditional_local
+Faro_004,Faro,250,74,0.6328603023450903,conditional_local
+Faro_005,Faro,250,74,0.16761463096037185,conditional_local
+Faro_006,Faro,74,250,0.021527399203449323,conditional_local
+Faro_007,Faro,250,74,0.39669727825562157,conditional_local
+Faro_008,Faro,74,250,0.09880310555664157,conditional_local
+Faro_009,Faro,250,74,0.24265918070411313,conditional_local
+Faro_010,Faro,74,250,0.0033471529840186417,conditional_local
+Faro_011,Faro,74,250,0.2611662540696352,conditional_local
+Faro_012,Faro,250,74,0.16485776743562183,conditional_local
+Faro_013,Faro,250,74,0.5327456133623358,conditional_local
+Faro_014,Faro,74,250,0.03738002162720818,conditional_local
+Faro_015,Faro,250,74,0.022547902082997864,conditional_local
+Faro_016,Faro,250,74,0.5253566789858691,conditional_local
+Faro_017,Faro,250,74,0.12363120364355279,conditional_local
+Faro_018,Faro,74,250,0.2338901883506249,conditional_local
+Faro_019,Faro,250,74,0.05331751387936653,conditional_local
+Faro_020,Faro,250,74,0.031137689796191966,conditional_local
+Faro_021,Faro,74,250,0.20130898254992546,conditional_local
+Faro_022,Faro,250,74,0.05557282415586975,conditional_local
+Faro_023,Faro,250,74,0.019028286816029222,conditional_local
+Faro_024,Faro,250,74,0.4801510190428608,conditional_local
+Faro_025,Faro,250,74,0.10377703737927224,conditional_local
+Faro_026,Faro,250,74,0.0802646527961537,conditional_local
+Faro_027,Faro,250,74,0.17975969243137874,conditional_local
+Faro_028,Faro,250,74,0.09388658585501267,conditional_local
+Faro_029,Faro,74,250,0.04048694433462515,conditional_local
+Faro_030,Faro,250,74,0.05611942400693051,conditional_local
+Faro_031,Faro,74,250,0.10878779297288459,conditional_local
+Faro_032,Faro,74,250,0.05778974042123174,conditional_local
+Faro_033,Faro,74,250,0.0005370264156983552,conditional_local
+Faro_034,Faro,74,250,0.15038631772716266,conditional_local
+Faro_035,Faro,250,74,0.5225405816229857,conditional_local
+Faro_036,Faro,74,250,0.29292599222195675,conditional_local
+Faro_037,Faro,250,74,0.01614077236873228,conditional_local
+Faro_038,Faro,250,74,0.21439141484637025,conditional_local
+Faro_039,Faro,74,250,0.23656360222249756,conditional_local
+Faro_040,Faro,250,74,0.2910647072893704,conditional_local
+Faro_041,Faro,250,74,0.03490929328541311,conditional_local
+Faro_042,Faro,250,74,0.15763827337712435,conditional_local
+Faro_043,Faro,250,74,0.05157304707990923,conditional_local
+Faro_044,Faro,250,74,0.04886283745811211,conditional_local
+Faro_045,Faro,74,250,0.2682163474525991,conditional_local
+Faro_046,Faro,74,250,0.5517352158684692,conditional_local
+Faro_047,Faro,250,74,0.2165360408709039,conditional_local
+Faro_048,Faro,74,250,0.20235800827878134,conditional_local
+Faro_049,Faro,250,74,0.04657204589893328,conditional_local
+Faro_050,Faro,74,250,0.020369241163688687,conditional_local
+Faro_051,Faro,74,250,0.4981718574614626,conditional_local
+Faro_052,Faro,74,250,0.010071096936206237,conditional_local
+Faro_053,Faro,250,74,0.0647905549376717,conditional_local
+Faro_054,Faro,250,74,0.0822183556535431,conditional_local
+Faro_055,Faro,250,74,0.24298232031344769,conditional_local
+Faro_056,Faro,74,250,0.20419181595925212,conditional_local
+Faro_057,Faro,250,74,0.12099761571270305,conditional_local
+Faro_058,Faro,250,74,0.5956868583807432,conditional_local
+Faro_059,Faro,74,250,0.09751292646687594,conditional_local
+Faro_060,Faro,74,250,0.07989384851931035,conditional_local
+Faro_061,Faro,250,74,0.6634192564473618,conditional_local
+Faro_062,Faro,250,74,0.13679224339088103,conditional_local
+Faro_063,Faro,250,74,0.11149646216139165,conditional_local
+Faro_064,Faro,250,74,0.2508560180838544,conditional_local
+Faro_065,Faro,74,250,0.24840999857230495,conditional_local
+Faro_066,Faro,250,74,0.4226275387838971,conditional_local
+Faro_067,Faro,74,250,0.15508000666741914,conditional_local
+Faro_068,Faro,250,74,0.0577216390163474,conditional_local
+Faro_069,Faro,74,250,0.22649047747167186,conditional_local
+Faro_070,Faro,74,250,0.20061293843672356,conditional_local
+Faro_071,Faro,250,74,0.05054233123027566,conditional_local
+Faro_072,Faro,250,74,0.6963014918742217,conditional_local
+Faro_073,Faro,250,74,0.16429696994482992,conditional_local
+Faro_074,Faro,250,74,0.03744397053945557,conditional_local
+Faro_075,Faro,74,250,0.29267754514348426,conditional_local
+Faro_076,Faro,250,74,0.24281300885648535,conditional_local
+Faro_077,Faro,74,250,0.5042127930974024,conditional_local
+Faro_078,Faro,250,74,0.2396791295129508,conditional_local
+Faro_079,Faro,250,74,0.4139871914413151,conditional_local
+Faro_080,Faro,74,250,0.07791816273039395,conditional_local
+Faro_081,Faro,74,250,0.0531540183582957,conditional_local
+Faro_082,Faro,74,250,0.22968569267750563,conditional_local
+Faro_083,Faro,250,74,0.130227796279932,conditional_local
+Faro_084,Faro,74,250,0.2355114228724596,conditional_local
+Faro_085,Faro,74,250,0.34679549841327906,conditional_local
+Faro_086,Faro,250,74,0.04865892861153453,conditional_local
+Faro_087,Faro,74,250,0.35355882915351594,conditional_local
+Faro_088,Faro,74,250,0.11053942330866168,conditional_local
+Faro_089,Faro,250,74,0.22879939003101998,conditional_local
+Faro_090,Faro,74,250,0.2848059952919049,conditional_local
+Faro_091,Faro,74,250,0.1678317503138315,conditional_local
+Faro_092,Faro,250,74,0.26474005139506673,conditional_local
+Faro_093,Faro,74,250,0.2547591393159869,conditional_local
+Faro_094,Faro,250,74,0.059357195293166416,conditional_local
+Faro_095,Faro,250,74,0.06771073428029346,conditional_local
+Faro_096,Faro,250,74,0.575829916341751,conditional_local
+Faro_097,Faro,250,74,0.15137228166346217,conditional_local
+Faro_098,Faro,74,250,0.07488296287913451,conditional_local
+Faro_099,Faro,74,250,0.04506863464243339,conditional_local
+Flanders old brown_000,Flanders old brown,190,159,0.1660034768707619,conditional_local
+Flanders old brown_001,Flanders old brown,190,159,0.018360393644351627,conditional_local
+Flanders old brown_002,Flanders old brown,161,159,0.19741098756150777,conditional_local
+Flanders old brown_003,Flanders old brown,159,161,0.48424734546783404,conditional_local
+Flanders old brown_004,Flanders old brown,167,159,0.17163338628341887,conditional_local
+Flanders old brown_005,Flanders old brown,190,167,0.0613138991427233,conditional_local
+Flanders old brown_006,Flanders old brown,167,159,0.30026443050560114,conditional_local
+Flanders old brown_007,Flanders old brown,161,190,0.15021409603214148,conditional_local
+Flanders old brown_008,Flanders old brown,159,161,0.47176146108059824,conditional_local
+Flanders old brown_009,Flanders old brown,159,161,0.7344741434596745,conditional_local
+Flanders old brown_010,Flanders old brown,167,190,0.15082816889141518,conditional_local
+Flanders old brown_011,Flanders old brown,190,161,0.02464764077379937,conditional_local
+Flanders old brown_012,Flanders old brown,167,161,0.02234269293425296,conditional_local
+Flanders old brown_013,Flanders old brown,190,167,0.27471719903912406,conditional_local
+Flanders old brown_014,Flanders old brown,167,159,0.21747583526921968,conditional_local
+Flanders old brown_015,Flanders old brown,159,190,0.048753442475964734,conditional_local
+Flanders old brown_016,Flanders old brown,161,190,0.05106530388524903,conditional_local
+Flanders old brown_017,Flanders old brown,161,167,0.27086696597921706,conditional_local
+Flanders old brown_018,Flanders old brown,190,167,0.0008660440244360334,conditional_local
+Flanders old brown_019,Flanders old brown,167,161,0.08256964585378126,conditional_local
+Flanders old brown_020,Flanders old brown,159,190,0.03152731498451387,conditional_local
+Flanders old brown_021,Flanders old brown,167,159,0.1094280900326839,conditional_local
+Flanders old brown_022,Flanders old brown,159,161,0.127859435030381,conditional_local
+Flanders old brown_023,Flanders old brown,167,161,0.05523976086720826,conditional_local
+Flanders old brown_024,Flanders old brown,167,190,0.25489167026359755,conditional_local
+Flanders old brown_025,Flanders old brown,161,190,0.07904658738798286,conditional_local
+Flanders old brown_026,Flanders old brown,159,190,0.3711018707577675,conditional_local
+Flanders old brown_027,Flanders old brown,161,167,0.050556693994320764,conditional_local
+Flanders old brown_028,Flanders old brown,167,159,0.011146938602757676,conditional_local
+Flanders old brown_029,Flanders old brown,159,161,0.1432083437700159,conditional_local
+Flanders old brown_030,Flanders old brown,161,190,0.2674188708348212,conditional_local
+Flanders old brown_031,Flanders old brown,159,161,0.5142571064663414,conditional_local
+Flanders old brown_032,Flanders old brown,161,159,0.18523995074473312,conditional_local
+Flanders old brown_033,Flanders old brown,159,190,0.08627618659209474,conditional_local
+Flanders old brown_034,Flanders old brown,161,190,0.22224837979902948,conditional_local
+Flanders old brown_035,Flanders old brown,161,167,0.32282521406087505,conditional_local
+Flanders old brown_036,Flanders old brown,167,159,0.015571923278327628,conditional_local
+Flanders old brown_037,Flanders old brown,190,159,0.025172131800072294,conditional_local
+Flanders old brown_038,Flanders old brown,167,190,0.39992392607032456,conditional_local
+Flanders old brown_039,Flanders old brown,190,159,0.23108614010997605,conditional_local
+Flanders old brown_040,Flanders old brown,190,161,0.09635769856536718,conditional_local
+Flanders old brown_041,Flanders old brown,190,159,0.22143477627608843,conditional_local
+Flanders old brown_042,Flanders old brown,190,161,0.117635553782474,conditional_local
+Flanders old brown_043,Flanders old brown,190,161,0.5547878197626649,conditional_local
+Flanders old brown_044,Flanders old brown,167,161,0.0905770123752128,conditional_local
+Flanders old brown_045,Flanders old brown,167,161,0.5182688922109017,conditional_local
+Flanders old brown_046,Flanders old brown,159,190,0.3647880957857867,conditional_local
+Flanders old brown_047,Flanders old brown,190,161,0.34395851055574167,conditional_local
+Flanders old brown_048,Flanders old brown,167,161,0.0021431731096756596,conditional_local
+Flanders old brown_049,Flanders old brown,159,190,0.021714975718136097,conditional_local
+Flanders old brown_050,Flanders old brown,159,190,0.15902686337469296,conditional_local
+Flanders old brown_051,Flanders old brown,167,161,0.19660975909320935,conditional_local
+Flanders old brown_052,Flanders old brown,161,190,0.10188200145135755,conditional_local
+Flanders old brown_053,Flanders old brown,161,167,0.3148129165980116,conditional_local
+Flanders old brown_054,Flanders old brown,167,161,0.11353105750859827,conditional_local
+Flanders old brown_055,Flanders old brown,159,190,0.1176235442902021,conditional_local
+Flanders old brown_056,Flanders old brown,159,167,0.19750402468016223,conditional_local
+Flanders old brown_057,Flanders old brown,159,161,0.554250615762115,conditional_local
+Flanders old brown_058,Flanders old brown,167,161,0.21305261481472934,conditional_local
+Flanders old brown_059,Flanders old brown,161,167,0.2073344926789326,conditional_local
+Flanders old brown_060,Flanders old brown,190,159,0.1652253078036327,conditional_local
+Flanders old brown_061,Flanders old brown,161,190,0.4237192465038777,conditional_local
+Flanders old brown_062,Flanders old brown,159,161,0.12317732461452677,conditional_local
+Flanders old brown_063,Flanders old brown,167,159,0.38498539300914103,conditional_local
+Flanders old brown_064,Flanders old brown,161,159,0.004582948228222249,conditional_local
+Flanders old brown_065,Flanders old brown,159,161,0.20022662485261825,conditional_local
+Flanders old brown_066,Flanders old brown,167,161,0.0005125280838303917,conditional_local
+Flanders old brown_067,Flanders old brown,167,159,0.6884859078674763,conditional_local
+Flanders old brown_068,Flanders old brown,167,190,0.16643702943257643,conditional_local
+Flanders old brown_069,Flanders old brown,167,159,0.13228802060767514,conditional_local
+Flanders old brown_070,Flanders old brown,159,161,0.43215914270266154,conditional_local
+Flanders old brown_071,Flanders old brown,161,190,0.09946981189324917,conditional_local
+Flanders old brown_072,Flanders old brown,161,159,0.2446378712784012,conditional_local
+Flanders old brown_073,Flanders old brown,159,167,0.09986215039916349,conditional_local
+Flanders old brown_074,Flanders old brown,190,159,0.08191082359699514,conditional_local
+Flanders old brown_075,Flanders old brown,159,161,0.11242058720657584,conditional_local
+Flanders old brown_076,Flanders old brown,159,190,0.0733412191007012,conditional_local
+Flanders old brown_077,Flanders old brown,159,167,0.28288255382840055,conditional_local
+Flanders old brown_078,Flanders old brown,161,167,0.07622406235089352,conditional_local
+Flanders old brown_079,Flanders old brown,159,167,0.46899000001177005,conditional_local
+Flanders old brown_080,Flanders old brown,190,161,0.021716360063282213,conditional_local
+Flanders old brown_081,Flanders old brown,159,161,0.011431604146249007,conditional_local
+Flanders old brown_082,Flanders old brown,167,161,0.0013945608326546694,conditional_local
+Flanders old brown_083,Flanders old brown,167,159,0.197619038476258,conditional_local
+Flanders old brown_084,Flanders old brown,167,190,0.23834539437335697,conditional_local
+Flanders old brown_085,Flanders old brown,161,167,0.08620669131402947,conditional_local
+Flanders old brown_086,Flanders old brown,190,161,0.0530485308300753,conditional_local
+Flanders old brown_087,Flanders old brown,159,161,0.12472356656201439,conditional_local
+Flanders old brown_088,Flanders old brown,190,159,0.6069628867155679,conditional_local
+Flanders old brown_089,Flanders old brown,161,167,0.11574356575146309,conditional_local
+Flanders old brown_090,Flanders old brown,159,190,0.09308901192547529,conditional_local
+Flanders old brown_091,Flanders old brown,159,167,0.4460427677737411,conditional_local
+Flanders old brown_092,Flanders old brown,159,190,0.07416036762631949,conditional_local
+Flanders old brown_093,Flanders old brown,167,161,0.04954792201625227,conditional_local
+Flanders old brown_094,Flanders old brown,190,161,0.34811645098089294,conditional_local
+Flanders old brown_095,Flanders old brown,167,159,0.007417255285234783,conditional_local
+Flanders old brown_096,Flanders old brown,159,190,0.6529895194683133,conditional_local
+Flanders old brown_097,Flanders old brown,161,159,0.14132710886266797,conditional_local
+Flanders old brown_098,Flanders old brown,161,190,0.14311303245308593,conditional_local
+Flanders old brown_099,Flanders old brown,159,190,0.23320896429971458,conditional_local
+Fruitbeer_000,Fruitbeer,50,227,0.05879496199996122,conditional_local
+Fruitbeer_001,Fruitbeer,33,165,0.13081407744550588,conditional_local
+Fruitbeer_002,Fruitbeer,207,50,0.30275782908631704,conditional_local
+Fruitbeer_003,Fruitbeer,33,207,0.07338484626613961,conditional_local
+Fruitbeer_004,Fruitbeer,165,177,0.06854622105534529,conditional_local
+Fruitbeer_005,Fruitbeer,33,177,0.05591329401947031,conditional_local
+Fruitbeer_006,Fruitbeer,207,50,0.21623396792980185,conditional_local
+Fruitbeer_007,Fruitbeer,227,207,0.0050826130808219626,conditional_local
+Fruitbeer_008,Fruitbeer,33,50,0.4813654601308828,conditional_local
+Fruitbeer_009,Fruitbeer,50,165,0.4929135291060812,conditional_local
+Fruitbeer_010,Fruitbeer,177,33,0.02261893639739793,conditional_local
+Fruitbeer_011,Fruitbeer,165,50,0.2812380277681912,conditional_local
+Fruitbeer_012,Fruitbeer,50,33,0.01310100362774756,conditional_local
+Fruitbeer_013,Fruitbeer,227,177,0.031590791136594555,conditional_local
+Fruitbeer_014,Fruitbeer,227,177,0.08072375842303264,conditional_local
+Fruitbeer_015,Fruitbeer,165,227,0.44297885117585856,conditional_local
+Fruitbeer_016,Fruitbeer,33,165,0.05399312812702031,conditional_local
+Fruitbeer_017,Fruitbeer,165,207,0.522984874011447,conditional_local
+Fruitbeer_018,Fruitbeer,165,50,0.08926160485392089,conditional_local
+Fruitbeer_019,Fruitbeer,177,227,0.44036608712289776,conditional_local
+Fruitbeer_020,Fruitbeer,207,33,0.0667435863516721,conditional_local
+Fruitbeer_021,Fruitbeer,165,33,0.31758009561020845,conditional_local
+Fruitbeer_022,Fruitbeer,33,227,0.07992688140888546,conditional_local
+Fruitbeer_023,Fruitbeer,207,33,0.2170198192892432,conditional_local
+Fruitbeer_024,Fruitbeer,33,165,0.034724958436206016,conditional_local
+Fruitbeer_025,Fruitbeer,207,227,0.21530256299094,conditional_local
+Fruitbeer_026,Fruitbeer,227,207,0.15752255066316792,conditional_local
+Fruitbeer_027,Fruitbeer,177,33,0.17798750313229314,conditional_local
+Fruitbeer_028,Fruitbeer,177,33,0.2121970724766925,conditional_local
+Fruitbeer_029,Fruitbeer,33,50,0.10537192457807476,conditional_local
+Fruitbeer_030,Fruitbeer,165,33,0.03231327989619842,conditional_local
+Fruitbeer_031,Fruitbeer,177,50,0.3592138565518278,conditional_local
+Fruitbeer_032,Fruitbeer,50,177,0.06490618364867289,conditional_local
+Fruitbeer_033,Fruitbeer,165,207,0.30102687714252907,conditional_local
+Fruitbeer_034,Fruitbeer,50,33,0.053711406206165456,conditional_local
+Fruitbeer_035,Fruitbeer,227,33,0.35199928248533063,conditional_local
+Fruitbeer_036,Fruitbeer,50,33,0.018614088114435542,conditional_local
+Fruitbeer_037,Fruitbeer,227,207,0.0386322164064178,conditional_local
+Fruitbeer_038,Fruitbeer,177,33,0.17368499975011756,conditional_local
+Fruitbeer_039,Fruitbeer,33,227,0.11931826036557343,conditional_local
+Fruitbeer_040,Fruitbeer,227,165,0.2196389335941167,conditional_local
+Fruitbeer_041,Fruitbeer,207,227,0.025259052832224307,conditional_local
+Fruitbeer_042,Fruitbeer,165,50,0.06417156002561591,conditional_local
+Fruitbeer_043,Fruitbeer,50,207,0.1319764826622764,conditional_local
+Fruitbeer_044,Fruitbeer,207,227,0.5118873512298983,conditional_local
+Fruitbeer_045,Fruitbeer,177,165,0.38864303556627977,conditional_local
+Fruitbeer_046,Fruitbeer,227,207,0.5994913082453219,conditional_local
+Fruitbeer_047,Fruitbeer,165,177,0.6328737733749485,conditional_local
+Fruitbeer_048,Fruitbeer,165,33,0.22284183822741296,conditional_local
+Fruitbeer_049,Fruitbeer,50,207,0.07604676756883613,conditional_local
+Fruitbeer_050,Fruitbeer,177,165,0.15426113655143503,conditional_local
+Fruitbeer_051,Fruitbeer,207,33,0.159709769712066,conditional_local
+Fruitbeer_052,Fruitbeer,227,33,0.2194939668096586,conditional_local
+Fruitbeer_053,Fruitbeer,207,165,0.30879780924262323,conditional_local
+Fruitbeer_054,Fruitbeer,50,177,0.09273333022239241,conditional_local
+Fruitbeer_055,Fruitbeer,207,227,0.32200994353511225,conditional_local
+Fruitbeer_056,Fruitbeer,50,207,0.03640194805946754,conditional_local
+Fruitbeer_057,Fruitbeer,165,227,0.09837640903755095,conditional_local
+Fruitbeer_058,Fruitbeer,227,165,0.23058291632820768,conditional_local
+Fruitbeer_059,Fruitbeer,50,177,0.5177760053796805,conditional_local
+Fruitbeer_060,Fruitbeer,165,33,0.057925099016751205,conditional_local
+Fruitbeer_061,Fruitbeer,177,227,0.3773944504195961,conditional_local
+Fruitbeer_062,Fruitbeer,177,33,0.136400536815108,conditional_local
+Fruitbeer_063,Fruitbeer,227,33,0.0026936192101381863,conditional_local
+Fruitbeer_064,Fruitbeer,177,207,0.1025902880188019,conditional_local
+Fruitbeer_065,Fruitbeer,165,50,0.06719604822425251,conditional_local
+Fruitbeer_066,Fruitbeer,33,227,0.014867749202948406,conditional_local
+Fruitbeer_067,Fruitbeer,227,177,0.24100087897376832,conditional_local
+Fruitbeer_068,Fruitbeer,33,227,0.19947194940822735,conditional_local
+Fruitbeer_069,Fruitbeer,50,227,0.16857619949302693,conditional_local
+Fruitbeer_070,Fruitbeer,207,50,0.2961398085448656,conditional_local
+Fruitbeer_071,Fruitbeer,50,177,0.23231438531382426,conditional_local
+Fruitbeer_072,Fruitbeer,227,165,0.05317757144964005,conditional_local
+Fruitbeer_073,Fruitbeer,227,33,0.1236183875829531,conditional_local
+Fruitbeer_074,Fruitbeer,177,227,0.2181165752028772,conditional_local
+Fruitbeer_075,Fruitbeer,33,50,0.10928003105891278,conditional_local
+Fruitbeer_076,Fruitbeer,165,207,0.04932753524282935,conditional_local
+Fruitbeer_077,Fruitbeer,227,33,0.0020428665142945565,conditional_local
+Fruitbeer_078,Fruitbeer,227,207,0.47582456894502706,conditional_local
+Fruitbeer_079,Fruitbeer,177,165,0.0803150336929305,conditional_local
+Fruitbeer_080,Fruitbeer,165,207,0.15021408624055016,conditional_local
+Fruitbeer_081,Fruitbeer,165,227,0.3943519239705928,conditional_local
+Fruitbeer_082,Fruitbeer,177,227,0.007347705290142299,conditional_local
+Fruitbeer_083,Fruitbeer,50,165,0.01850988953987589,conditional_local
+Fruitbeer_084,Fruitbeer,165,227,0.2586709876125118,conditional_local
+Fruitbeer_085,Fruitbeer,165,33,0.18086983240633292,conditional_local
+Fruitbeer_086,Fruitbeer,50,165,0.5312392845676465,conditional_local
+Fruitbeer_087,Fruitbeer,33,165,0.24089262140663015,conditional_local
+Fruitbeer_088,Fruitbeer,165,227,0.3366645419882002,conditional_local
+Fruitbeer_089,Fruitbeer,227,207,0.044765196283754506,conditional_local
+Fruitbeer_090,Fruitbeer,177,33,0.1512228647581576,conditional_local
+Fruitbeer_091,Fruitbeer,50,177,0.32473022305224386,conditional_local
+Fruitbeer_092,Fruitbeer,207,165,0.08416841244523403,conditional_local
+Fruitbeer_093,Fruitbeer,33,207,0.2619848677762586,conditional_local
+Fruitbeer_094,Fruitbeer,165,33,0.10726979905847683,conditional_local
+Fruitbeer_095,Fruitbeer,227,50,0.14139285482397954,conditional_local
+Fruitbeer_096,Fruitbeer,50,207,0.08094044920989123,conditional_local
+Fruitbeer_097,Fruitbeer,177,207,0.5231363435278958,conditional_local
+Fruitbeer_098,Fruitbeer,165,33,0.0024657470915573926,conditional_local
+Fruitbeer_099,Fruitbeer,33,50,0.24828102923534429,conditional_local
+Hoppy_000,Hoppy,80,8,0.05357585181369465,conditional_local
+Hoppy_001,Hoppy,72,8,0.03752273789463655,conditional_local
+Hoppy_002,Hoppy,9,27,0.0422958299532173,conditional_local
+Hoppy_003,Hoppy,213,114,0.21873277306247635,conditional_local
+Hoppy_004,Hoppy,143,114,0.14675033825878023,conditional_local
+Hoppy_005,Hoppy,8,97,0.05314609530606844,conditional_local
+Hoppy_006,Hoppy,65,143,0.03370130133537728,conditional_local
+Hoppy_007,Hoppy,27,39,0.5490882279157667,conditional_local
+Hoppy_008,Hoppy,27,39,0.06239656571049595,conditional_local
+Hoppy_009,Hoppy,143,213,0.07985257683554724,conditional_local
+Hoppy_010,Hoppy,8,97,0.1561543600866875,conditional_local
+Hoppy_011,Hoppy,31,114,0.25538670898203875,conditional_local
+Hoppy_012,Hoppy,72,143,0.06437565825729494,conditional_local
+Hoppy_013,Hoppy,80,55,0.03145357487278873,conditional_local
+Hoppy_014,Hoppy,27,213,0.025082019399751868,conditional_local
+Hoppy_015,Hoppy,31,213,0.3480566212946604,conditional_local
+Hoppy_016,Hoppy,114,72,0.2768570887759532,conditional_local
+Hoppy_017,Hoppy,9,31,0.027808418745698203,conditional_local
+Hoppy_018,Hoppy,31,27,0.0072738227019720466,conditional_local
+Hoppy_019,Hoppy,9,213,0.3632372772650413,conditional_local
+Hoppy_020,Hoppy,9,213,0.19840038192455137,conditional_local
+Hoppy_021,Hoppy,80,169,0.13954022664886392,conditional_local
+Hoppy_022,Hoppy,27,72,0.03994233566877318,conditional_local
+Hoppy_023,Hoppy,169,72,0.32887584794862146,conditional_local
+Hoppy_024,Hoppy,114,213,0.292397706012375,conditional_local
+Hoppy_025,Hoppy,72,8,0.5181032377072511,conditional_local
+Hoppy_026,Hoppy,169,72,0.050518547021919,conditional_local
+Hoppy_027,Hoppy,39,27,0.23224142206636758,conditional_local
+Hoppy_028,Hoppy,8,55,0.24513543445855282,conditional_local
+Hoppy_029,Hoppy,169,97,0.09005164413491547,conditional_local
+Hoppy_030,Hoppy,80,55,0.3488246149913723,conditional_local
+Hoppy_031,Hoppy,55,97,0.3121466676119986,conditional_local
+Hoppy_032,Hoppy,143,114,0.30975409118204006,conditional_local
+Hoppy_033,Hoppy,27,31,0.044431749876490914,conditional_local
+Hoppy_034,Hoppy,97,72,0.07043903168817311,conditional_local
+Hoppy_035,Hoppy,9,31,0.5700604263331264,conditional_local
+Hoppy_036,Hoppy,114,213,0.45592055025327244,conditional_local
+Hoppy_037,Hoppy,80,39,0.07413484813649043,conditional_local
+Hoppy_038,Hoppy,39,27,0.1899243074111728,conditional_local
+Hoppy_039,Hoppy,8,97,0.08445345611580922,conditional_local
+Hoppy_040,Hoppy,9,114,0.08118238868274226,conditional_local
+Hoppy_041,Hoppy,169,143,0.3631750598265798,conditional_local
+Hoppy_042,Hoppy,39,143,0.0296781593413993,conditional_local
+Hoppy_043,Hoppy,9,27,0.1301006812415047,conditional_local
+Hoppy_044,Hoppy,27,114,0.19949590417995994,conditional_local
+Hoppy_045,Hoppy,27,213,0.4694834009094293,conditional_local
+Hoppy_046,Hoppy,27,39,0.07803549289554554,conditional_local
+Hoppy_047,Hoppy,213,72,0.1254386205934154,conditional_local
+Hoppy_048,Hoppy,97,213,0.7555716892370242,conditional_local
+Hoppy_049,Hoppy,72,143,0.06171061366010535,conditional_local
+Hoppy_050,Hoppy,97,8,0.281365267733632,conditional_local
+Hoppy_051,Hoppy,213,143,0.11821240571424947,conditional_local
+Hoppy_052,Hoppy,169,143,0.11581727469724197,conditional_local
+Hoppy_053,Hoppy,114,143,0.3870809653225311,conditional_local
+Hoppy_054,Hoppy,31,72,0.07185013748111707,conditional_local
+Hoppy_055,Hoppy,143,72,0.1439914723136487,conditional_local
+Hoppy_056,Hoppy,97,169,0.0182863709389139,conditional_local
+Hoppy_057,Hoppy,114,143,0.15138201876595517,conditional_local
+Hoppy_058,Hoppy,31,114,0.14451355146284908,conditional_local
+Hoppy_059,Hoppy,55,27,0.2507123831517165,conditional_local
+Hoppy_060,Hoppy,213,169,0.08412721446710245,conditional_local
+Hoppy_061,Hoppy,55,80,0.2615786512095202,conditional_local
+Hoppy_062,Hoppy,143,72,0.279824191783244,conditional_local
+Hoppy_063,Hoppy,72,143,0.16853692206167592,conditional_local
+Hoppy_064,Hoppy,114,213,0.22526194375033162,conditional_local
+Hoppy_065,Hoppy,169,72,0.04780532724315328,conditional_local
+Hoppy_066,Hoppy,65,27,0.10308015961644021,conditional_local
+Hoppy_067,Hoppy,39,80,0.023406812571775945,conditional_local
+Hoppy_068,Hoppy,72,143,0.6298920351386037,conditional_local
+Hoppy_069,Hoppy,65,31,0.030049748053630143,conditional_local
+Hoppy_070,Hoppy,27,114,0.2268033563683984,conditional_local
+Hoppy_071,Hoppy,31,65,0.0955597406362627,conditional_local
+Hoppy_072,Hoppy,80,8,0.13905001347727253,conditional_local
+Hoppy_073,Hoppy,143,213,0.06659291708059155,conditional_local
+Hoppy_074,Hoppy,72,213,0.036397886738018144,conditional_local
+Hoppy_075,Hoppy,55,27,0.07941417314061626,conditional_local
+Hoppy_076,Hoppy,9,114,0.021558898450508502,conditional_local
+Hoppy_077,Hoppy,72,8,0.4274954887486073,conditional_local
+Hoppy_078,Hoppy,39,143,0.12127307060630711,conditional_local
+Hoppy_079,Hoppy,31,213,0.04613898444611711,conditional_local
+Hoppy_080,Hoppy,55,97,0.31955639241145867,conditional_local
+Hoppy_081,Hoppy,8,213,0.2410502914083278,conditional_local
+Hoppy_082,Hoppy,31,114,0.07735582284507918,conditional_local
+Hoppy_083,Hoppy,72,213,0.6600263061779003,conditional_local
+Hoppy_084,Hoppy,9,72,0.08164641274520444,conditional_local
+Hoppy_085,Hoppy,213,72,0.32229854398553376,conditional_local
+Hoppy_086,Hoppy,9,114,0.37340376076666054,conditional_local
+Hoppy_087,Hoppy,213,143,0.15918128274286203,conditional_local
+Hoppy_088,Hoppy,8,55,0.4500954394474581,conditional_local
+Hoppy_089,Hoppy,143,114,0.3545311285964638,conditional_local
+Hoppy_090,Hoppy,169,143,0.03961410845230208,conditional_local
+Hoppy_091,Hoppy,27,213,0.7097665169279942,conditional_local
+Hoppy_092,Hoppy,39,65,0.35380212473442085,conditional_local
+Hoppy_093,Hoppy,31,27,0.29391238834206407,conditional_local
+Hoppy_094,Hoppy,143,114,0.3469678340001553,conditional_local
+Hoppy_095,Hoppy,65,31,0.21089532760929644,conditional_local
+Hoppy_096,Hoppy,72,27,0.2388890947278034,conditional_local
+Hoppy_097,Hoppy,27,213,0.05329868268295762,conditional_local
+Hoppy_098,Hoppy,213,27,0.5444448107162644,conditional_local
+Hoppy_099,Hoppy,213,169,0.24274636802751404,conditional_local
+Kriek_000,Kriek,54,232,0.11863680863117179,conditional_local
+Kriek_001,Kriek,153,241,0.3620022161238319,conditional_local
+Kriek_002,Kriek,153,82,0.042972881799876066,conditional_local
+Kriek_003,Kriek,54,232,0.140394623002478,conditional_local
+Kriek_004,Kriek,156,54,0.1946209046705478,conditional_local
+Kriek_005,Kriek,156,82,0.04565775914661215,conditional_local
+Kriek_006,Kriek,220,232,0.09592427699357596,conditional_local
+Kriek_007,Kriek,88,54,0.05364524554780335,conditional_local
+Kriek_008,Kriek,156,232,0.23324117954347395,conditional_local
+Kriek_009,Kriek,156,82,0.30871150978495493,conditional_local
+Kriek_010,Kriek,88,241,0.06118367806354919,conditional_local
+Kriek_011,Kriek,156,82,0.05547698325265326,conditional_local
+Kriek_012,Kriek,82,232,0.32035356416466226,conditional_local
+Kriek_013,Kriek,241,82,0.040600838980579264,conditional_local
+Kriek_014,Kriek,88,232,0.1530369499258959,conditional_local
+Kriek_015,Kriek,241,82,0.061816304253188736,conditional_local
+Kriek_016,Kriek,241,153,0.3278983380796607,conditional_local
+Kriek_017,Kriek,156,54,0.18741627053172277,conditional_local
+Kriek_018,Kriek,241,153,0.002769232638660716,conditional_local
+Kriek_019,Kriek,232,220,0.21520515407421217,conditional_local
+Kriek_020,Kriek,88,241,0.4159614687533839,conditional_local
+Kriek_021,Kriek,153,88,0.19890309859953062,conditional_local
+Kriek_022,Kriek,156,82,0.3381043531596877,conditional_local
+Kriek_023,Kriek,153,82,0.21142120333905068,conditional_local
+Kriek_024,Kriek,82,88,0.4452899245744163,conditional_local
+Kriek_025,Kriek,153,241,0.23912425829817502,conditional_local
+Kriek_026,Kriek,88,241,0.2442988024433949,conditional_local
+Kriek_027,Kriek,54,82,0.05179330561702578,conditional_local
+Kriek_028,Kriek,54,220,0.08792260648685364,conditional_local
+Kriek_029,Kriek,88,82,0.14879504189813414,conditional_local
+Kriek_030,Kriek,232,54,0.100275791453875,conditional_local
+Kriek_031,Kriek,241,88,0.01847655467526966,conditional_local
+Kriek_032,Kriek,88,54,0.08365969610607979,conditional_local
+Kriek_033,Kriek,82,54,0.7082928808946215,conditional_local
+Kriek_034,Kriek,232,88,0.08222013867392224,conditional_local
+Kriek_035,Kriek,54,220,0.09899145819841945,conditional_local
+Kriek_036,Kriek,88,54,0.3476724147138289,conditional_local
+Kriek_037,Kriek,232,82,0.09119508035238123,conditional_local
+Kriek_038,Kriek,88,232,0.11067598599068106,conditional_local
+Kriek_039,Kriek,88,82,0.4240541917502421,conditional_local
+Kriek_040,Kriek,241,54,0.0008609971282004,conditional_local
+Kriek_041,Kriek,54,88,0.03466191445117437,conditional_local
+Kriek_042,Kriek,88,82,0.3853644745078922,conditional_local
+Kriek_043,Kriek,88,241,0.26519499819680153,conditional_local
+Kriek_044,Kriek,153,54,0.3830899111467901,conditional_local
+Kriek_045,Kriek,232,88,0.012678294404819082,conditional_local
+Kriek_046,Kriek,241,54,0.07843165070799574,conditional_local
+Kriek_047,Kriek,232,220,0.2978624951531646,conditional_local
+Kriek_048,Kriek,88,241,0.19648695800021307,conditional_local
+Kriek_049,Kriek,54,232,0.0020348553388580696,conditional_local
+Kriek_050,Kriek,88,82,0.014929878709410472,conditional_local
+Kriek_051,Kriek,232,220,0.2875911230991778,conditional_local
+Kriek_052,Kriek,153,54,0.11779568014914894,conditional_local
+Kriek_053,Kriek,241,82,0.030862455178214118,conditional_local
+Kriek_054,Kriek,156,88,0.1461741547091637,conditional_local
+Kriek_055,Kriek,88,220,0.5908567128286952,conditional_local
+Kriek_056,Kriek,82,241,0.006455010168315916,conditional_local
+Kriek_057,Kriek,88,54,0.08360008018363811,conditional_local
+Kriek_058,Kriek,241,54,0.1177598603333194,conditional_local
+Kriek_059,Kriek,220,82,0.3188648388711713,conditional_local
+Kriek_060,Kriek,220,82,0.4144857138433161,conditional_local
+Kriek_061,Kriek,88,241,0.5050044321288324,conditional_local
+Kriek_062,Kriek,156,88,0.19837827078690717,conditional_local
+Kriek_063,Kriek,88,82,0.26011303234380506,conditional_local
+Kriek_064,Kriek,220,232,0.12851043870523118,conditional_local
+Kriek_065,Kriek,241,88,0.26146430288525485,conditional_local
+Kriek_066,Kriek,232,54,0.0893856371065205,conditional_local
+Kriek_067,Kriek,153,241,0.01534072532091108,conditional_local
+Kriek_068,Kriek,156,54,0.14636860648182504,conditional_local
+Kriek_069,Kriek,156,88,0.026708609340795428,conditional_local
+Kriek_070,Kriek,82,241,0.15792400586073768,conditional_local
+Kriek_071,Kriek,153,88,0.10669213227890871,conditional_local
+Kriek_072,Kriek,241,153,0.30310034243608625,conditional_local
+Kriek_073,Kriek,153,88,0.05867141212016919,conditional_local
+Kriek_074,Kriek,82,232,0.10535924480418812,conditional_local
+Kriek_075,Kriek,88,82,0.010229148551023335,conditional_local
+Kriek_076,Kriek,220,232,0.005027102123811651,conditional_local
+Kriek_077,Kriek,156,54,0.14289712913434754,conditional_local
+Kriek_078,Kriek,220,82,0.2702034985819046,conditional_local
+Kriek_079,Kriek,232,220,0.18485614048063065,conditional_local
+Kriek_080,Kriek,232,82,0.025975051172859906,conditional_local
+Kriek_081,Kriek,232,54,0.06502307224062485,conditional_local
+Kriek_082,Kriek,241,54,0.20353722362433715,conditional_local
+Kriek_083,Kriek,232,241,0.002379659221946147,conditional_local
+Kriek_084,Kriek,156,54,0.5010325364171917,conditional_local
+Kriek_085,Kriek,156,54,0.24877543345259778,conditional_local
+Kriek_086,Kriek,88,220,0.32963323487065876,conditional_local
+Kriek_087,Kriek,241,54,0.034849526534215976,conditional_local
+Kriek_088,Kriek,82,54,0.10916669566925112,conditional_local
+Kriek_089,Kriek,232,54,0.19580192805934848,conditional_local
+Kriek_090,Kriek,220,241,0.174927056885257,conditional_local
+Kriek_091,Kriek,241,82,0.16168925843336007,conditional_local
+Kriek_092,Kriek,232,82,0.3060085839806275,conditional_local
+Kriek_093,Kriek,156,241,0.004145315454389324,conditional_local
+Kriek_094,Kriek,220,54,0.1287637209095736,conditional_local
+Kriek_095,Kriek,232,88,0.009795139925704695,conditional_local
+Kriek_096,Kriek,153,241,0.034578949514251923,conditional_local
+Kriek_097,Kriek,153,88,0.43879352793139886,conditional_local
+Kriek_098,Kriek,156,241,0.019318300692145705,conditional_local
+Kriek_099,Kriek,241,232,0.29190966537561097,conditional_local
+Lambic_000,Lambic,21,144,0.0017478843970196428,conditional_local
+Lambic_001,Lambic,115,41,0.08786604338161953,conditional_local
+Lambic_002,Lambic,41,144,0.134648193336187,conditional_local
+Lambic_003,Lambic,211,12,0.07820053094442585,conditional_local
+Lambic_004,Lambic,21,42,0.536914345640987,conditional_local
+Lambic_005,Lambic,12,41,0.07217269092577708,conditional_local
+Lambic_006,Lambic,12,75,0.022623114978644335,conditional_local
+Lambic_007,Lambic,41,75,0.14602498779527384,conditional_local
+Lambic_008,Lambic,42,162,0.08135488080098685,conditional_local
+Lambic_009,Lambic,75,41,0.05727710568472858,conditional_local
+Lambic_010,Lambic,12,41,0.5896140475126622,conditional_local
+Lambic_011,Lambic,144,162,0.17089371635365852,conditional_local
+Lambic_012,Lambic,42,144,0.02587011893103406,conditional_local
+Lambic_013,Lambic,12,162,0.11565589935144012,conditional_local
+Lambic_014,Lambic,21,42,0.4203984702406811,conditional_local
+Lambic_015,Lambic,144,42,0.17060248629767097,conditional_local
+Lambic_016,Lambic,41,211,0.0362227103197745,conditional_local
+Lambic_017,Lambic,162,21,0.48094864580516244,conditional_local
+Lambic_018,Lambic,162,211,0.11846066483159128,conditional_local
+Lambic_019,Lambic,21,162,0.31408060962079043,conditional_local
+Lambic_020,Lambic,42,162,0.07379872397981303,conditional_local
+Lambic_021,Lambic,21,75,0.0706582844942844,conditional_local
+Lambic_022,Lambic,42,75,0.2495697411082265,conditional_local
+Lambic_023,Lambic,144,75,0.08524318965782807,conditional_local
+Lambic_024,Lambic,21,144,0.25379312135420656,conditional_local
+Lambic_025,Lambic,41,144,0.0030382624383432587,conditional_local
+Lambic_026,Lambic,144,41,0.12269006840050385,conditional_local
+Lambic_027,Lambic,144,41,0.4326717300413395,conditional_local
+Lambic_028,Lambic,41,211,0.11657642858833916,conditional_local
+Lambic_029,Lambic,115,41,0.6590616974548958,conditional_local
+Lambic_030,Lambic,144,41,0.6799177921316527,conditional_local
+Lambic_031,Lambic,211,41,0.07526958384221934,conditional_local
+Lambic_032,Lambic,42,144,0.07174817044471961,conditional_local
+Lambic_033,Lambic,42,144,0.08236467605883156,conditional_local
+Lambic_034,Lambic,41,144,0.29819992245134086,conditional_local
+Lambic_035,Lambic,12,211,0.24172790058373556,conditional_local
+Lambic_036,Lambic,12,162,0.11626034943383057,conditional_local
+Lambic_037,Lambic,115,144,0.6177749624118108,conditional_local
+Lambic_038,Lambic,162,75,0.27754365733947717,conditional_local
+Lambic_039,Lambic,211,144,0.33212672295622436,conditional_local
+Lambic_040,Lambic,42,162,0.1694426927976669,conditional_local
+Lambic_041,Lambic,162,211,0.040376968873151634,conditional_local
+Lambic_042,Lambic,115,144,0.21972382595498455,conditional_local
+Lambic_043,Lambic,42,144,0.007272472435439733,conditional_local
+Lambic_044,Lambic,162,75,0.032273069633312584,conditional_local
+Lambic_045,Lambic,12,21,0.45866941504784076,conditional_local
+Lambic_046,Lambic,211,144,0.09728085529189835,conditional_local
+Lambic_047,Lambic,21,144,0.3841786241995879,conditional_local
+Lambic_048,Lambic,162,21,0.22966732692338615,conditional_local
+Lambic_049,Lambic,42,21,0.1765120253996301,conditional_local
+Lambic_050,Lambic,42,144,0.1534020303667941,conditional_local
+Lambic_051,Lambic,21,41,0.3078472364782314,conditional_local
+Lambic_052,Lambic,21,162,0.018599814536943506,conditional_local
+Lambic_053,Lambic,42,41,0.3289347564613187,conditional_local
+Lambic_054,Lambic,162,144,0.11587394189688256,conditional_local
+Lambic_055,Lambic,12,162,0.4406779000524402,conditional_local
+Lambic_056,Lambic,75,42,0.455677901989207,conditional_local
+Lambic_057,Lambic,21,75,0.1711426680962555,conditional_local
+Lambic_058,Lambic,144,41,0.5099756306157792,conditional_local
+Lambic_059,Lambic,21,41,0.09803576447823109,conditional_local
+Lambic_060,Lambic,115,41,0.24650196604485494,conditional_local
+Lambic_061,Lambic,211,41,0.6691488802262391,conditional_local
+Lambic_062,Lambic,42,41,0.2508858187253777,conditional_local
+Lambic_063,Lambic,42,144,0.07302715575811425,conditional_local
+Lambic_064,Lambic,211,162,0.17608656825569152,conditional_local
+Lambic_065,Lambic,75,162,0.4175114597390772,conditional_local
+Lambic_066,Lambic,211,12,0.3883827368466796,conditional_local
+Lambic_067,Lambic,21,144,0.022583213258898973,conditional_local
+Lambic_068,Lambic,42,21,0.19529126926680251,conditional_local
+Lambic_069,Lambic,41,162,0.1934116004687188,conditional_local
+Lambic_070,Lambic,21,75,0.1664293238917353,conditional_local
+Lambic_071,Lambic,75,42,0.17999186789832183,conditional_local
+Lambic_072,Lambic,144,75,0.33985698246260115,conditional_local
+Lambic_073,Lambic,211,41,0.062728502181321,conditional_local
+Lambic_074,Lambic,115,41,0.28010575353122147,conditional_local
+Lambic_075,Lambic,115,162,0.20571329602246424,conditional_local
+Lambic_076,Lambic,41,75,0.44321412171352714,conditional_local
+Lambic_077,Lambic,42,144,0.12925739905600545,conditional_local
+Lambic_078,Lambic,41,162,0.16239352507156163,conditional_local
+Lambic_079,Lambic,144,42,0.4686899212979198,conditional_local
+Lambic_080,Lambic,12,75,0.1308647163214311,conditional_local
+Lambic_081,Lambic,162,21,0.2565500606250802,conditional_local
+Lambic_082,Lambic,211,12,0.23276254571133406,conditional_local
+Lambic_083,Lambic,41,21,0.34722368113928287,conditional_local
+Lambic_084,Lambic,42,144,0.021457084233131463,conditional_local
+Lambic_085,Lambic,75,144,0.5123024556926897,conditional_local
+Lambic_086,Lambic,41,144,0.16051063100545815,conditional_local
+Lambic_087,Lambic,162,41,0.015102644201110188,conditional_local
+Lambic_088,Lambic,162,211,0.44120832907710644,conditional_local
+Lambic_089,Lambic,21,75,0.11095812424861352,conditional_local
+Lambic_090,Lambic,144,41,0.08209341108786929,conditional_local
+Lambic_091,Lambic,21,144,0.4505015370815626,conditional_local
+Lambic_092,Lambic,21,144,0.06325006341889747,conditional_local
+Lambic_093,Lambic,12,41,0.019465639451865115,conditional_local
+Lambic_094,Lambic,115,41,0.1331244589172173,conditional_local
+Lambic_095,Lambic,162,75,0.023038303447628836,conditional_local
+Lambic_096,Lambic,144,41,0.11989000376778816,conditional_local
+Lambic_097,Lambic,42,162,0.2475673798328208,conditional_local
+Lambic_098,Lambic,12,75,0.042433870237649114,conditional_local
+Lambic_099,Lambic,41,211,0.07376265571782091,conditional_local
+Low_No alcohol_000,Low/No alcohol,141,10,0.4934218570418123,conditional_local
+Low_No alcohol_001,Low/No alcohol,141,223,0.4430016006859111,conditional_local
+Low_No alcohol_002,Low/No alcohol,10,155,0.1780182832515855,conditional_local
+Low_No alcohol_003,Low/No alcohol,223,155,0.15008589383733612,conditional_local
+Low_No alcohol_004,Low/No alcohol,141,10,0.08972087942563228,conditional_local
+Low_No alcohol_005,Low/No alcohol,223,83,0.16397458177012758,conditional_local
+Low_No alcohol_006,Low/No alcohol,86,155,0.011109797427321108,conditional_local
+Low_No alcohol_007,Low/No alcohol,83,141,0.1338049848874728,conditional_local
+Low_No alcohol_008,Low/No alcohol,141,155,0.06834047570965746,conditional_local
+Low_No alcohol_009,Low/No alcohol,223,86,0.16977683774039584,conditional_local
+Low_No alcohol_010,Low/No alcohol,86,141,0.04662164456390798,conditional_local
+Low_No alcohol_011,Low/No alcohol,83,155,0.28885978211811114,conditional_local
+Low_No alcohol_012,Low/No alcohol,86,223,0.10902129863624749,conditional_local
+Low_No alcohol_013,Low/No alcohol,141,155,0.0213420826115334,conditional_local
+Low_No alcohol_014,Low/No alcohol,10,223,0.23482460699870775,conditional_local
+Low_No alcohol_015,Low/No alcohol,223,83,0.2464081987342241,conditional_local
+Low_No alcohol_016,Low/No alcohol,10,223,0.1950129676267411,conditional_local
+Low_No alcohol_017,Low/No alcohol,223,141,0.13746355100464244,conditional_local
+Low_No alcohol_018,Low/No alcohol,223,86,0.16313173352603913,conditional_local
+Low_No alcohol_019,Low/No alcohol,155,83,0.4900001465105534,conditional_local
+Low_No alcohol_020,Low/No alcohol,86,10,0.1962190571306871,conditional_local
+Low_No alcohol_021,Low/No alcohol,155,83,0.15312654550718896,conditional_local
+Low_No alcohol_022,Low/No alcohol,83,86,0.16121538403219937,conditional_local
+Low_No alcohol_023,Low/No alcohol,83,141,0.10427670444466454,conditional_local
+Low_No alcohol_024,Low/No alcohol,86,83,0.045131705181694536,conditional_local
+Low_No alcohol_025,Low/No alcohol,223,155,0.03666752592626084,conditional_local
+Low_No alcohol_026,Low/No alcohol,141,86,0.034614012209730184,conditional_local
+Low_No alcohol_027,Low/No alcohol,155,223,0.5143715630220033,conditional_local
+Low_No alcohol_028,Low/No alcohol,83,10,0.09237880223612448,conditional_local
+Low_No alcohol_029,Low/No alcohol,83,223,0.056511141516984394,conditional_local
+Low_No alcohol_030,Low/No alcohol,83,141,0.3341538618882819,conditional_local
+Low_No alcohol_031,Low/No alcohol,141,223,0.1493595042750772,conditional_local
+Low_No alcohol_032,Low/No alcohol,10,83,0.3602153296938545,conditional_local
+Low_No alcohol_033,Low/No alcohol,223,155,0.2177592275518584,conditional_local
+Low_No alcohol_034,Low/No alcohol,141,86,0.309638650097109,conditional_local
+Low_No alcohol_035,Low/No alcohol,223,141,0.11697115943336049,conditional_local
+Low_No alcohol_036,Low/No alcohol,86,141,0.12028963229201108,conditional_local
+Low_No alcohol_037,Low/No alcohol,223,141,0.4782409081490005,conditional_local
+Low_No alcohol_038,Low/No alcohol,10,141,0.017758930506550707,conditional_local
+Low_No alcohol_039,Low/No alcohol,86,155,0.4012183148819449,conditional_local
+Low_No alcohol_040,Low/No alcohol,86,223,0.31066205310587985,conditional_local
+Low_No alcohol_041,Low/No alcohol,10,223,0.051798911731129285,conditional_local
+Low_No alcohol_042,Low/No alcohol,10,86,0.027751623766703842,conditional_local
+Low_No alcohol_043,Low/No alcohol,155,141,0.1154891061009316,conditional_local
+Low_No alcohol_044,Low/No alcohol,83,155,0.04134388624579884,conditional_local
+Low_No alcohol_045,Low/No alcohol,83,86,0.20512784112001428,conditional_local
+Low_No alcohol_046,Low/No alcohol,155,83,0.1088750045372736,conditional_local
+Low_No alcohol_047,Low/No alcohol,10,86,0.10488951305197043,conditional_local
+Low_No alcohol_048,Low/No alcohol,10,223,0.23492324443027415,conditional_local
+Low_No alcohol_049,Low/No alcohol,155,83,0.033920353346941164,conditional_local
+Low_No alcohol_050,Low/No alcohol,86,83,0.20819015130629956,conditional_local
+Low_No alcohol_051,Low/No alcohol,223,10,0.7058479969617433,conditional_local
+Low_No alcohol_052,Low/No alcohol,83,86,0.14001328692705023,conditional_local
+Low_No alcohol_053,Low/No alcohol,10,86,0.07195521852016286,conditional_local
+Low_No alcohol_054,Low/No alcohol,223,155,0.2636866851943024,conditional_local
+Low_No alcohol_055,Low/No alcohol,223,141,0.1870418589079449,conditional_local
+Low_No alcohol_056,Low/No alcohol,10,141,0.3560801599282631,conditional_local
+Low_No alcohol_057,Low/No alcohol,141,83,0.24942206179850257,conditional_local
+Low_No alcohol_058,Low/No alcohol,223,86,0.015282892572399344,conditional_local
+Low_No alcohol_059,Low/No alcohol,141,155,0.1331819125159258,conditional_local
+Low_No alcohol_060,Low/No alcohol,86,155,0.15372539265953417,conditional_local
+Low_No alcohol_061,Low/No alcohol,83,86,0.5617712053754764,conditional_local
+Low_No alcohol_062,Low/No alcohol,141,83,0.6446828537448538,conditional_local
+Low_No alcohol_063,Low/No alcohol,83,141,0.3720184803697517,conditional_local
+Low_No alcohol_064,Low/No alcohol,10,141,0.0039603117381825205,conditional_local
+Low_No alcohol_065,Low/No alcohol,83,155,0.26414856455768515,conditional_local
+Low_No alcohol_066,Low/No alcohol,141,86,0.10859141007163595,conditional_local
+Low_No alcohol_067,Low/No alcohol,223,141,0.1908029390355837,conditional_local
+Low_No alcohol_068,Low/No alcohol,141,83,0.35279128756316863,conditional_local
+Low_No alcohol_069,Low/No alcohol,86,223,0.001416499886941826,conditional_local
+Low_No alcohol_070,Low/No alcohol,155,223,0.022554816061784024,conditional_local
+Low_No alcohol_071,Low/No alcohol,223,83,0.10933482643495224,conditional_local
+Low_No alcohol_072,Low/No alcohol,86,223,0.14250750191760644,conditional_local
+Low_No alcohol_073,Low/No alcohol,83,86,0.007814778515299705,conditional_local
+Low_No alcohol_074,Low/No alcohol,155,86,0.02363572797425356,conditional_local
+Low_No alcohol_075,Low/No alcohol,83,223,0.1610494121914188,conditional_local
+Low_No alcohol_076,Low/No alcohol,141,86,0.4561722506661031,conditional_local
+Low_No alcohol_077,Low/No alcohol,155,83,0.31978847751975775,conditional_local
+Low_No alcohol_078,Low/No alcohol,86,141,0.5132546533706829,conditional_local
+Low_No alcohol_079,Low/No alcohol,10,141,0.03424044560056708,conditional_local
+Low_No alcohol_080,Low/No alcohol,223,86,0.22778972147065146,conditional_local
+Low_No alcohol_081,Low/No alcohol,83,223,0.1746788478000286,conditional_local
+Low_No alcohol_082,Low/No alcohol,83,223,0.36563246045419745,conditional_local
+Low_No alcohol_083,Low/No alcohol,83,141,0.14205281589234878,conditional_local
+Low_No alcohol_084,Low/No alcohol,155,141,0.395330765486513,conditional_local
+Low_No alcohol_085,Low/No alcohol,223,155,0.19998632847181563,conditional_local
+Low_No alcohol_086,Low/No alcohol,223,155,0.05294040233180697,conditional_local
+Low_No alcohol_087,Low/No alcohol,83,223,0.10299357888589257,conditional_local
+Low_No alcohol_088,Low/No alcohol,86,141,0.29717961568965456,conditional_local
+Low_No alcohol_089,Low/No alcohol,223,155,0.27634352204964924,conditional_local
+Low_No alcohol_090,Low/No alcohol,155,10,0.07200848046339524,conditional_local
+Low_No alcohol_091,Low/No alcohol,155,141,0.2988929281524665,conditional_local
+Low_No alcohol_092,Low/No alcohol,10,223,0.15617291485578205,conditional_local
+Low_No alcohol_093,Low/No alcohol,155,223,0.6191706547514735,conditional_local
+Low_No alcohol_094,Low/No alcohol,86,10,0.3950185359722168,conditional_local
+Low_No alcohol_095,Low/No alcohol,83,141,0.04715727843880772,conditional_local
+Low_No alcohol_096,Low/No alcohol,223,83,0.20644996038724076,conditional_local
+Low_No alcohol_097,Low/No alcohol,10,141,0.2244792533099223,conditional_local
+Low_No alcohol_098,Low/No alcohol,86,10,0.0822526325047009,conditional_local
+Low_No alcohol_099,Low/No alcohol,141,86,0.5188163675933127,conditional_local
+Pils_Lager_000,Pils/Lager,96,90,0.19315738930334764,conditional_local
+Pils_Lager_001,Pils/Lager,209,90,0.17858573848499518,conditional_local
+Pils_Lager_002,Pils/Lager,124,81,0.18416868859491878,conditional_local
+Pils_Lager_003,Pils/Lager,139,81,0.14567189922009238,conditional_local
+Pils_Lager_004,Pils/Lager,230,209,0.24620512209581608,conditional_local
+Pils_Lager_005,Pils/Lager,230,139,0.16441680145732937,conditional_local
+Pils_Lager_006,Pils/Lager,139,230,0.22751872498644404,conditional_local
+Pils_Lager_007,Pils/Lager,96,218,0.019867611098252514,conditional_local
+Pils_Lager_008,Pils/Lager,139,81,0.31256621532074014,conditional_local
+Pils_Lager_009,Pils/Lager,124,81,0.21762138331273773,conditional_local
+Pils_Lager_010,Pils/Lager,124,218,0.013327742922600458,conditional_local
+Pils_Lager_011,Pils/Lager,209,139,0.31482613430785206,conditional_local
+Pils_Lager_012,Pils/Lager,185,124,0.12975561664856913,conditional_local
+Pils_Lager_013,Pils/Lager,218,139,0.23959697617612727,conditional_local
+Pils_Lager_014,Pils/Lager,90,209,0.18123439706200145,conditional_local
+Pils_Lager_015,Pils/Lager,230,185,0.054501269248443014,conditional_local
+Pils_Lager_016,Pils/Lager,230,218,0.1029348811722077,conditional_local
+Pils_Lager_017,Pils/Lager,96,81,0.5394176769863169,conditional_local
+Pils_Lager_018,Pils/Lager,139,90,0.04315627998227768,conditional_local
+Pils_Lager_019,Pils/Lager,139,209,0.13207152554231916,conditional_local
+Pils_Lager_020,Pils/Lager,96,81,0.007441256622364772,conditional_local
+Pils_Lager_021,Pils/Lager,218,90,0.161983669389794,conditional_local
+Pils_Lager_022,Pils/Lager,81,90,0.12266960604197336,conditional_local
+Pils_Lager_023,Pils/Lager,139,81,0.11063243662432336,conditional_local
+Pils_Lager_024,Pils/Lager,209,218,0.37866071043998006,conditional_local
+Pils_Lager_025,Pils/Lager,209,185,0.03168962887042222,conditional_local
+Pils_Lager_026,Pils/Lager,185,90,0.08978894168687636,conditional_local
+Pils_Lager_027,Pils/Lager,218,185,0.40273622927995656,conditional_local
+Pils_Lager_028,Pils/Lager,185,209,0.004360863217236224,conditional_local
+Pils_Lager_029,Pils/Lager,139,230,0.01002511440946831,conditional_local
+Pils_Lager_030,Pils/Lager,81,90,0.2637421015292812,conditional_local
+Pils_Lager_031,Pils/Lager,90,139,0.376748967457349,conditional_local
+Pils_Lager_032,Pils/Lager,209,230,0.3419016555228419,conditional_local
+Pils_Lager_033,Pils/Lager,81,218,0.03790381644792666,conditional_local
+Pils_Lager_034,Pils/Lager,230,139,0.038553626278764665,conditional_local
+Pils_Lager_035,Pils/Lager,124,230,0.08501260021692791,conditional_local
+Pils_Lager_036,Pils/Lager,90,230,0.2378484883523902,conditional_local
+Pils_Lager_037,Pils/Lager,90,81,0.10312035218538791,conditional_local
+Pils_Lager_038,Pils/Lager,209,185,0.010384037557712854,conditional_local
+Pils_Lager_039,Pils/Lager,124,218,0.1468728688482682,conditional_local
+Pils_Lager_040,Pils/Lager,209,139,0.5113470575184018,conditional_local
+Pils_Lager_041,Pils/Lager,96,139,0.12785828510147493,conditional_local
+Pils_Lager_042,Pils/Lager,124,218,0.021610607181549904,conditional_local
+Pils_Lager_043,Pils/Lager,209,139,0.5270124937301404,conditional_local
+Pils_Lager_044,Pils/Lager,230,139,0.04188496074968934,conditional_local
+Pils_Lager_045,Pils/Lager,230,185,0.27927412319071443,conditional_local
+Pils_Lager_046,Pils/Lager,124,139,0.24527214270968675,conditional_local
+Pils_Lager_047,Pils/Lager,96,230,0.1214329176227681,conditional_local
+Pils_Lager_048,Pils/Lager,209,230,0.11680692004057623,conditional_local
+Pils_Lager_049,Pils/Lager,185,124,0.2151268881012714,conditional_local
+Pils_Lager_050,Pils/Lager,90,218,0.10906305218293183,conditional_local
+Pils_Lager_051,Pils/Lager,81,139,0.22145755044531065,conditional_local
+Pils_Lager_052,Pils/Lager,96,81,0.12159484238679524,conditional_local
+Pils_Lager_053,Pils/Lager,81,185,0.18902600861474975,conditional_local
+Pils_Lager_054,Pils/Lager,81,90,0.1998583580374369,conditional_local
+Pils_Lager_055,Pils/Lager,218,139,0.16854195239109462,conditional_local
+Pils_Lager_056,Pils/Lager,218,185,0.41546764614758985,conditional_local
+Pils_Lager_057,Pils/Lager,185,124,0.051463532005136974,conditional_local
+Pils_Lager_058,Pils/Lager,209,230,0.13631475613592275,conditional_local
+Pils_Lager_059,Pils/Lager,218,139,0.0702869632234627,conditional_local
+Pils_Lager_060,Pils/Lager,96,90,0.025884997374058697,conditional_local
+Pils_Lager_061,Pils/Lager,218,230,0.05122399807539967,conditional_local
+Pils_Lager_062,Pils/Lager,96,230,0.3985956134506953,conditional_local
+Pils_Lager_063,Pils/Lager,209,139,0.4614248690949145,conditional_local
+Pils_Lager_064,Pils/Lager,209,218,0.041932939348757615,conditional_local
+Pils_Lager_065,Pils/Lager,90,139,0.4299732797303264,conditional_local
+Pils_Lager_066,Pils/Lager,185,124,0.12630585767230784,conditional_local
+Pils_Lager_067,Pils/Lager,96,139,0.737697127038684,conditional_local
+Pils_Lager_068,Pils/Lager,124,218,0.0020965555388700852,conditional_local
+Pils_Lager_069,Pils/Lager,209,185,0.23098962285844207,conditional_local
+Pils_Lager_070,Pils/Lager,139,230,0.2379926313234894,conditional_local
+Pils_Lager_071,Pils/Lager,218,185,0.2643231638126296,conditional_local
+Pils_Lager_072,Pils/Lager,139,90,0.11107795733001559,conditional_local
+Pils_Lager_073,Pils/Lager,218,185,0.35061993535645747,conditional_local
+Pils_Lager_074,Pils/Lager,218,230,0.12593857844138212,conditional_local
+Pils_Lager_075,Pils/Lager,96,139,0.046941908115160136,conditional_local
+Pils_Lager_076,Pils/Lager,209,139,0.09300698013451081,conditional_local
+Pils_Lager_077,Pils/Lager,96,230,0.1949123814935415,conditional_local
+Pils_Lager_078,Pils/Lager,139,81,0.06477824417395212,conditional_local
+Pils_Lager_079,Pils/Lager,96,90,0.1296786205454511,conditional_local
+Pils_Lager_080,Pils/Lager,230,90,0.12184131540012548,conditional_local
+Pils_Lager_081,Pils/Lager,124,230,0.24829670752052863,conditional_local
+Pils_Lager_082,Pils/Lager,230,139,0.2345285628396755,conditional_local
+Pils_Lager_083,Pils/Lager,230,209,0.1652907073193164,conditional_local
+Pils_Lager_084,Pils/Lager,81,124,0.09318421766996371,conditional_local
+Pils_Lager_085,Pils/Lager,81,90,0.18687848677808191,conditional_local
+Pils_Lager_086,Pils/Lager,230,139,0.8132195132734935,conditional_local
+Pils_Lager_087,Pils/Lager,230,185,0.18961409537838758,conditional_local
+Pils_Lager_088,Pils/Lager,90,139,0.19695680110480998,conditional_local
+Pils_Lager_089,Pils/Lager,185,209,0.0218425624736613,conditional_local
+Pils_Lager_090,Pils/Lager,209,185,0.12275226091896867,conditional_local
+Pils_Lager_091,Pils/Lager,218,81,0.20453309188430424,conditional_local
+Pils_Lager_092,Pils/Lager,124,230,0.08165660896904106,conditional_local
+Pils_Lager_093,Pils/Lager,124,185,0.5968131037173986,conditional_local
+Pils_Lager_094,Pils/Lager,81,139,0.28958650047892576,conditional_local
+Pils_Lager_095,Pils/Lager,209,139,0.11747715631205104,conditional_local
+Pils_Lager_096,Pils/Lager,139,218,0.17567793528188871,conditional_local
+Pils_Lager_097,Pils/Lager,96,90,0.4214632720683154,conditional_local
+Pils_Lager_098,Pils/Lager,139,230,0.05488031482090278,conditional_local
+Pils_Lager_099,Pils/Lager,81,90,0.4367408916704574,conditional_local
+Saison_000,Saison,56,20,0.11683123706926463,conditional_local
+Saison_001,Saison,166,145,0.03783070836593457,conditional_local
+Saison_002,Saison,166,183,0.05239350328078833,conditional_local
+Saison_003,Saison,166,145,0.04695134317480528,conditional_local
+Saison_004,Saison,20,132,0.0010269990623165135,conditional_local
+Saison_005,Saison,132,166,0.07176357545689392,conditional_local
+Saison_006,Saison,7,183,0.02256618945857423,conditional_local
+Saison_007,Saison,183,20,0.45107132872269223,conditional_local
+Saison_008,Saison,132,7,0.12044287356716722,conditional_local
+Saison_009,Saison,20,166,0.023059600809438047,conditional_local
+Saison_010,Saison,56,132,0.07151102869348454,conditional_local
+Saison_011,Saison,183,145,0.33575369717041487,conditional_local
+Saison_012,Saison,132,166,0.3457602491876873,conditional_local
+Saison_013,Saison,183,20,0.20688852283183695,conditional_local
+Saison_014,Saison,56,20,0.16019386612719688,conditional_local
+Saison_015,Saison,56,132,0.2717479539704695,conditional_local
+Saison_016,Saison,56,183,0.029840099325007575,conditional_local
+Saison_017,Saison,56,145,0.30385394560150103,conditional_local
+Saison_018,Saison,7,166,0.17560590362078426,conditional_local
+Saison_019,Saison,56,20,0.13154930978589127,conditional_local
+Saison_020,Saison,145,56,0.21028850346198635,conditional_local
+Saison_021,Saison,7,145,0.26847935932681416,conditional_local
+Saison_022,Saison,20,132,0.2081137447599155,conditional_local
+Saison_023,Saison,20,166,0.22438467189862008,conditional_local
+Saison_024,Saison,166,145,0.09300262330520767,conditional_local
+Saison_025,Saison,132,20,0.1399023950225607,conditional_local
+Saison_026,Saison,183,56,0.11650705452527377,conditional_local
+Saison_027,Saison,145,166,0.30378406766382665,conditional_local
+Saison_028,Saison,145,20,0.1845299687334034,conditional_local
+Saison_029,Saison,145,132,0.014533114147857457,conditional_local
+Saison_030,Saison,145,166,0.12182201253388522,conditional_local
+Saison_031,Saison,145,20,0.07258551917643687,conditional_local
+Saison_032,Saison,7,166,0.16243294065206806,conditional_local
+Saison_033,Saison,58,132,0.17832864932499398,conditional_local
+Saison_034,Saison,58,132,0.3984850083506198,conditional_local
+Saison_035,Saison,145,56,0.5779387269218681,conditional_local
+Saison_036,Saison,145,166,0.027284681312712746,conditional_local
+Saison_037,Saison,20,183,0.01803320663443741,conditional_local
+Saison_038,Saison,183,166,0.3055406778148339,conditional_local
+Saison_039,Saison,7,20,0.4939681493165486,conditional_local
+Saison_040,Saison,166,183,0.23577431832476878,conditional_local
+Saison_041,Saison,56,145,0.05882536442190618,conditional_local
+Saison_042,Saison,183,20,0.06952036795930851,conditional_local
+Saison_043,Saison,58,166,0.34457202814280147,conditional_local
+Saison_044,Saison,145,20,0.3559431125310286,conditional_local
+Saison_045,Saison,56,132,0.01817136471651209,conditional_local
+Saison_046,Saison,56,183,0.16999960514229487,conditional_local
+Saison_047,Saison,7,132,0.3493745448195563,conditional_local
+Saison_048,Saison,7,183,0.4387550641669944,conditional_local
+Saison_049,Saison,145,132,0.18131312469246583,conditional_local
+Saison_050,Saison,58,56,0.0649883429745881,conditional_local
+Saison_051,Saison,56,145,0.5786453770918702,conditional_local
+Saison_052,Saison,166,183,0.022225836496939856,conditional_local
+Saison_053,Saison,145,132,0.20186053973254842,conditional_local
+Saison_054,Saison,7,145,0.08452255211150486,conditional_local
+Saison_055,Saison,58,20,0.5981419584530406,conditional_local
+Saison_056,Saison,132,20,0.09831034194979489,conditional_local
+Saison_057,Saison,7,132,0.1091807155196194,conditional_local
+Saison_058,Saison,7,166,0.2336366374088055,conditional_local
+Saison_059,Saison,166,58,0.19224167315771062,conditional_local
+Saison_060,Saison,56,132,0.21504232087113345,conditional_local
+Saison_061,Saison,166,58,0.2966612326801722,conditional_local
+Saison_062,Saison,58,56,0.12542937130121212,conditional_local
+Saison_063,Saison,56,183,0.02634406268224898,conditional_local
+Saison_064,Saison,166,145,0.11749136732226935,conditional_local
+Saison_065,Saison,132,145,0.38936449055818984,conditional_local
+Saison_066,Saison,58,145,0.16248553077259292,conditional_local
+Saison_067,Saison,145,183,0.15836192648834574,conditional_local
+Saison_068,Saison,183,145,0.1514140094622999,conditional_local
+Saison_069,Saison,145,183,0.4232335460763719,conditional_local
+Saison_070,Saison,7,132,0.007142055110771112,conditional_local
+Saison_071,Saison,7,20,0.01926472102524829,conditional_local
+Saison_072,Saison,58,56,0.4282181163563809,conditional_local
+Saison_073,Saison,132,56,0.337637514832712,conditional_local
+Saison_074,Saison,20,166,0.33600127150925946,conditional_local
+Saison_075,Saison,58,56,0.004402703506758218,conditional_local
+Saison_076,Saison,166,145,0.1602356862956081,conditional_local
+Saison_077,Saison,166,183,0.29430293389254636,conditional_local
+Saison_078,Saison,132,7,0.14077111070845752,conditional_local
+Saison_079,Saison,56,166,0.194484583891501,conditional_local
+Saison_080,Saison,166,145,0.16481893271336912,conditional_local
+Saison_081,Saison,58,145,0.310507043685382,conditional_local
+Saison_082,Saison,166,56,0.29419913414456655,conditional_local
+Saison_083,Saison,58,56,0.19359899989762588,conditional_local
+Saison_084,Saison,132,7,0.0033769777352338124,conditional_local
+Saison_085,Saison,7,132,0.291205668668086,conditional_local
+Saison_086,Saison,20,166,0.1695322607333569,conditional_local
+Saison_087,Saison,20,56,0.2746526416137566,conditional_local
+Saison_088,Saison,132,7,0.14132404742220667,conditional_local
+Saison_089,Saison,56,166,0.1612250502525579,conditional_local
+Saison_090,Saison,145,183,0.12830383703628317,conditional_local
+Saison_091,Saison,166,183,0.18161609976345303,conditional_local
+Saison_092,Saison,145,166,0.03919046605997923,conditional_local
+Saison_093,Saison,183,56,0.0962643622370543,conditional_local
+Saison_094,Saison,20,145,0.43745543966338596,conditional_local
+Saison_095,Saison,145,56,0.06820522937334345,conditional_local
+Saison_096,Saison,20,56,0.0585388462429536,conditional_local
+Saison_097,Saison,183,132,0.46049255942677025,conditional_local
+Saison_098,Saison,145,166,0.33042423365636037,conditional_local
+Saison_099,Saison,7,20,0.01275711712184203,conditional_local
+Scotch_000,Scotch,216,131,0.08806591537838318,conditional_local
+Scotch_001,Scotch,146,216,0.2508503186362051,conditional_local
+Scotch_002,Scotch,168,131,0.2539744104586983,conditional_local
+Scotch_003,Scotch,216,131,0.043822073750304044,conditional_local
+Scotch_004,Scotch,146,168,0.6274685114125477,conditional_local
+Scotch_005,Scotch,168,146,0.04855513765839026,conditional_local
+Scotch_006,Scotch,146,131,0.06567442096831293,conditional_local
+Scotch_007,Scotch,216,168,0.3006172735786389,conditional_local
+Scotch_008,Scotch,216,131,0.05562774581909219,conditional_local
+Scotch_009,Scotch,146,216,0.24401525349481745,conditional_local
+Scotch_010,Scotch,216,146,0.022032791459768088,conditional_local
+Scotch_011,Scotch,131,168,0.39060023248847237,conditional_local
+Scotch_012,Scotch,146,216,0.006731337681467894,conditional_local
+Scotch_013,Scotch,146,131,0.15703335097860854,conditional_local
+Scotch_014,Scotch,216,146,0.283501027892621,conditional_local
+Scotch_015,Scotch,131,168,0.2061508382498087,conditional_local
+Scotch_016,Scotch,168,131,0.32148867347573923,conditional_local
+Scotch_017,Scotch,216,131,0.17782542899998627,conditional_local
+Scotch_018,Scotch,146,216,0.6185595851180471,conditional_local
+Scotch_019,Scotch,131,168,0.08431655591842639,conditional_local
+Scotch_020,Scotch,216,131,0.37229420522480366,conditional_local
+Scotch_021,Scotch,146,131,0.4349398184131255,conditional_local
+Scotch_022,Scotch,131,168,0.08392329678329324,conditional_local
+Scotch_023,Scotch,216,146,0.105286026856675,conditional_local
+Scotch_024,Scotch,146,216,0.10278464338662549,conditional_local
+Scotch_025,Scotch,168,146,0.11874629445904213,conditional_local
+Scotch_026,Scotch,216,146,0.20311010643217584,conditional_local
+Scotch_027,Scotch,131,146,0.03185285032057256,conditional_local
+Scotch_028,Scotch,131,168,0.1564430890005232,conditional_local
+Scotch_029,Scotch,146,216,0.5353203018887775,conditional_local
+Scotch_030,Scotch,146,216,0.0657163724260967,conditional_local
+Scotch_031,Scotch,146,131,0.273597097037861,conditional_local
+Scotch_032,Scotch,216,131,0.31711866743376854,conditional_local
+Scotch_033,Scotch,131,216,0.07600119232723955,conditional_local
+Scotch_034,Scotch,131,146,0.05291065256882265,conditional_local
+Scotch_035,Scotch,131,168,0.07431110309354018,conditional_local
+Scotch_036,Scotch,216,168,0.06691207596370895,conditional_local
+Scotch_037,Scotch,216,131,0.007187549386066179,conditional_local
+Scotch_038,Scotch,131,146,0.4578974818176857,conditional_local
+Scotch_039,Scotch,146,216,0.35133910111200356,conditional_local
+Scotch_040,Scotch,216,131,0.35203519516309356,conditional_local
+Scotch_041,Scotch,168,131,0.22141495719279622,conditional_local
+Scotch_042,Scotch,216,131,0.12758249898454888,conditional_local
+Scotch_043,Scotch,131,216,0.2519331415248543,conditional_local
+Scotch_044,Scotch,146,131,0.33629766854891713,conditional_local
+Scotch_045,Scotch,146,168,0.5113076458221455,conditional_local
+Scotch_046,Scotch,168,216,0.35461283727250276,conditional_local
+Scotch_047,Scotch,146,216,0.11801107833143322,conditional_local
+Scotch_048,Scotch,216,168,0.11465686674781746,conditional_local
+Scotch_049,Scotch,146,216,0.20072012417244317,conditional_local
+Scotch_050,Scotch,168,216,0.4505662891971837,conditional_local
+Scotch_051,Scotch,146,131,0.11624874928910016,conditional_local
+Scotch_052,Scotch,168,146,0.2716702378263914,conditional_local
+Scotch_053,Scotch,168,216,0.01702805891402956,conditional_local
+Scotch_054,Scotch,168,146,0.22417643043598698,conditional_local
+Scotch_055,Scotch,146,216,0.06374856247717293,conditional_local
+Scotch_056,Scotch,216,146,0.22610157152121413,conditional_local
+Scotch_057,Scotch,168,131,0.22809148454741923,conditional_local
+Scotch_058,Scotch,168,131,0.5839783710637043,conditional_local
+Scotch_059,Scotch,216,131,0.07800867070137782,conditional_local
+Scotch_060,Scotch,131,168,0.030333133243480612,conditional_local
+Scotch_061,Scotch,168,131,0.08198668341265898,conditional_local
+Scotch_062,Scotch,131,146,0.016162618170840304,conditional_local
+Scotch_063,Scotch,168,146,0.07625695657727545,conditional_local
+Scotch_064,Scotch,131,216,0.015159523565737212,conditional_local
+Scotch_065,Scotch,168,146,0.05778091682073859,conditional_local
+Scotch_066,Scotch,146,216,0.2368470262697053,conditional_local
+Scotch_067,Scotch,216,168,0.1793200266971626,conditional_local
+Scotch_068,Scotch,131,216,0.13970422833017657,conditional_local
+Scotch_069,Scotch,168,131,0.08948771894921129,conditional_local
+Scotch_070,Scotch,131,216,0.03952207940464471,conditional_local
+Scotch_071,Scotch,131,216,0.08258428845459324,conditional_local
+Scotch_072,Scotch,168,216,0.029731199832769464,conditional_local
+Scotch_073,Scotch,146,131,0.2521891907353602,conditional_local
+Scotch_074,Scotch,131,216,0.017826065353319976,conditional_local
+Scotch_075,Scotch,216,131,0.36638298494800076,conditional_local
+Scotch_076,Scotch,146,168,0.16853026050415632,conditional_local
+Scotch_077,Scotch,146,131,0.1616769500255401,conditional_local
+Scotch_078,Scotch,216,131,0.09537960196963062,conditional_local
+Scotch_079,Scotch,216,168,0.14613301006506196,conditional_local
+Scotch_080,Scotch,131,146,0.21637679699322832,conditional_local
+Scotch_081,Scotch,131,146,0.06958982117175909,conditional_local
+Scotch_082,Scotch,168,216,0.4236627490281887,conditional_local
+Scotch_083,Scotch,131,168,0.26710216041145746,conditional_local
+Scotch_084,Scotch,168,131,0.07322267209419796,conditional_local
+Scotch_085,Scotch,131,146,0.5617839639294334,conditional_local
+Scotch_086,Scotch,168,146,0.5211981444949195,conditional_local
+Scotch_087,Scotch,216,146,0.2580163349671346,conditional_local
+Scotch_088,Scotch,168,131,0.2930671989229924,conditional_local
+Scotch_089,Scotch,168,146,0.06383897050124082,conditional_local
+Scotch_090,Scotch,216,146,0.6108293550487781,conditional_local
+Scotch_091,Scotch,146,216,0.45788332905680057,conditional_local
+Scotch_092,Scotch,216,131,0.14184136948196563,conditional_local
+Scotch_093,Scotch,168,146,0.4284465698646791,conditional_local
+Scotch_094,Scotch,168,146,0.18706217980976222,conditional_local
+Scotch_095,Scotch,168,131,0.19538209709860266,conditional_local
+Scotch_096,Scotch,146,216,0.03916625024299134,conditional_local
+Scotch_097,Scotch,216,168,0.34478119148865394,conditional_local
+Scotch_098,Scotch,131,216,0.2461849285113341,conditional_local
+Scotch_099,Scotch,146,168,0.21800003948680444,conditional_local
+Stout_Porter_000,Stout/Porter,61,231,0.2352854558461089,conditional_local
+Stout_Porter_001,Stout/Porter,123,52,0.047785876683074074,conditional_local
+Stout_Porter_002,Stout/Porter,123,182,0.05583934747572355,conditional_local
+Stout_Porter_003,Stout/Porter,188,123,0.19541442502674905,conditional_local
+Stout_Porter_004,Stout/Porter,231,188,0.08900846523010518,conditional_local
+Stout_Porter_005,Stout/Porter,188,212,0.11397634860326727,conditional_local
+Stout_Porter_006,Stout/Porter,61,182,0.03588934470270573,conditional_local
+Stout_Porter_007,Stout/Porter,231,52,0.6399295603322321,conditional_local
+Stout_Porter_008,Stout/Porter,67,231,0.5018348607923088,conditional_local
+Stout_Porter_009,Stout/Porter,212,52,0.03472055777992122,conditional_local
+Stout_Porter_010,Stout/Porter,188,61,0.14915843964976727,conditional_local
+Stout_Porter_011,Stout/Porter,201,61,0.3271864991186187,conditional_local
+Stout_Porter_012,Stout/Porter,212,123,0.14981246625679015,conditional_local
+Stout_Porter_013,Stout/Porter,182,231,0.012303956776066523,conditional_local
+Stout_Porter_014,Stout/Porter,52,182,0.015443562786060778,conditional_local
+Stout_Porter_015,Stout/Porter,67,52,0.01858487827043683,conditional_local
+Stout_Porter_016,Stout/Porter,52,212,0.22250150972209753,conditional_local
+Stout_Porter_017,Stout/Porter,103,188,0.001463190932705342,conditional_local
+Stout_Porter_018,Stout/Porter,212,188,0.2269351094322573,conditional_local
+Stout_Porter_019,Stout/Porter,201,52,0.15543135162274066,conditional_local
+Stout_Porter_020,Stout/Porter,231,52,0.2967916386562369,conditional_local
+Stout_Porter_021,Stout/Porter,103,182,0.10776092244611765,conditional_local
+Stout_Porter_022,Stout/Porter,123,61,0.1927821301084902,conditional_local
+Stout_Porter_023,Stout/Porter,61,182,0.036301258519440036,conditional_local
+Stout_Porter_024,Stout/Porter,123,61,0.15292561673182015,conditional_local
+Stout_Porter_025,Stout/Porter,52,212,0.12121303236819855,conditional_local
+Stout_Porter_026,Stout/Porter,103,188,0.26393023012572253,conditional_local
+Stout_Porter_027,Stout/Porter,231,61,0.0969698986012315,conditional_local
+Stout_Porter_028,Stout/Porter,52,123,0.02627590293353992,conditional_local
+Stout_Porter_029,Stout/Porter,201,123,0.2802878484298974,conditional_local
+Stout_Porter_030,Stout/Porter,212,182,0.33637487942061295,conditional_local
+Stout_Porter_031,Stout/Porter,52,61,0.24822813791206086,conditional_local
+Stout_Porter_032,Stout/Porter,188,123,0.36945595561001143,conditional_local
+Stout_Porter_033,Stout/Porter,67,61,0.3718492162303304,conditional_local
+Stout_Porter_034,Stout/Porter,188,61,0.1179845036525562,conditional_local
+Stout_Porter_035,Stout/Porter,201,61,0.11080493588160252,conditional_local
+Stout_Porter_036,Stout/Porter,67,52,0.24528097571445806,conditional_local
+Stout_Porter_037,Stout/Porter,123,212,0.4051267675081545,conditional_local
+Stout_Porter_038,Stout/Porter,188,52,0.1756241030255533,conditional_local
+Stout_Porter_039,Stout/Porter,103,188,0.2302759362788365,conditional_local
+Stout_Porter_040,Stout/Porter,61,231,0.008543724234475799,conditional_local
+Stout_Porter_041,Stout/Porter,67,182,0.024341119562069774,conditional_local
+Stout_Porter_042,Stout/Porter,201,182,0.09409952047803352,conditional_local
+Stout_Porter_043,Stout/Porter,182,188,0.021298168505971316,conditional_local
+Stout_Porter_044,Stout/Porter,123,188,0.13014166324366463,conditional_local
+Stout_Porter_045,Stout/Porter,52,188,0.26815205315206314,conditional_local
+Stout_Porter_046,Stout/Porter,61,52,0.02989247682355261,conditional_local
+Stout_Porter_047,Stout/Porter,212,61,0.16003104099567206,conditional_local
+Stout_Porter_048,Stout/Porter,67,188,0.12979944385249959,conditional_local
+Stout_Porter_049,Stout/Porter,61,182,0.10569268275095971,conditional_local
+Stout_Porter_050,Stout/Porter,188,52,0.10496450976852667,conditional_local
+Stout_Porter_051,Stout/Porter,182,123,0.2004524075269116,conditional_local
+Stout_Porter_052,Stout/Porter,67,231,0.7103185827474349,conditional_local
+Stout_Porter_053,Stout/Porter,123,212,0.23912009744243784,conditional_local
+Stout_Porter_054,Stout/Porter,201,61,0.18968524546934012,conditional_local
+Stout_Porter_055,Stout/Porter,182,61,0.10524644793434658,conditional_local
+Stout_Porter_056,Stout/Porter,201,52,0.25529518882171337,conditional_local
+Stout_Porter_057,Stout/Porter,188,52,0.049403127268505265,conditional_local
+Stout_Porter_058,Stout/Porter,188,123,0.3891651042314805,conditional_local
+Stout_Porter_059,Stout/Porter,123,52,0.012474830432509269,conditional_local
+Stout_Porter_060,Stout/Porter,61,52,0.48451346755905184,conditional_local
+Stout_Porter_061,Stout/Porter,231,52,0.34275578773208715,conditional_local
+Stout_Porter_062,Stout/Porter,61,231,0.19753356228336444,conditional_local
+Stout_Porter_063,Stout/Porter,67,182,0.13073004564134763,conditional_local
+Stout_Porter_064,Stout/Porter,52,182,0.5117778321888315,conditional_local
+Stout_Porter_065,Stout/Porter,182,123,0.282644774217287,conditional_local
+Stout_Porter_066,Stout/Porter,52,123,0.017708802907562327,conditional_local
+Stout_Porter_067,Stout/Porter,61,182,0.3364907618818829,conditional_local
+Stout_Porter_068,Stout/Porter,201,182,0.4736301920757756,conditional_local
+Stout_Porter_069,Stout/Porter,123,188,0.13805926765225535,conditional_local
+Stout_Porter_070,Stout/Porter,201,52,0.25045522076546867,conditional_local
+Stout_Porter_071,Stout/Porter,103,182,0.11551691147648904,conditional_local
+Stout_Porter_072,Stout/Porter,182,231,0.29469558138394697,conditional_local
+Stout_Porter_073,Stout/Porter,182,61,0.09042421549462691,conditional_local
+Stout_Porter_074,Stout/Porter,188,123,0.25266259078924236,conditional_local
+Stout_Porter_075,Stout/Porter,231,188,0.08319136832291998,conditional_local
+Stout_Porter_076,Stout/Porter,61,182,0.09578377293975117,conditional_local
+Stout_Porter_077,Stout/Porter,182,231,0.5405776755182841,conditional_local
+Stout_Porter_078,Stout/Porter,231,201,0.10545989346130732,conditional_local
+Stout_Porter_079,Stout/Porter,182,231,0.22448135772678807,conditional_local
+Stout_Porter_080,Stout/Porter,231,52,0.06090943965219918,conditional_local
+Stout_Porter_081,Stout/Porter,52,61,0.0986495938792556,conditional_local
+Stout_Porter_082,Stout/Porter,212,123,0.19016629194228138,conditional_local
+Stout_Porter_083,Stout/Porter,61,123,0.2401870938486473,conditional_local
+Stout_Porter_084,Stout/Porter,123,182,0.3487821169486253,conditional_local
+Stout_Porter_085,Stout/Porter,201,123,0.0717581439009127,conditional_local
+Stout_Porter_086,Stout/Porter,52,188,0.1822466080660416,conditional_local
+Stout_Porter_087,Stout/Porter,67,231,0.386118654460304,conditional_local
+Stout_Porter_088,Stout/Porter,212,188,0.05973291087812272,conditional_local
+Stout_Porter_089,Stout/Porter,123,212,0.06831959578462249,conditional_local
+Stout_Porter_090,Stout/Porter,52,212,0.00444311706867158,conditional_local
+Stout_Porter_091,Stout/Porter,212,123,0.12258605785037303,conditional_local
+Stout_Porter_092,Stout/Porter,67,61,0.24763916988152163,conditional_local
+Stout_Porter_093,Stout/Porter,67,188,0.014482000524722509,conditional_local
+Stout_Porter_094,Stout/Porter,103,188,0.1808493214752128,conditional_local
+Stout_Porter_095,Stout/Porter,103,52,0.47851429733218476,conditional_local
+Stout_Porter_096,Stout/Porter,212,123,0.169640879561352,conditional_local
+Stout_Porter_097,Stout/Porter,52,188,0.1565773875417088,conditional_local
+Stout_Porter_098,Stout/Porter,212,61,0.005323502863967363,conditional_local
+Stout_Porter_099,Stout/Porter,103,52,0.034192346479435164,conditional_local
+Strong ale_000,Strong ale,196,133,0.30896430374118417,conditional_local
+Strong ale_001,Strong ale,4,186,0.19595022012175284,conditional_local
+Strong ale_002,Strong ale,51,186,0.27472786651684455,conditional_local
+Strong ale_003,Strong ale,196,51,0.2872394018696797,conditional_local
+Strong ale_004,Strong ale,133,117,0.1576858597120507,conditional_local
+Strong ale_005,Strong ale,235,99,0.0981661388737077,conditional_local
+Strong ale_006,Strong ale,4,37,0.030269517850143455,conditional_local
+Strong ale_007,Strong ale,4,37,0.0008255792628706494,conditional_local
+Strong ale_008,Strong ale,175,51,0.07182129878718152,conditional_local
+Strong ale_009,Strong ale,196,4,0.2694418487266101,conditional_local
+Strong ale_010,Strong ale,105,99,0.3606971548801204,conditional_local
+Strong ale_011,Strong ale,133,99,0.7076622291254199,conditional_local
+Strong ale_012,Strong ale,175,51,0.18892714827568577,conditional_local
+Strong ale_013,Strong ale,225,4,0.2031492538341276,conditional_local
+Strong ale_014,Strong ale,186,235,0.07577086920554549,conditional_local
+Strong ale_015,Strong ale,37,225,0.37444593795057945,conditional_local
+Strong ale_016,Strong ale,175,186,0.1412796328816514,conditional_local
+Strong ale_017,Strong ale,51,134,0.34897994102697777,conditional_local
+Strong ale_018,Strong ale,225,133,0.18146271087647772,conditional_local
+Strong ale_019,Strong ale,175,51,0.28595983430989264,conditional_local
+Strong ale_020,Strong ale,117,235,0.0029808983631541917,conditional_local
+Strong ale_021,Strong ale,134,235,0.2899444876518255,conditional_local
+Strong ale_022,Strong ale,4,148,0.1413036238478833,conditional_local
+Strong ale_023,Strong ale,134,186,0.1614387988180081,conditional_local
+Strong ale_024,Strong ale,4,225,0.22541767908841331,conditional_local
+Strong ale_025,Strong ale,4,37,0.0011968651117196178,conditional_local
+Strong ale_026,Strong ale,148,186,0.4731641667645608,conditional_local
+Strong ale_027,Strong ale,134,235,0.05891017629364947,conditional_local
+Strong ale_028,Strong ale,148,186,0.07511470853885448,conditional_local
+Strong ale_029,Strong ale,105,225,0.013944555740286293,conditional_local
+Strong ale_030,Strong ale,225,37,0.12081483536224079,conditional_local
+Strong ale_031,Strong ale,4,37,0.8132643426574662,conditional_local
+Strong ale_032,Strong ale,196,4,0.3749126131966026,conditional_local
+Strong ale_033,Strong ale,51,37,0.13145107186492544,conditional_local
+Strong ale_034,Strong ale,105,99,0.10163973720188273,conditional_local
+Strong ale_035,Strong ale,186,235,0.27131591636254193,conditional_local
+Strong ale_036,Strong ale,4,225,0.16166850071580904,conditional_local
+Strong ale_037,Strong ale,196,225,0.30196472865487173,conditional_local
+Strong ale_038,Strong ale,37,235,0.10798387238486552,conditional_local
+Strong ale_039,Strong ale,134,99,0.39390813833601385,conditional_local
+Strong ale_040,Strong ale,51,37,0.07248338183808987,conditional_local
+Strong ale_041,Strong ale,235,148,0.1303004624062881,conditional_local
+Strong ale_042,Strong ale,225,148,0.13978369762119502,conditional_local
+Strong ale_043,Strong ale,51,37,0.17751390618523177,conditional_local
+Strong ale_044,Strong ale,196,133,0.03788264728628138,conditional_local
+Strong ale_045,Strong ale,99,148,0.3420741291961339,conditional_local
+Strong ale_046,Strong ale,235,99,0.12546565397156664,conditional_local
+Strong ale_047,Strong ale,51,134,0.038179493623184145,conditional_local
+Strong ale_048,Strong ale,37,235,0.0005215856344176019,conditional_local
+Strong ale_049,Strong ale,37,235,0.03004907068383225,conditional_local
+Strong ale_050,Strong ale,105,148,0.42137466698671183,conditional_local
+Strong ale_051,Strong ale,99,186,0.00927517750423379,conditional_local
+Strong ale_052,Strong ale,235,37,0.11163681264955784,conditional_local
+Strong ale_053,Strong ale,51,37,0.3593099581788816,conditional_local
+Strong ale_054,Strong ale,134,99,0.40928561412155023,conditional_local
+Strong ale_055,Strong ale,175,235,0.07270608086694458,conditional_local
+Strong ale_056,Strong ale,148,186,0.12401583972982919,conditional_local
+Strong ale_057,Strong ale,105,148,0.30333137271472677,conditional_local
+Strong ale_058,Strong ale,196,4,0.16762220565421881,conditional_local
+Strong ale_059,Strong ale,133,186,0.2072306476475989,conditional_local
+Strong ale_060,Strong ale,37,51,0.06346617841035052,conditional_local
+Strong ale_061,Strong ale,133,99,0.03726632456750379,conditional_local
+Strong ale_062,Strong ale,133,186,0.10326484721729498,conditional_local
+Strong ale_063,Strong ale,235,99,0.011333430937298368,conditional_local
+Strong ale_064,Strong ale,235,134,0.2136000154429555,conditional_local
+Strong ale_065,Strong ale,196,133,0.2082818262247748,conditional_local
+Strong ale_066,Strong ale,37,148,0.6104293220687877,conditional_local
+Strong ale_067,Strong ale,133,225,0.4321618443539589,conditional_local
+Strong ale_068,Strong ale,134,51,0.2561841599581856,conditional_local
+Strong ale_069,Strong ale,133,148,0.08720437847665519,conditional_local
+Strong ale_070,Strong ale,235,134,0.22339769404554383,conditional_local
+Strong ale_071,Strong ale,196,4,0.21240273480427826,conditional_local
+Strong ale_072,Strong ale,196,51,0.08953001450520101,conditional_local
+Strong ale_073,Strong ale,148,4,0.3829985847783468,conditional_local
+Strong ale_074,Strong ale,99,117,0.6348744518936066,conditional_local
+Strong ale_075,Strong ale,99,148,0.3013985661823205,conditional_local
+Strong ale_076,Strong ale,117,235,0.7185307835804504,conditional_local
+Strong ale_077,Strong ale,186,235,0.37452520946850626,conditional_local
+Strong ale_078,Strong ale,133,99,0.08040810968557968,conditional_local
+Strong ale_079,Strong ale,134,51,0.02838971481926598,conditional_local
+Strong ale_080,Strong ale,196,4,0.3018131688348281,conditional_local
+Strong ale_081,Strong ale,186,99,0.16450882241872014,conditional_local
+Strong ale_082,Strong ale,235,37,0.16259552026155505,conditional_local
+Strong ale_083,Strong ale,148,99,0.38765134108974264,conditional_local
+Strong ale_084,Strong ale,186,99,0.17971144074488846,conditional_local
+Strong ale_085,Strong ale,196,4,0.19206102268183653,conditional_local
+Strong ale_086,Strong ale,225,148,0.1984116983941242,conditional_local
+Strong ale_087,Strong ale,148,186,0.6128195996303136,conditional_local
+Strong ale_088,Strong ale,51,186,0.4274592761215772,conditional_local
+Strong ale_089,Strong ale,51,235,0.05990345570196032,conditional_local
+Strong ale_090,Strong ale,105,235,0.20238286995263086,conditional_local
+Strong ale_091,Strong ale,37,235,0.3525851870298632,conditional_local
+Strong ale_092,Strong ale,51,186,0.4528175193137317,conditional_local
+Strong ale_093,Strong ale,105,225,0.03120141810434576,conditional_local
+Strong ale_094,Strong ale,37,235,0.19994256164915447,conditional_local
+Strong ale_095,Strong ale,51,225,0.023470785668050463,conditional_local
+Strong ale_096,Strong ale,105,186,0.12119883897685146,conditional_local
+Strong ale_097,Strong ale,235,99,0.6282005292085874,conditional_local
+Strong ale_098,Strong ale,175,99,0.6537106537324165,conditional_local
+Strong ale_099,Strong ale,186,235,0.036361830350627164,conditional_local
+Tripel_000,Tripel,147,140,0.009028622726895233,conditional_local
+Tripel_001,Tripel,66,15,0.07477576857012568,conditional_local
+Tripel_002,Tripel,15,17,0.06259092442983676,conditional_local
+Tripel_003,Tripel,163,85,0.03327887722841699,conditional_local
+Tripel_004,Tripel,66,17,0.1860488140413288,conditional_local
+Tripel_005,Tripel,34,199,0.23286452363659094,conditional_local
+Tripel_006,Tripel,147,140,0.03490706831933011,conditional_local
+Tripel_007,Tripel,15,17,0.3175922191722067,conditional_local
+Tripel_008,Tripel,17,66,0.21854282316966514,conditional_local
+Tripel_009,Tripel,240,163,0.059351788418148366,conditional_local
+Tripel_010,Tripel,240,17,0.11199200462789927,conditional_local
+Tripel_011,Tripel,157,15,0.07233721055156206,conditional_local
+Tripel_012,Tripel,69,66,0.09133315068495682,conditional_local
+Tripel_013,Tripel,204,140,0.3661278397601983,conditional_local
+Tripel_014,Tripel,217,147,0.06742033216542202,conditional_local
+Tripel_015,Tripel,204,140,0.3625535805895996,conditional_local
+Tripel_016,Tripel,69,147,0.4415048013473141,conditional_local
+Tripel_017,Tripel,204,147,0.10496103479463742,conditional_local
+Tripel_018,Tripel,228,66,0.24639413139806393,conditional_local
+Tripel_019,Tripel,66,45,0.01972466155864414,conditional_local
+Tripel_020,Tripel,239,191,0.10234934834495675,conditional_local
+Tripel_021,Tripel,240,163,0.23819970224489512,conditional_local
+Tripel_022,Tripel,239,191,0.22550758653584577,conditional_local
+Tripel_023,Tripel,154,191,0.06753666976550443,conditional_local
+Tripel_024,Tripel,140,217,0.2592110743843201,conditional_local
+Tripel_025,Tripel,204,245,0.035605578738696464,conditional_local
+Tripel_026,Tripel,93,240,0.0077130048048053,conditional_local
+Tripel_027,Tripel,163,199,0.007462761510465459,conditional_local
+Tripel_028,Tripel,147,69,0.0020325128441662506,conditional_local
+Tripel_029,Tripel,240,163,0.008974540684181345,conditional_local
+Tripel_030,Tripel,204,147,0.5469894697649483,conditional_local
+Tripel_031,Tripel,240,163,0.13690723794945148,conditional_local
+Tripel_032,Tripel,147,140,0.06865902043249111,conditional_local
+Tripel_033,Tripel,171,17,0.1372132270810124,conditional_local
+Tripel_034,Tripel,199,85,0.013582357368800842,conditional_local
+Tripel_035,Tripel,85,93,0.030599580945258994,conditional_local
+Tripel_036,Tripel,93,191,0.025275920731078056,conditional_local
+Tripel_037,Tripel,163,85,0.05623415962257611,conditional_local
+Tripel_038,Tripel,245,204,0.10472276867827271,conditional_local
+Tripel_039,Tripel,93,163,0.7000192085280554,conditional_local
+Tripel_040,Tripel,140,154,0.053287116876239805,conditional_local
+Tripel_041,Tripel,85,93,0.2873875658959608,conditional_local
+Tripel_042,Tripel,239,171,0.14825274224054996,conditional_local
+Tripel_043,Tripel,191,217,0.006189388180589161,conditional_local
+Tripel_044,Tripel,171,217,0.012507377521954475,conditional_local
+Tripel_045,Tripel,239,217,0.17645437142191572,conditional_local
+Tripel_046,Tripel,163,217,0.05579519449663238,conditional_local
+Tripel_047,Tripel,199,85,0.04495343212026977,conditional_local
+Tripel_048,Tripel,228,15,0.36927198850962434,conditional_local
+Tripel_049,Tripel,191,69,0.12187668840739356,conditional_local
+Tripel_050,Tripel,163,199,0.09063523200437773,conditional_local
+Tripel_051,Tripel,163,217,0.2636204078418261,conditional_local
+Tripel_052,Tripel,240,163,0.5869089775282206,conditional_local
+Tripel_053,Tripel,191,154,0.3062025962778506,conditional_local
+Tripel_054,Tripel,191,69,0.1497819258675306,conditional_local
+Tripel_055,Tripel,157,199,0.10405781257267131,conditional_local
+Tripel_056,Tripel,45,69,0.16747774392887546,conditional_local
+Tripel_057,Tripel,93,163,0.13043380915477398,conditional_local
+Tripel_058,Tripel,157,45,0.26136473824903794,conditional_local
+Tripel_059,Tripel,34,240,0.214164154332857,conditional_local
+Tripel_060,Tripel,85,93,0.10350619760800431,conditional_local
+Tripel_061,Tripel,45,191,0.07754611330291933,conditional_local
+Tripel_062,Tripel,217,69,0.06536312344522151,conditional_local
+Tripel_063,Tripel,228,66,0.18588031732763877,conditional_local
+Tripel_064,Tripel,191,217,0.10125201281734826,conditional_local
+Tripel_065,Tripel,163,17,0.4492811736511403,conditional_local
+Tripel_066,Tripel,217,66,0.026229921890312223,conditional_local
+Tripel_067,Tripel,45,217,0.45446526942192567,conditional_local
+Tripel_068,Tripel,199,217,0.057977455540479395,conditional_local
+Tripel_069,Tripel,140,245,0.25396535995785346,conditional_local
+Tripel_070,Tripel,154,191,0.07524439237619453,conditional_local
+Tripel_071,Tripel,69,17,0.14329432179546223,conditional_local
+Tripel_072,Tripel,69,191,0.020712006892877395,conditional_local
+Tripel_073,Tripel,140,154,0.08788536130093863,conditional_local
+Tripel_074,Tripel,245,17,0.28527195609528366,conditional_local
+Tripel_075,Tripel,140,245,0.2502178617919934,conditional_local
+Tripel_076,Tripel,140,147,0.017929921105069375,conditional_local
+Tripel_077,Tripel,147,191,0.2034091495343113,conditional_local
+Tripel_078,Tripel,240,163,0.3454430660604245,conditional_local
+Tripel_079,Tripel,85,93,0.30897916577930756,conditional_local
+Tripel_080,Tripel,66,69,0.06501456968571194,conditional_local
+Tripel_081,Tripel,17,147,0.2837409764899651,conditional_local
+Tripel_082,Tripel,157,199,0.050519244597344665,conditional_local
+Tripel_083,Tripel,217,69,0.4018713888229327,conditional_local
+Tripel_084,Tripel,45,69,0.2164449000377068,conditional_local
+Tripel_085,Tripel,66,17,0.20768794139544486,conditional_local
+Tripel_086,Tripel,157,199,0.02335418153651358,conditional_local
+Tripel_087,Tripel,93,240,0.4531217037389177,conditional_local
+Tripel_088,Tripel,93,163,0.06053097899270422,conditional_local
+Tripel_089,Tripel,45,69,0.1335535672508357,conditional_local
+Tripel_090,Tripel,147,191,0.15671687381892238,conditional_local
+Tripel_091,Tripel,163,217,0.2619793349961702,conditional_local
+Tripel_092,Tripel,69,147,0.08048008822011495,conditional_local
+Tripel_093,Tripel,239,171,0.29803073740448016,conditional_local
+Tripel_094,Tripel,34,17,0.088496549448124,conditional_local
+Tripel_095,Tripel,163,191,0.023851481615077448,conditional_local
+Tripel_096,Tripel,204,245,0.42350930748583077,conditional_local
+Tripel_097,Tripel,171,154,0.02629054625913891,conditional_local
+Tripel_098,Tripel,154,217,0.4779296372079403,conditional_local
+Tripel_099,Tripel,240,217,0.012471897552774383,conditional_local
+West Flanders ale_000,West Flanders ale,244,118,0.05141088273434732,conditional_local
+West Flanders ale_001,West Flanders ale,118,176,0.12164726128644475,conditional_local
+West Flanders ale_002,West Flanders ale,178,118,0.026288175706973047,conditional_local
+West Flanders ale_003,West Flanders ale,26,244,0.1465725607974016,conditional_local
+West Flanders ale_004,West Flanders ale,26,176,0.2956985134138645,conditional_local
+West Flanders ale_005,West Flanders ale,118,176,0.38979633036203404,conditional_local
+West Flanders ale_006,West Flanders ale,176,200,0.36213173897983025,conditional_local
+West Flanders ale_007,West Flanders ale,176,178,0.07471118588826133,conditional_local
+West Flanders ale_008,West Flanders ale,244,200,0.09935792264492782,conditional_local
+West Flanders ale_009,West Flanders ale,244,178,0.10352076300099289,conditional_local
+West Flanders ale_010,West Flanders ale,176,118,0.04855572970209094,conditional_local
+West Flanders ale_011,West Flanders ale,26,176,0.0004317011919741227,conditional_local
+West Flanders ale_012,West Flanders ale,178,26,0.008405316738432912,conditional_local
+West Flanders ale_013,West Flanders ale,26,118,0.403568986659415,conditional_local
+West Flanders ale_014,West Flanders ale,244,118,0.14394814527230743,conditional_local
+West Flanders ale_015,West Flanders ale,176,26,0.2530513240765059,conditional_local
+West Flanders ale_016,West Flanders ale,176,200,0.425344454599708,conditional_local
+West Flanders ale_017,West Flanders ale,178,26,0.0794784970497911,conditional_local
+West Flanders ale_018,West Flanders ale,178,176,0.559106224227099,conditional_local
+West Flanders ale_019,West Flanders ale,178,176,0.21281585493828153,conditional_local
+West Flanders ale_020,West Flanders ale,200,176,0.013218321880984079,conditional_local
+West Flanders ale_021,West Flanders ale,118,178,0.29205138395055424,conditional_local
+West Flanders ale_022,West Flanders ale,26,178,0.010521135465765686,conditional_local
+West Flanders ale_023,West Flanders ale,176,200,0.10269100082500938,conditional_local
+West Flanders ale_024,West Flanders ale,178,176,0.5238141172974238,conditional_local
+West Flanders ale_025,West Flanders ale,118,244,0.04832577357550551,conditional_local
+West Flanders ale_026,West Flanders ale,118,178,0.0634642058616499,conditional_local
+West Flanders ale_027,West Flanders ale,200,118,0.22603045320675538,conditional_local
+West Flanders ale_028,West Flanders ale,178,176,0.0845399025384621,conditional_local
+West Flanders ale_029,West Flanders ale,178,244,0.21656669527664077,conditional_local
+West Flanders ale_030,West Flanders ale,200,118,0.014385731510706757,conditional_local
+West Flanders ale_031,West Flanders ale,178,118,0.17331918703187923,conditional_local
+West Flanders ale_032,West Flanders ale,118,200,0.12268873898895,conditional_local
+West Flanders ale_033,West Flanders ale,176,26,0.21224176495661307,conditional_local
+West Flanders ale_034,West Flanders ale,176,200,0.41325887595729505,conditional_local
+West Flanders ale_035,West Flanders ale,176,200,0.1368925389141896,conditional_local
+West Flanders ale_036,West Flanders ale,178,244,0.3090041626399742,conditional_local
+West Flanders ale_037,West Flanders ale,200,26,0.18419919943907515,conditional_local
+West Flanders ale_038,West Flanders ale,176,244,0.19633564708051124,conditional_local
+West Flanders ale_039,West Flanders ale,200,26,0.028626365448711926,conditional_local
+West Flanders ale_040,West Flanders ale,200,26,0.45450859481708233,conditional_local
+West Flanders ale_041,West Flanders ale,176,118,0.2018793597969247,conditional_local
+West Flanders ale_042,West Flanders ale,176,244,0.4278831533322041,conditional_local
+West Flanders ale_043,West Flanders ale,200,244,0.4989784545359171,conditional_local
+West Flanders ale_044,West Flanders ale,118,200,0.1990318901967029,conditional_local
+West Flanders ale_045,West Flanders ale,244,118,0.03345354480282578,conditional_local
+West Flanders ale_046,West Flanders ale,200,244,0.3000977120059147,conditional_local
+West Flanders ale_047,West Flanders ale,118,176,0.08394309063661907,conditional_local
+West Flanders ale_048,West Flanders ale,118,200,0.09277240432101957,conditional_local
+West Flanders ale_049,West Flanders ale,26,178,0.43737794949960657,conditional_local
+West Flanders ale_050,West Flanders ale,244,26,0.0263657045638909,conditional_local
+West Flanders ale_051,West Flanders ale,178,26,0.24517059677433037,conditional_local
+West Flanders ale_052,West Flanders ale,176,178,0.431511646869251,conditional_local
+West Flanders ale_053,West Flanders ale,118,178,0.14387585442281212,conditional_local
+West Flanders ale_054,West Flanders ale,200,26,0.27977205079611406,conditional_local
+West Flanders ale_055,West Flanders ale,118,244,0.11580139641235497,conditional_local
+West Flanders ale_056,West Flanders ale,26,176,0.6568635593986504,conditional_local
+West Flanders ale_057,West Flanders ale,244,178,0.068020179303695,conditional_local
+West Flanders ale_058,West Flanders ale,118,176,0.07697120062422358,conditional_local
+West Flanders ale_059,West Flanders ale,200,26,0.5640700514238858,conditional_local
+West Flanders ale_060,West Flanders ale,176,26,0.0800885039696794,conditional_local
+West Flanders ale_061,West Flanders ale,244,26,0.2533896067679485,conditional_local
+West Flanders ale_062,West Flanders ale,26,200,0.021715995528141192,conditional_local
+West Flanders ale_063,West Flanders ale,176,26,0.03512002542613528,conditional_local
+West Flanders ale_064,West Flanders ale,244,118,0.12034673601786403,conditional_local
+West Flanders ale_065,West Flanders ale,200,26,0.042578519477354054,conditional_local
+West Flanders ale_066,West Flanders ale,176,26,0.11742076027988296,conditional_local
+West Flanders ale_067,West Flanders ale,178,26,0.0039638905267069995,conditional_local
+West Flanders ale_068,West Flanders ale,244,26,0.3410719695394432,conditional_local
+West Flanders ale_069,West Flanders ale,178,244,0.09966132698643608,conditional_local
+West Flanders ale_070,West Flanders ale,244,26,0.42394563500853827,conditional_local
+West Flanders ale_071,West Flanders ale,244,200,0.13678432396188728,conditional_local
+West Flanders ale_072,West Flanders ale,26,118,0.04037280541099654,conditional_local
+West Flanders ale_073,West Flanders ale,176,26,0.014455640505369476,conditional_local
+West Flanders ale_074,West Flanders ale,176,244,0.051960528682791725,conditional_local
+West Flanders ale_075,West Flanders ale,244,178,0.16464498071884345,conditional_local
+West Flanders ale_076,West Flanders ale,26,178,0.011167637347606004,conditional_local
+West Flanders ale_077,West Flanders ale,178,244,0.2684643211037779,conditional_local
+West Flanders ale_078,West Flanders ale,176,200,0.2137025170195797,conditional_local
+West Flanders ale_079,West Flanders ale,118,244,0.044940309564963546,conditional_local
+West Flanders ale_080,West Flanders ale,118,200,0.17405601383247565,conditional_local
+West Flanders ale_081,West Flanders ale,178,118,0.28562341190643775,conditional_local
+West Flanders ale_082,West Flanders ale,176,118,0.021035132550771628,conditional_local
+West Flanders ale_083,West Flanders ale,200,176,0.13653415154156975,conditional_local
+West Flanders ale_084,West Flanders ale,200,176,0.04015467337253076,conditional_local
+West Flanders ale_085,West Flanders ale,200,118,0.18943108627590038,conditional_local
+West Flanders ale_086,West Flanders ale,200,118,0.26661561711583115,conditional_local
+West Flanders ale_087,West Flanders ale,244,26,0.3867140512791643,conditional_local
+West Flanders ale_088,West Flanders ale,178,26,0.17939065800630744,conditional_local
+West Flanders ale_089,West Flanders ale,200,178,0.1467180633101911,conditional_local
+West Flanders ale_090,West Flanders ale,178,200,0.29055538387664526,conditional_local
+West Flanders ale_091,West Flanders ale,200,176,0.26841972358195876,conditional_local
+West Flanders ale_092,West Flanders ale,118,176,0.186016341036223,conditional_local
+West Flanders ale_093,West Flanders ale,200,118,0.3258095973433746,conditional_local
+West Flanders ale_094,West Flanders ale,176,244,0.01039224499840545,conditional_local
+West Flanders ale_095,West Flanders ale,26,118,0.377185516303837,conditional_local
+West Flanders ale_096,West Flanders ale,26,200,0.04373752543247983,conditional_local
+West Flanders ale_097,West Flanders ale,244,200,0.08442446419691213,conditional_local
+West Flanders ale_098,West Flanders ale,26,244,0.09099409882060397,conditional_local
+West Flanders ale_099,West Flanders ale,244,178,0.09251190494458536,conditional_local
+Wheat_000,Wheat,142,197,0.2097269054149256,conditional_local
+Wheat_001,Wheat,152,172,0.08617874350475342,conditional_local
+Wheat_002,Wheat,224,172,0.3578970667214411,conditional_local
+Wheat_003,Wheat,44,208,0.22890116572851865,conditional_local
+Wheat_004,Wheat,197,152,0.08876534121393376,conditional_local
+Wheat_005,Wheat,44,243,0.2538207674113075,conditional_local
+Wheat_006,Wheat,44,243,0.04974962084542777,conditional_local
+Wheat_007,Wheat,208,197,0.11171846683571823,conditional_local
+Wheat_008,Wheat,152,243,0.212130948234423,conditional_local
+Wheat_009,Wheat,152,195,0.13733730806296207,conditional_local
+Wheat_010,Wheat,224,195,0.26090579039468603,conditional_local
+Wheat_011,Wheat,160,208,0.13790203405468923,conditional_local
+Wheat_012,Wheat,142,208,0.3008151959569172,conditional_local
+Wheat_013,Wheat,44,142,0.115753844397642,conditional_local
+Wheat_014,Wheat,172,195,0.2658296071355425,conditional_local
+Wheat_015,Wheat,44,197,0.061866950087943046,conditional_local
+Wheat_016,Wheat,152,172,0.3344544387531736,conditional_local
+Wheat_017,Wheat,142,160,0.030517113929694095,conditional_local
+Wheat_018,Wheat,152,172,0.2839502530658306,conditional_local
+Wheat_019,Wheat,195,172,0.03542903877272728,conditional_local
+Wheat_020,Wheat,142,208,0.11962352090474646,conditional_local
+Wheat_021,Wheat,208,44,0.18140076108092335,conditional_local
+Wheat_022,Wheat,197,208,0.70507187901924,conditional_local
+Wheat_023,Wheat,160,152,0.1524928249034752,conditional_local
+Wheat_024,Wheat,197,152,0.3780581130949785,conditional_local
+Wheat_025,Wheat,195,152,0.16512393835488712,conditional_local
+Wheat_026,Wheat,208,152,0.17607664214131172,conditional_local
+Wheat_027,Wheat,208,243,0.3188289785024608,conditional_local
+Wheat_028,Wheat,152,197,0.11930484623809912,conditional_local
+Wheat_029,Wheat,160,197,0.09354267878661461,conditional_local
+Wheat_030,Wheat,197,208,0.09014178499192034,conditional_local
+Wheat_031,Wheat,172,197,0.006146093664114835,conditional_local
+Wheat_032,Wheat,172,195,0.003328183993355796,conditional_local
+Wheat_033,Wheat,208,44,0.13151717161443693,conditional_local
+Wheat_034,Wheat,172,208,0.08409697018995894,conditional_local
+Wheat_035,Wheat,197,172,0.01388113889237448,conditional_local
+Wheat_036,Wheat,160,208,0.20101579362536312,conditional_local
+Wheat_037,Wheat,172,224,0.04959918360341741,conditional_local
+Wheat_038,Wheat,195,172,0.1237050091552615,conditional_local
+Wheat_039,Wheat,160,142,0.37934726536419827,conditional_local
+Wheat_040,Wheat,208,197,0.1494092790635668,conditional_local
+Wheat_041,Wheat,142,160,0.049643792138465655,conditional_local
+Wheat_042,Wheat,44,197,0.5384045451410706,conditional_local
+Wheat_043,Wheat,224,152,0.08764208527019395,conditional_local
+Wheat_044,Wheat,152,197,0.42024676798297567,conditional_local
+Wheat_045,Wheat,152,195,0.14045599674007542,conditional_local
+Wheat_046,Wheat,152,197,0.4103082983534394,conditional_local
+Wheat_047,Wheat,243,197,0.1902680587341334,conditional_local
+Wheat_048,Wheat,160,197,0.29674479259201664,conditional_local
+Wheat_049,Wheat,243,197,0.3327466034988379,conditional_local
+Wheat_050,Wheat,152,172,0.25663626557922375,conditional_local
+Wheat_051,Wheat,243,195,0.24984109327557613,conditional_local
+Wheat_052,Wheat,208,44,0.0017868036662747925,conditional_local
+Wheat_053,Wheat,243,197,0.11959635121668724,conditional_local
+Wheat_054,Wheat,160,197,0.03147954026388228,conditional_local
+Wheat_055,Wheat,224,197,0.028420651683818247,conditional_local
+Wheat_056,Wheat,160,197,0.16720009800826438,conditional_local
+Wheat_057,Wheat,195,197,0.16894101637770506,conditional_local
+Wheat_058,Wheat,197,172,0.19396925072170912,conditional_local
+Wheat_059,Wheat,142,160,0.012404357725456592,conditional_local
+Wheat_060,Wheat,197,172,0.14593636971529142,conditional_local
+Wheat_061,Wheat,208,197,0.07301666519422471,conditional_local
+Wheat_062,Wheat,160,152,0.12093016291728198,conditional_local
+Wheat_063,Wheat,172,224,0.012580852284969888,conditional_local
+Wheat_064,Wheat,224,197,0.09741832060804999,conditional_local
+Wheat_065,Wheat,208,243,0.12403566647121896,conditional_local
+Wheat_066,Wheat,142,208,0.009813004784588776,conditional_local
+Wheat_067,Wheat,224,197,0.21317229356071202,conditional_local
+Wheat_068,Wheat,152,172,0.250344069693757,conditional_local
+Wheat_069,Wheat,224,197,0.4814851815882956,conditional_local
+Wheat_070,Wheat,172,197,0.24067697609655397,conditional_local
+Wheat_071,Wheat,160,243,0.46196125620202966,conditional_local
+Wheat_072,Wheat,208,243,0.20550850086013875,conditional_local
+Wheat_073,Wheat,172,224,0.03900165309652202,conditional_local
+Wheat_074,Wheat,224,172,0.040456178090224885,conditional_local
+Wheat_075,Wheat,224,172,0.1614953469527634,conditional_local
+Wheat_076,Wheat,195,172,0.250812864747377,conditional_local
+Wheat_077,Wheat,224,195,0.2187607250433455,conditional_local
+Wheat_078,Wheat,172,197,0.1480169442656946,conditional_local
+Wheat_079,Wheat,160,142,0.3502755010718806,conditional_local
+Wheat_080,Wheat,197,195,0.28915126672121877,conditional_local
+Wheat_081,Wheat,224,152,0.12062736589804816,conditional_local
+Wheat_082,Wheat,208,152,0.1259879861273343,conditional_local
+Wheat_083,Wheat,152,172,0.24942802661128985,conditional_local
+Wheat_084,Wheat,224,172,0.30101739849095543,conditional_local
+Wheat_085,Wheat,142,152,0.11728827641157852,conditional_local
+Wheat_086,Wheat,44,208,0.5107287158482827,conditional_local
+Wheat_087,Wheat,160,152,0.02705515588697451,conditional_local
+Wheat_088,Wheat,160,142,0.005451883282495059,conditional_local
+Wheat_089,Wheat,224,172,0.20583767246406515,conditional_local
+Wheat_090,Wheat,172,197,0.43597541534361467,conditional_local
+Wheat_091,Wheat,243,208,0.46336116424044466,conditional_local
+Wheat_092,Wheat,142,243,0.2976074890056342,conditional_local
+Wheat_093,Wheat,224,152,0.08759449559852653,conditional_local
+Wheat_094,Wheat,195,208,0.3067737270706474,conditional_local
+Wheat_095,Wheat,224,195,0.14094601205476068,conditional_local
+Wheat_096,Wheat,208,44,0.492342455886209,conditional_local
+Wheat_097,Wheat,224,195,0.15623259445943674,conditional_local
+Wheat_098,Wheat,197,195,0.11169021689421349,conditional_local
+Wheat_099,Wheat,160,243,0.18187769873003257,conditional_local

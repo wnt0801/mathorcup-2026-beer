@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "reviewed_utc": "2026-10-26T22:11:46.920156+00:00",
+  "pdf_sha256": "4f3f276af7ce7048ad173b5d21ea7a4f50e3dc02ca7e5841cade686476056f30",
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "method": "Poppler page rendering and assistant visual inspection of all14 final pages",
+  "observations": "No observed clipping, overlapping tables, missing CJK glyphs or unresolved image markup; figures and NA presentation checked",
+  "renders": "tmp/pdf_review_v2_final"
+}

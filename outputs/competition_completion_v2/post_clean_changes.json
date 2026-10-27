@@ -1,0 +1,14 @@
+{
+  "changed_scripts_after_clean_snapshot": [
+    "build_competition_deliverables.py",
+    "review_audits.py",
+    "review_report.py"
+  ],
+  "scope": "scorecard evidence details and document formatting only; no predictive/generative model, split, hyperparameter or selection changes",
+  "next_required_validation": [
+    "source audit",
+    "paper rebuild",
+    "independent verification",
+    "PDF visual review"
+  ]
+}

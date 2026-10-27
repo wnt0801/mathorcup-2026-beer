@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-26T22:13:14.557128+00:00",
+  "verification_root": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2",
+  "output": "C:\\Users\\Lenovo\\PycharmProjects\\PythonProject2\\outputs\\competition_completion_v2",
+  "protected_source_files": 13,
+  "exact_source_files": 13,
+  "eol_only_source_files": 0,
+  "q1_predictions": 12500,
+  "q2_top3_records": 150,
+  "generated_spectra": 2200,
+  "transferred_spectra": 11,
+  "executed_review_notebooks": [
+    "06_competition_scoring_review.ipynb",
+    "07_competition_network_all50.ipynb",
+    "08_competition_conditional_generation.ipynb"
+  ],
+  "paper_pages": 14,
+  "checks": [
+    "fresh source hashes, no rebaselining",
+    "frozen prediction equality",
+    "saved model round-trip",
+    "train-only relative cutpoints and OOF scopes",
+    "all50 Top3 and stable/exploratory labels",
+    "official matrix type",
+    "training-only donors",
+    "style-conditional donor labels",
+    "generated donor interpolation and missing mask",
+    "training support bounds",
+    "generated sensory predictions",
+    "replayed66 diversity/coverage baseline rows",
+    "unverified summary formulas not recomputed",
+    "four-defect missing/conflict states",
+    "fixed training-only guard CV assessment",
+    "transfer reconstruction",
+    "exact native defect preservation incl missing",
+    "model proxy guard constraint",
+    "executed review notebooks without errors",
+    "paper/CSV numerical scope and figure-source hashes"
+  ],
+  "limits": [
+    "Raw0–6 intensity not identified",
+    "Stale hops guard has no demonstrated advantage, model proxy only",
+    "Summary constituent identities unverified",
+    "Actual brewing/causal experiments not performed; research limitations, not added contest submission requirements",
+    "No Linux/macOS execution claim"
+  ]
+}

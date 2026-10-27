@@ -10,6 +10,7 @@ import platform
 from pathlib import Path
 import sys
 import warnings
+from datetime import datetime, timezone
 
 if __name__ == '__main__':
     # Stable import path for joblib artifacts when this file is run as a CLI.
@@ -30,8 +31,8 @@ from sklearn.model_selection import KFold, train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT/'outputs/competition_completion_v1'
+from review_config import ROOT, OUT, FROZEN
+from integrity import read_manifest, verify_manifest
 SEED = 42
 DEFECTS = ['DMS','X2.3.butanedione','X4VG','X.E..2.nonenal']
 SUMMARY = ['esters_sum','aroma_hops_sum','acids_sum','sulfur_sum']
@@ -69,7 +70,7 @@ def load():
     assert a.tasting_category_fine.equals(y.tasting_category_fine)
     x=a.drop(columns=['beer_id','tasting_category_fine'])
     y=y.drop(columns=['beer_id','tasting_category_fine'])
-    sel=pd.read_csv(ROOT/'outputs/model_selection_cv_50.csv')
+    sel=pd.read_csv(FROZEN/'model_selection_cv_50.csv')
     y=y[sel['指标'].tolist()]
     train,test=train_test_split(x.index,test_size=.2,random_state=SEED,stratify=a.tasting_category_fine)
     return x,y,a.tasting_category_fine,sel,pd.Index(train),pd.Index(test)
@@ -110,7 +111,7 @@ def chemical_evidence(row):
 
 def scoring():
     x,y,styles,sel,tr,te=load()
-    reference=pd.read_csv(ROOT/'outputs/test_predictions_50.csv')
+    reference=pd.read_csv(FROZEN/'test_predictions_50.csv')
     models={}; records=[]; cuts=[]; metrics=[]
     fold=KFold(5,shuffle=True,random_state=SEED)
     for i,row in sel.iterrows():
@@ -167,9 +168,23 @@ def scoring():
 def correlations():
     import networkx as nx
     x,y,styles,sel,tr,te=load()
-    roles=pd.read_csv(ROOT/'outputs/feature_roles.csv')
+    # Rebuild definitions from the supplied attachment fields; no legacy output dependency.
+    def role(f):
+        if f in SUMMARY:return '汇总指标'
+        if f in ['pH','color.EBC.','bitterness','CO2.PSI.','kcalperc']:return '理化或整体测量'
+        if f in ['GFS','unfermentables','protein.g.L.','betaglucan.mg.L.']:return '混合成分或定义待核实'
+        return '单项化学测量候选'
+    roles=pd.DataFrame({'字段':x.columns,'暂定角色':[role(f) for f in x.columns]})
+    save(roles,'feature_roles.csv')
     compounds=roles.loc[roles['暂定角色'].eq('单项化学测量候选'),'字段'].tolist()
-    info=pd.read_csv(ROOT/'outputs/chemical_name_mapping.csv').set_index('field_name_R')
+    dictionary=pd.read_excel(ROOT/'data/8.xlsx',sheet_name='Sensory thresholds')
+    for col in ['field_name_R','chemical_name','chemical_name_short']:
+        dictionary[col]=dictionary[col].astype('string').str.strip()
+    info=dictionary.loc[dictionary.field_name_R.isin(x.columns)].set_index('field_name_R').loc[x.columns].copy()
+    assert info.index.is_unique and len(info)==len(x.columns)
+    info['official_name']=info.chemical_name.str.replace('Î±','α',regex=False).str.replace('Î²','β',regex=False)
+    assert info.official_name.is_unique and info.official_name.notna().all()
+    save(info.reset_index(),'chemical_name_mapping.csv')
     names=info.loc[x.columns,'official_name'].tolist()
     official=pd.read_csv(ROOT/'data/2.csv',index_col=0).loc[names,names]
     official.index=x.columns;official.columns=x.columns
@@ -208,11 +223,13 @@ def correlations():
             evidence.append(dict(target=t,rank=rank,field=f,chemical_name=meta['official_name'],rho=c.loc[f,t],n=len(data),bootstrap_frequency=counts[idx,j]/200,bootstrap_rho_low=np.nanquantile(boot_values[:,j,rank-1],.025),bootstrap_rho_high=np.nanquantile(boot_values[:,j,rank-1],.975),style_adjusted_rho=adjusted,direction_agrees=bool(np.sign(adjusted)==np.sign(c.loc[f,t])),origin=origin,unit=meta.get('unit',np.nan),off_flavors=flavor,family_hint=family,interpretation='关联候选；同源代谢和风格混杂均可能解释，不能推断单体因果'))
     evidence=pd.DataFrame(evidence)
     evidence['chemical_plausibility']=evidence.apply(chemical_evidence,axis=1)
+    evidence['ranking_stable_80pct']=evidence.bootstrap_frequency.ge(.8)
+    evidence['candidate_class']=np.where(evidence.ranking_stable_80pct & evidence.direction_agrees,'stable_association',np.where(evidence.ranking_stable_80pct,'stable_rank_direction_sensitive','exploratory_association'))
     save(evidence,'q2_top3_all50_evidence.csv')
     save(pd.DataFrame(counts/200,index=compounds,columns=y.columns).reset_index(names='field'),'q2_all_candidate_frequencies.csv')
     # A faithful graph uses the provided matrix, not a newly estimated substitute.
     edges=[];g=nx.Graph();g.add_nodes_from(compounds)
-    stable=pd.read_csv(ROOT/'outputs/network_edges_stable.csv')
+    stable=rebuild_network_stability(x,compounds,official)
     stablekeys={frozenset([r['指标1'],r['指标2']]):r['重抽样保留率'] for _,r in stable.iterrows()}
     for i,f in enumerate(compounds):
         for h in compounds[i+1:]:
@@ -231,6 +248,26 @@ def correlations():
         b=set(pear.loc[compounds,'sensory__'+t].abs().nlargest(3).index)
         sens.append(dict(target=t,jaccard_pearson_spearman=len(a&b)/len(a|b)))
     save(pd.DataFrame(sens),'q2_method_sensitivity.csv')
+
+
+def rebuild_network_stability(x,compounds,official):
+    """Rebuild the historical edge diagnostic from attachments, with its original row order."""
+    order=pd.read_csv(ROOT/'data/1.csv',usecols=['beer'])['beer']
+    data=x.loc[order,compounds]
+    subset=official.loc[compounds,compounds].to_numpy()
+    left,right=np.triu_indices(len(compounds),1)
+    keep=np.abs(subset[left,right])>=.6
+    left,right=left[keep],right[keep]
+    rho=subset[left,right]
+    rng=np.random.default_rng(SEED);count=np.zeros(len(left),int)
+    for k in range(100):
+        c=data.iloc[rng.integers(0,len(data),len(data))].corr(method='spearman',min_periods=200).to_numpy()[left,right]
+        count+=np.isfinite(c)&(np.abs(c)>=.6)&(np.sign(c)==np.sign(rho))
+    edges=pd.DataFrame({'指标1':np.asarray(compounds)[left],'指标2':np.asarray(compounds)[right],'Spearman相关系数':rho,'相关强度':np.abs(rho),'重抽样保留率':count/100})
+    save(edges,'q2_network_edges_bootstrap.csv')
+    stable=edges.loc[edges['重抽样保留率'].ge(.8)].copy()
+    save(stable,'q2_network_edges_stable.csv')
+    return stable
 
 
 class LocalConditionalGenerator:
@@ -283,6 +320,7 @@ def distribution_metrics(real,fake,train,imputer,scaler):
 
 
 def generation():
+    from review_audits import coverage_diagnostics
     x,y,styles,sel,tr,te=load()
     bundle=joblib.load(OUT/'frozen_training_models.joblib');models=bundle['models']
     gen=LocalConditionalGenerator().fit(x.loc[tr],styles.loc[tr]);rng=np.random.default_rng(SEED)
@@ -291,7 +329,8 @@ def generation():
         real=x.loc[te[styles.loc[te].eq(style).to_numpy()]]
         for mode in ['conditional_local','conditional_resample','unconditional_local']:
             fake,lineage=gen.sample(style,100,rng,mode)
-            validation.append(dict(style=style,mode=mode,n_train=int((styles.loc[tr]==style).sum()),n_test=len(real),**distribution_metrics(real,fake,x.loc[tr],gen.imputer,gen.scaler)))
+            style_train=x.loc[tr[styles.loc[tr].eq(style).to_numpy()]]
+            validation.append(dict(style=style,mode=mode,n_train=len(style_train),n_test=len(real),**distribution_metrics(real,fake,x.loc[tr],gen.imputer,gen.scaler),**coverage_diagnostics(real,fake,style_train,gen.imputer,gen.scaler)))
             if mode=='conditional_local':
                 ids=[f'{style.replace("/","_")}_{i:03d}' for i in range(len(fake))]
                 fake.index=ids;fake.index.name='sample_id';lineage.index=ids;lineage.index.name='sample_id'
@@ -328,7 +367,7 @@ def generation():
     cp=classifier.predict(x.loc[te]);gp=classifier.predict(fake)
     save(pd.DataFrame([dict(heldout_style_accuracy=accuracy_score(styles.loc[te],cp),heldout_balanced_accuracy=balanced_accuracy_score(styles.loc[te],cp),generated_condition_agreement=accuracy_score(lineage['style'],gp))]),'q3_style_diagnostic.csv')
     # Correlation preservation on stable graph edges, not global mean alone.
-    edges=pd.read_csv(ROOT/'outputs/network_edges_stable.csv');corr=[]
+    edges=pd.read_csv(OUT/'q2_network_edges_stable.csv');corr=[]
     for s in ['Tripel','Kriek','Lambic']:
         ids=lineage.index[lineage['style'].eq(s)];train=x.loc[tr[styles.loc[tr].eq(s).to_numpy()]]
         for _,e in edges.iterrows():
@@ -408,25 +447,27 @@ def transfer(gen,models,classifier,x,y,styles,tr,te):
 
 
 def inventory():
-    original={}
-    for folder in ['data','notebooks','outputs']:
-        for p in (ROOT/folder).rglob('*'):
-            if not p.is_file() or OUT in p.parents or p.name.startswith(('06_','07_','08_')):continue
-            original[str(p.relative_to(ROOT))]=hashlib.sha256(p.read_bytes()).hexdigest()
+    # Historical expected values are frozen in source_sha256.json, never recaptured here.
+    original=read_manifest(FROZEN/'source_sha256.json')
+    audit=verify_manifest(ROOT,original)
     path=OUT/'original_sha256.json'
     if path.exists():
-        old=json.loads(path.read_text(encoding='utf-8'));assert all(original.get(k)==v for k,v in old.items()),'original file modified'
+        assert read_manifest(path)==original,'Manifest contents changed; refusing to rebaseline'
     else: path.write_text(json.dumps(original,ensure_ascii=False,indent=2),encoding='utf-8')
+    save(pd.DataFrame(audit),'source_integrity_audit.csv')
     versions={m:__import__(m).__version__ for m in ['numpy','pandas','scipy','sklearn','joblib','nbformat','nbclient','networkx']}
-    (OUT/'environment.json').write_text(json.dumps({'python':sys.version,'platform':platform.platform(),'packages':versions},indent=2),encoding='utf-8')
-    print('Original file hash check:',len(original),'files intact',flush=True)
+    (OUT/'environment.json').write_text(json.dumps({'python':sys.version,'platform':platform.platform(),'packages':versions,'run_utc':datetime.now(timezone.utc).isoformat(),'output':str(OUT),'root':str(ROOT)},indent=2),encoding='utf-8')
+    print('Protected source check:',len(original),'inputs verified',flush=True)
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--stage',choices=['scoring','correlations','generation','all'],default='all');args=parser.parse_args()
-    OUT.mkdir(exist_ok=True);inventory()
+    parser=argparse.ArgumentParser();parser.add_argument('--stage',choices=['scoring','correlations','generation','audit','all'],default='all');args=parser.parse_args()
+    OUT.mkdir(parents=True,exist_ok=True);inventory()
     for stage,fn in [('scoring',scoring),('correlations',correlations),('generation',generation)]:
         if args.stage in ['all',stage]: fn()
+    if args.stage in ['all','audit']:
+        from review_audits import run_audits
+        run_audits()
     inventory()
 
 if __name__=='__main__': main()
