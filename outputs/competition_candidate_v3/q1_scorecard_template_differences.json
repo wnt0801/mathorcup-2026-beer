@@ -1,0 +1,80 @@
+{
+  "beer_1": [],
+  "beer_2": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 2
+    }
+  ],
+  "beer_3": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 3
+    }
+  ],
+  "beer_4": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 4
+    }
+  ],
+  "beer_5": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 5
+    }
+  ],
+  "beer_6": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 6
+    }
+  ],
+  "beer_7": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 7
+    }
+  ],
+  "beer_8": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 8
+    }
+  ],
+  "beer_9": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 9
+    }
+  ],
+  "beer_10": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 10
+    }
+  ],
+  "beer_11": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 11
+    }
+  ],
+  "beer_12": [
+    {
+      "cell": "S3",
+      "base": 1,
+      "value": 12
+    }
+  ]
+}

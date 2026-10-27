@@ -1,19 +1,13 @@
-# MathorCup 啤酒竞赛项目
+﻿# MathorCup 啤酒项目
 
-**唯一推荐入口：[审核版 v2 材料与状态](outputs/competition_completion_v2/START_HERE.md)**。
+唯一推荐入口：[v3论文与支撑材料](outputs/competition_candidate_v3/START_HERE.md)。
 
-项目依据实际赛题PDF与附件，实现50维标准化感官预测、化合物关联网络、风格条件统计谱生成及受约束迁移。原始附件、历史Notebook、v1论文和旧ZIP均保留。本轮没有提交、推送Git或向赛事平台上传。
+- [论文PDF](outputs/competition_candidate_v3/competition_paper.pdf) · [可编辑Markdown](outputs/competition_candidate_v3/competition_paper.md)
+- [唯一推荐支撑包](outputs/competition_candidate_v3/submission_candidate_v3.zip)
+- [复现说明](REPRODUCIBILITY.md) · [审查总结](REVIEW_SUMMARY.md) · [v3进度](outputs/competition_candidate_v3/PROGRESS.md)
 
-当前主要结果与口径：
+沿用冻结训练CV选择，完成三问计算、Aroma/Flavour分组评估、预处理核验、网络解释及迁移前后变化分析。全50维历史测试MAE为0.3380；测试集曾被查看，本轮是冻结复现，不是新盲测。
 
-- 第一问沿用冻结的训练CV模型选择，50维测试MAE约0.3380，均值基准约0.4120，42维改善。测试集在历史工作中已被查看，本轮是冻结复现，不是全新盲测。
-- **相对0–6级是训练分位数等级，不是评分卡原始强度还原。** 当前资料没有可靠的配对原始标签或逆变换参数；维度范围与允许的评分口径需要主办方确认。
-- 第二问保留50维全部150条Top-3，提供200轮bootstrap、风格调整和稳定/探索候选标记；关联不是因果。
-- 第三问沿用局部条件生成方法，输出22风格共2200条统计谱及预测画像，演示11款Pils/Lager→Tripel迁移。四个缺陷原生字段保持不变；未知值及来源冲突不被当作安全。Stale hops辅助模型没有平均CV优势，只能称模型代理约束。
-- 生成汇总指标与组成成分一致性仍有5项未验证。统计谱诊断、感官模型预测、实际酿造有效性分开陈述；实际酿造与因果实验属于研究局限，给定题面未把它们列为额外强制提交条件。
+相对0–6级是训练分位数等级，不是原始评分还原。Stale hops只作为弱模型代理约束，不能保证实际缺陷不恶化；四项缺陷保留已知/未知、单位、变换及来源冲突。五项汇总公式仍未验证。迁移目标距离下降不等于独立证明真实风格转换。
 
-完整计算入口是 `scripts/run_review.py`；[复现说明](REPRODUCIBILITY.md)包含虚拟环境、依赖、字体、运行、验证和重复打包命令。流程需要原附件及明确列出的冻结输入，不能称为仅靠原附件重新完成全部历史选模。
-
-02、04是保留的空白占位Notebook；notebooks/中的06–08属于v1结果复查。v2的结果复查副本位于输出目录的 `review_notebooks/`，均不替代脚本中的训练与生成流程。状态详见 [Notebook清单](notebooks/STATUS.md)。
-
-AI参与情况如实记录；完整历史交互导出未在仓库中发现，是否必须补交应核对正式规则。真实评分校准、部分阈值和正式提交格式仍待确认；本地审核通过不等于主办方已认可这些口径。
+原附件、冻结输入、历史Notebook及v1/v2成果保留；旧版验证不作为v3证据。完整训练入口为scripts/run_review.py，复查Notebook只展示结果。本轮不执行git commit、git push或赛事平台提交。AI参与如实说明，缺失的历史交互记录不补造。

@@ -1,0 +1,7 @@
+# 三问对应关系
+
+| 题目要求 | 采用方法 | 实际输出 | 验证证据 | 剩余缺口 |
+| --- | --- | --- | --- | --- |
+| 第一问 | 训练内OOF及历史测试；分组回归、相对等级 | q1_group_metrics.csv；q1_dimension_comparison.csv | 逐条预测/界点/预处理核验 | 原始0–6校准及维度口径 |
+| 第二问 | Spearman Top-3、bootstrap、秩内风格调整；网络辅助解释 | q2_top3_all50_evidence.csv；q2_network_explanation.csv | 映射唯一性、矩阵重算、150项完整性 | 关联非因果；多数排序不稳 |
+| 第三问 | 同风格近邻插值、冻结模型画像、受约束候选修改 | q3_style_diversity_coverage.csv；q3_transfer_compound_changes.csv | 血缘、66项诊断、缺陷及感官变化重算 | 汇总未验证；弱代理；非实测迁移 |

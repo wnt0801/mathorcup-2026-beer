@@ -127,7 +127,7 @@ Stale hops辅助模型5折MAE为{guard['model_mean_MAE']:.4f}，均值基准{gua
     [3] Schreurs M, et al. Data from: Predicting and improving complex beer flavor through machine learning. Zenodo, version3, DOI:10.5281/zenodo.10653704. 本轮核对记录元数据与已缓存补充表，具体使用S3、S4、Table S1及Sensory thresholds。https://zenodo.org/records/10653704
     ''')
     title='啤酒感官预测、稳定关联与局部风格谱生成'
-    sections=[(h,b.replace('−','-')) for h,b in sections]
+    sections=[(h,b.replace('−','-').replace('²','^2')) for h,b in sections]
     md='# '+title+'\n\n候选提交版 v3｜原始评分校准及部分缺陷判据仍待确认。\n\n'+'\n\n'.join('## '+h+'\n\n'+b for h,b in sections)+'\n'
     (OUT/'competition_paper.md').write_text(md,encoding='utf-8')
     return title,sections

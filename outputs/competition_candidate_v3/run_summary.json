@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-27T09:39:00.533257+00:00",
+  "finished_utc": "2026-10-27T09:44:18.763330+00:00",
+  "output_relative": "outputs/competition_candidate_v3",
+  "stages": [
+    {
+      "stage": "dependency_check",
+      "returncode": 0,
+      "seconds": 1.7310942999902181
+    },
+    {
+      "stage": "targeted_contract_tests",
+      "returncode": 0,
+      "seconds": 8.867921300057787
+    },
+    {
+      "stage": "pipeline",
+      "returncode": 0,
+      "seconds": 258.62201729998924
+    },
+    {
+      "stage": "build",
+      "returncode": 0,
+      "seconds": 31.28888329997426
+    },
+    {
+      "stage": "verify",
+      "returncode": 0,
+      "seconds": 17.586486100044567
+    }
+  ],
+  "selection": "frozen policies and parameters unchanged"
+}

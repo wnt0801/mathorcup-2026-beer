@@ -177,6 +177,9 @@ def pdf(title,sections):
     from reportlab.lib.pagesizes import A4
     font=chinese_font()
     pdfmetrics.registerFont(TTFont('CN',str(font),subfontIndex=0))
+    glyphs=pdfmetrics.getFont('CN').face.charToGlyph
+    missing={c for c in title+''.join(h+b for h,b in sections) if not c.isspace() and ord(c) not in glyphs}
+    if missing:raise ValueError('Paper contains unsupported font glyphs: '+repr(sorted(missing)))
     styles=getSampleStyleSheet()
     body=ParagraphStyle('CNBody',fontName='CN',fontSize=9.2,leading=15.5,spaceAfter=7,wordWrap='CJK')
     head=ParagraphStyle('CNHead',parent=body,fontSize=14,leading=20,spaceBefore=14,spaceAfter=9,keepWithNext=True,textColor=colors.HexColor('#164748'))

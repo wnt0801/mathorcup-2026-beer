@@ -177,7 +177,32 @@ def validate_candidate_tables(predictions,groups=None):
         assert np.isclose(r.delta_native,r.after_native-r.before_native,equal_nan=True)
     import joblib
     diagnostic=joblib.load(OUT/'style_diagnostic_classifier.joblib')
-    xcols=joblib.load(OUT/'frozen_training_models.joblib')['features']
+    bundle=joblib.load(OUT/'frozen_training_models.joblib');xcols=bundle['features']
+    import competition_pipeline as cp
+    predicted_before=cp.predict(bundle['models'],source.loc[after.index,xcols])
+    predicted_after=cp.predict(bundle['models'],after[xcols])
+    changes=pd.read_csv(OUT/'q3_transfer_sensory.csv')
+    assert len(changes)==11*50 and not changes.duplicated(['source_beer','target']).any()
+    for _,r in changes.iterrows():
+        assert np.isclose(r.before,predicted_before.at[r.source_beer,r.target])
+        assert np.isclose(r.after,predicted_after.at[r.source_beer,r.target])
+        assert np.isclose(r.delta,r.after-r.before)
+    summary=pd.read_csv(OUT/'q3_transfer_sensory_summary.csv').set_index('target')
+    for t,g in changes.groupby('target'):
+        assert np.allclose(summary.loc[t,['before_mean','after_mean','paired_mean_delta']].to_numpy(dtype=float),[g.before.mean(),g.after.mean(),g.delta.mean()])
+    split=pd.read_csv(OUT/'split_manifest.csv')
+    sd=source.loc[split.loc[split['split'].eq('training'),'beer'],xcols].std(ddof=0)
+    expected=long.delta_native/long.field.map(sd).replace(0,np.nan)
+    assert np.allclose(long.delta_train_SD,expected,equal_nan=True)
+    edges=pd.read_csv(OUT/'q2_official_graph_edges.csv')
+    edgekeys={frozenset([r.left,r.right]):r.rho for _,r in edges.iterrows()}
+    top=pd.read_csv(OUT/'q2_top3_all50_evidence.csv')
+    context=pd.read_csv(OUT/'q2_network_explanation.csv').set_index('target')
+    for t,g in top.groupby('target'):
+        fields=g.field.tolist()
+        values=[edgekeys[frozenset([a,b])] for i,a in enumerate(fields) for b in fields[i+1:] if frozenset([a,b]) in edgekeys]
+        assert int(context.at[t,'top3_edges_at_abs_rho06'])==len(values)
+        assert np.allclose(json.loads(context.at[t,'edge_rhos']),values)
     transfer=pd.read_csv(OUT/'q3_transfer_summary.csv').set_index('source_beer')
     assert np.array_equal(diagnostic.predict(after[xcols]),transfer.loc[after.index,'after_diagnostic_style'])
     grouped=pd.read_csv(OUT/'q1_missingness_by_group.csv');all50=grouped[grouped['group'].eq('All50')].sort_values(['additional_missing_rate','repeat'])

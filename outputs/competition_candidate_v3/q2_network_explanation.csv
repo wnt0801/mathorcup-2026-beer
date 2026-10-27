@@ -1,0 +1,51 @@
+﻿target,top3_edges_at_abs_rho06,edge_rhos,role
+A_malt_all,1,[0.690747954062581],auxiliary co-variation explanation; no network re-ranking or selection
+A_malt_grain,2,"[0.691852247511699, 0.744630047771829]",auxiliary co-variation explanation; no network re-ranking or selection
+A_malt_bread,1,[0.733055998327051],auxiliary co-variation explanation; no network re-ranking or selection
+A_malt_cara,1,[0.690747954062581],auxiliary co-variation explanation; no network re-ranking or selection
+A_malt_burn,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+A_hops_all,1,[0.85313084169571],auxiliary co-variation explanation; no network re-ranking or selection
+A_hops_citrus,1,[0.60772963314725],auxiliary co-variation explanation; no network re-ranking or selection
+A_hops_tropical,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+A_hops_noble,1,[0.85313084169571],auxiliary co-variation explanation; no network re-ranking or selection
+A_hops_woody,1,[0.707262149109333],auxiliary co-variation explanation; no network re-ranking or selection
+A_esters_all,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+A_esters_ethac,2,"[0.719391515847365, 0.690747954062581]",auxiliary co-variation explanation; no network re-ranking or selection
+A_esters_isoaa,1,[0.676886100064107],auxiliary co-variation explanation; no network re-ranking or selection
+A_esters_flower,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+A_esters_fruity,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+F_malt_all,1,[0.690747954062581],auxiliary co-variation explanation; no network re-ranking or selection
+F_malt_grain,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+F_malt_bread,2,"[0.690747954062581, 0.733055998327051]",auxiliary co-variation explanation; no network re-ranking or selection
+F_malt_cara,2,"[0.690747954062581, 0.628963951025104]",auxiliary co-variation explanation; no network re-ranking or selection
+F_malt_burn,1,[0.733055998327051],auxiliary co-variation explanation; no network re-ranking or selection
+F_hops_all,1,[0.85313084169571],auxiliary co-variation explanation; no network re-ranking or selection
+F_hops_citrus,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+F_hops_tropical,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+F_hops_noble,2,"[0.85313084169571, 0.654534946689899]",auxiliary co-variation explanation; no network re-ranking or selection
+F_hops_woody,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+F_esters_all,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+F_esters_ethac,2,"[0.719391515847365, 0.733055998327051]",auxiliary co-variation explanation; no network re-ranking or selection
+F_esters_isoaa,1,[0.676886100064107],auxiliary co-variation explanation; no network re-ranking or selection
+F_esters_flower,1,[0.646808415389653],auxiliary co-variation explanation; no network re-ranking or selection
+F_esters_fruity,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+body,3,"[0.733055998327051, 0.740166747927893, 0.617262109412569]",auxiliary co-variation explanation; no network re-ranking or selection
+bitternes,1,[0.85313084169571],auxiliary co-variation explanation; no network re-ranking or selection
+co2,3,"[0.654534946689899, 0.723697350107506, 0.740166747927893]",auxiliary co-variation explanation; no network re-ranking or selection
+aftertaste,1,[0.654534946689899],auxiliary co-variation explanation; no network re-ranking or selection
+alcohol,2,"[0.733055998327051, 0.654534946689899]",auxiliary co-variation explanation; no network re-ranking or selection
+sweetness,1,[0.68086773459828],auxiliary co-variation explanation; no network re-ranking or selection
+acidity,3,"[0.768752858448157, 0.686803580322637, 0.655751548024768]",auxiliary co-variation explanation; no network re-ranking or selection
+dms,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+metallic,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+X4vg,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+t2n,1,[0.691852247511699],auxiliary co-variation explanation; no network re-ranking or selection
+diacetyl,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+stale_hops,1,[0.629067412247281],auxiliary co-variation explanation; no network re-ranking or selection
+orange,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+coriander,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+clove,0,[],auxiliary co-variation explanation; no network re-ranking or selection
+lactic,1,[0.686803580322637],auxiliary co-variation explanation; no network re-ranking or selection
+acetic,1,[0.768752858448157],auxiliary co-variation explanation; no network re-ranking or selection
+barnyard,1,[0.629067412247281],auxiliary co-variation explanation; no network re-ranking or selection
+overall,0,[],auxiliary co-variation explanation; no network re-ranking or selection

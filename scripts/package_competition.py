@@ -1,11 +1,12 @@
 """One portable candidate package; only current, required inputs/code/results."""
 from pathlib import Path,PurePosixPath
-import hashlib,json,posixpath,re,zipfile
+import hashlib,json,posixpath,re,zipfile,subprocess,sys,tempfile,time,os
 from datetime import datetime,timezone
 from review_config import ROOT,OUT
 
 ACTIVE_SCRIPTS=['run_review.py','competition_pipeline.py','review_audits.py','review_report.py','build_competition_deliverables.py','verify_competition.py','package_competition.py','review_config.py','integrity.py','test_review_contracts.py']
 JSON_RESULTS=['analysis_design.json','original_sha256.json','verification.json','dependencies_actual.json','run_summary.json','fresh_environment.json','q1_score_scale_evidence.json','q1_workbook_metadata.json','q1_scorecard_template_differences.json','q3_stale_guard_assessment.json','reference_provenance.json','references_verification.json','pdf_visual_review.json']
+JSON_RESULTS += ['final_validation_execution.json','post_visual_build.json','font_evidence.json']
 
 
 def portable_json(data):
@@ -48,6 +49,7 @@ def main():
     for name in ACTIVE_SCRIPTS:put(ROOT/'scripts'/name)
     put(ROOT/'requirements_competition.txt')
     for path in OUT.glob('*.csv'):put(path,'results/'+path.name)
+    for path in OUT.glob('*.graphml'):put(path,'results/'+path.name)
     for name in JSON_RESULTS:
         p=OUT/name
         if p.is_file():payload['results/'+name]=json.dumps(portable_json(json.loads(p.read_text(encoding='utf-8'))),ensure_ascii=False,indent=2).encode('utf-8')
@@ -114,7 +116,21 @@ python3.13 -m venv .venv
     with zipfile.ZipFile(final) as archive:
         assert archive.testzip() is None
         assert all(hashlib.sha256(archive.read(k)).hexdigest()==v for k,v in manifest.items())
+        # Verify the actual extracted package, including dependencies such as GraphML.
+        scratch=ROOT/'tmp';scratch.mkdir(exist_ok=True)
+        extracted=Path(tempfile.mkdtemp(prefix='v3_package_',dir=scratch))
+        assert all(not PurePosixPath(k).is_absolute() and '..' not in PurePosixPath(k).parts for k in archive.namelist())
+        archive.extractall(extracted)
+    assert all(hashlib.sha256((extracted/k).read_bytes()).hexdigest()==v for k,v in manifest.items())
+    begin=time.monotonic();started=datetime.now(timezone.utc).isoformat()
+    env=os.environ.copy();env['PYTHONIOENCODING']='utf-8'
+    result=subprocess.run([sys.executable,str(extracted/'scripts/verify_competition.py'),'--output',str(extracted/'results')],cwd=extracted,env=env,capture_output=True,text=True,encoding='utf-8')
+    (OUT/'.review/package_extracted_verify.log').write_text(result.stdout+result.stderr,encoding='utf-8')
+    extraction={'started_utc':started,'finished_utc':datetime.now(timezone.utc).isoformat(),'returncode':result.returncode,'seconds':time.monotonic()-begin,'file_hashes':'passed','log':'.review/package_extracted_verify.log'}
+    (OUT/'.review/package_extracted_execution.json').write_text(json.dumps(extraction,indent=2),encoding='utf-8')
+    if result.returncode:raise RuntimeError('Extracted package verification failed; see .review/package_extracted_verify.log')
     record={'archive':final.name,'sha256':hashlib.sha256(final.read_bytes()).hexdigest(),'files':len(payload),'checked_markdown_links':links,'verified_utc':datetime.now(timezone.utc).isoformat(),'CRC':'passed','file_hashes':'passed','policy':'current required inputs, source and results only; no history/cache/screenshots/absolute-path logs','manifest':manifest}
+    record['extracted_verification']=extraction
     (OUT/'package_verification.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Candidate package verified:',final,'files=',len(payload),'links=',links)
     return record
