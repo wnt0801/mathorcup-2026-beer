@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-27T09:48:49.901387+00:00",
+  "finished_utc": "2026-10-27T09:49:12.927377+00:00",
+  "returncode": 0,
+  "seconds": 23.02599310001824,
+  "checks_added": "independent sensory before/after prediction replay, change means and training SD, network explanation edges"
+}

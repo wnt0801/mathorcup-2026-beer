@@ -1,0 +1,21 @@
+{
+  "checked_utc": "2026-10-27T08:13:29.321612+00:00",
+  "sources": [
+    {
+      "id": 1,
+      "source": "data/赛题PDF及附件",
+      "checked": "local full task text and supplied files"
+    },
+    {
+      "id": 2,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38531860/",
+      "checked": "author/title/journal/year/DOI and abstract; used for background only; no claim to revalidate full article or replicate published scores"
+    },
+    {
+      "id": 3,
+      "url": "https://zenodo.org/records/10653704",
+      "checked": "version3 record metadata and listed workbook; local cached workbook MD5=52645e38d90aafda272532e19e2fea1c; inspected S3/S4/TableS1/thresholds"
+    }
+  ],
+  "removed_from_current_paper": "Unneeded direct citation to uncached Rmd; matrix type established numerically instead."
+}

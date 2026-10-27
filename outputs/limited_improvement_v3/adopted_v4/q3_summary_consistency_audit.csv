@@ -1,0 +1,6 @@
+﻿field,unit,formula_status,constituent_list_status,transform_evidence,n_generated,generated_missing,consistency_error,recomputed,status,reason
+esters_sum,,not_verified,not_verified,not_verified,2200,0,,False,未验证,No complete evidenced formula + constituents + units + transform chain in inspected sources; no numerical consistency error computed and no summary overwritten
+aroma_hops_sum,,not_verified,not_verified,not_verified,2200,118,,False,未验证,No complete evidenced formula + constituents + units + transform chain in inspected sources; no numerical consistency error computed and no summary overwritten
+acids_sum,,not_verified,not_verified,not_verified,2200,0,,False,未验证,No complete evidenced formula + constituents + units + transform chain in inspected sources; no numerical consistency error computed and no summary overwritten
+sulfur_sum,,not_verified,not_verified,not_verified,2200,0,,False,未验证,No complete evidenced formula + constituents + units + transform chain in inspected sources; no numerical consistency error computed and no summary overwritten
+kcalperc,kcal%,not_verified,not_verified,empirical_pairing_log10; not proof of constituent identity,2200,0,,False,未验证,No complete evidenced formula + constituents + units + transform chain in inspected sources; no numerical consistency error computed and no summary overwritten

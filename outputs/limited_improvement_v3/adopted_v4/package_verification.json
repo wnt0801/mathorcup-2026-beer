@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "archive": "submission_candidate_v4.zip",
+  "sha256": "3f2352637a17d51676362930fe7f370389e9705a2d2f7b93bd8f54ba8dec3bcd",
+  "files": 149,
+  "links": 14,
+  "CRC": "passed",
+  "file_hashes": "passed",
+  "extracted_checks": [
+    {
+      "command": [
+        "scripts/verify_competition.py",
+        "--output",
+        "results"
+      ],
+      "started_utc": "2026-10-27T16:36:01.046514+00:00",
+      "returncode": 0,
+      "seconds": 19.410002299991902
+    },
+    {
+      "command": [
+        "experiments/limited/verify_experiment.py",
+        "--output",
+        "results"
+      ],
+      "started_utc": "2026-10-27T16:36:20.456536+00:00",
+      "returncode": 0,
+      "seconds": 14.337319599988405
+    }
+  ]
+}

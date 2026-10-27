@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-27T16:18:47.746937+00:00",
+  "finished_utc": "2026-10-27T16:19:08.129479+00:00",
+  "seconds": 20.382541900034994,
+  "protocol_sha256": "8865ae7eada707a40858483a24eb015ae5d842ad50c29cc2418782e7973ef2d7",
+  "heldout50_used_for_predictive_selection": false
+}

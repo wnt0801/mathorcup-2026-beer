@@ -1,0 +1,13 @@
+{
+  "folds": 5,
+  "model_mean_MAE": 0.31267338574610315,
+  "baseline_mean_MAE": 0.3120132162285625,
+  "paired_mean_MAE_difference": 0.000660169517540643,
+  "model_better_folds": 2,
+  "mean_R2": -0.11719362217101,
+  "has_mean_MAE_advantage": false,
+  "selection_action": "none; auxiliary configuration and Q1 frozen selection unchanged",
+  "allowed_claim": "模型代理约束满足",
+  "disallowed_claim": "实际陈旧酒花缺陷不恶化",
+  "evidence_limit": "No predictive advantage shown over mean baseline in these fixed training folds; not an actual safety/quality measurement."
+}

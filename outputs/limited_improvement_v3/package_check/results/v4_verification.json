@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-27T16:36:24.181366+00:00",
+  "finished_utc": "2026-10-27T16:36:34.593986+00:00",
+  "seconds": 10.412633600004483,
+  "calibrated_dimensions": 25,
+  "calibrated_predictions": 6250,
+  "training_transfer_rows": 81,
+  "actual_unique_pils": 9,
+  "checks": [
+    "source MD5 and unique fingerprint identity",
+    "independent numpy per-taster standardization",
+    "raw label aggregation",
+    "foldwise affine calibration by independent least squares",
+    "adoption criteria and all reported failures",
+    "25-dimension predictions and provisional rounding",
+    "training-only fit/donor/evaluation scopes",
+    "selected spectra reconstruction",
+    "fold-fitted stale guard replay",
+    "heldout-Tripel distribution and nearest distance",
+    "trusted concentration preserved; unknowns remain unknown"
+  ],
+  "paper_pages": 10,
+  "paper_sha256": "f662c355756ab093fc6d7869d3640287fc964f796000e0ae958f8bf0b364bfd5",
+  "selection_heldout50_used": false,
+  "interpretation": "Partial supervised panel-mean calibration; Q3 alternatives rejected, no new sensory safety guarantee"
+}

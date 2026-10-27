@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "reviewed_utc": "2026-10-27T16:35:52.602525+00:00",
+  "pdf_sha256": "f662c355756ab093fc6d7869d3640287fc964f796000e0ae958f8bf0b364bfd5",
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "method": "Poppler95dpi page rendering and visual inspection; all 38 calibration decision rows retained; 5 baseline figures and new comparison table checked",
+  "scope": "new v4 PDF, not reused v3 visual evidence"
+}

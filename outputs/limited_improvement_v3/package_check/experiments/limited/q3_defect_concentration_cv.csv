@@ -1,0 +1,325 @@
+﻿seed,fold,beer,method,field,known_trusted,before_concentration,after_concentration,unit,transform,threshold,before_excess,after_excess,claim
+42,1,230,v3,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,v3,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,v3,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,v3,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,1,230,C_concentration,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,C_concentration,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,C_concentration,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,C_concentration,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,1,230,N_distribution,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,N_distribution,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,N_distribution,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,230,N_distribution,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,1,185,v3,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,185,v3,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,185,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,1,185,v3,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,1,185,C_concentration,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,185,C_concentration,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,185,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,1,185,C_concentration,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,1,185,N_distribution,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,185,N_distribution,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,185,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,1,185,N_distribution,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,1,90,v3,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,90,v3,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+42,1,90,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,1,90,v3,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,1,90,C_concentration,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,90,C_concentration,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+42,1,90,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,1,90,C_concentration,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,1,90,N_distribution,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,1,90,N_distribution,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+42,1,90,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,1,90,N_distribution,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,218,v3,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+42,2,218,v3,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,218,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,218,v3,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,218,C_concentration,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+42,2,218,C_concentration,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,218,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,218,C_concentration,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,218,N_distribution,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+42,2,218,N_distribution,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,218,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,218,N_distribution,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,96,v3,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,96,v3,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+42,2,96,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,96,v3,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,96,C_concentration,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,96,C_concentration,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+42,2,96,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,96,C_concentration,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,96,N_distribution,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,96,N_distribution,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+42,2,96,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,96,N_distribution,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,139,v3,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+42,2,139,v3,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,139,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,139,v3,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,139,C_concentration,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+42,2,139,C_concentration,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,139,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,139,C_concentration,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,2,139,N_distribution,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+42,2,139,N_distribution,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,2,139,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,2,139,N_distribution,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,209,v3,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,209,v3,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,209,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,209,v3,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,209,C_concentration,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,209,C_concentration,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,209,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,209,C_concentration,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,209,N_distribution,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,209,N_distribution,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,209,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,209,N_distribution,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,81,v3,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,81,v3,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+42,3,81,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,81,v3,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,81,C_concentration,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,81,C_concentration,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+42,3,81,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,81,C_concentration,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,81,N_distribution,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,81,N_distribution,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+42,3,81,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,81,N_distribution,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,124,v3,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,124,v3,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,124,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,124,v3,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,124,C_concentration,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,124,C_concentration,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,124,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,124,C_concentration,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+42,3,124,N_distribution,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,124,N_distribution,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+42,3,124,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+42,3,124,N_distribution,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,209,v3,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,209,v3,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,209,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,209,v3,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,209,C_concentration,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,209,C_concentration,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,209,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,209,C_concentration,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,209,N_distribution,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,209,N_distribution,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,209,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,209,N_distribution,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,124,v3,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,124,v3,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,124,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,124,v3,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,124,C_concentration,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,124,C_concentration,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,124,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,124,C_concentration,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,124,N_distribution,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,124,N_distribution,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,124,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,124,N_distribution,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,139,v3,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+43,1,139,v3,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,139,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,139,v3,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,139,C_concentration,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+43,1,139,C_concentration,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,139,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,139,C_concentration,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,1,139,N_distribution,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+43,1,139,N_distribution,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,1,139,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,1,139,N_distribution,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,230,v3,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,v3,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,v3,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,v3,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,230,C_concentration,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,C_concentration,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,C_concentration,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,C_concentration,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,230,N_distribution,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,N_distribution,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,N_distribution,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,230,N_distribution,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,81,v3,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,81,v3,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+43,2,81,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,2,81,v3,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,81,C_concentration,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,81,C_concentration,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+43,2,81,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,2,81,C_concentration,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,81,N_distribution,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,81,N_distribution,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+43,2,81,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,2,81,N_distribution,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,218,v3,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+43,2,218,v3,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,218,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,2,218,v3,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,218,C_concentration,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+43,2,218,C_concentration,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,218,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,2,218,C_concentration,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,2,218,N_distribution,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+43,2,218,N_distribution,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,2,218,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,2,218,N_distribution,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,185,v3,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,185,v3,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,185,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,185,v3,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,185,C_concentration,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,185,C_concentration,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,185,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,185,C_concentration,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,185,N_distribution,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,185,N_distribution,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,185,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,185,N_distribution,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,96,v3,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,96,v3,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+43,3,96,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,96,v3,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,96,C_concentration,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,96,C_concentration,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+43,3,96,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,96,C_concentration,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,96,N_distribution,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,96,N_distribution,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+43,3,96,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,96,N_distribution,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,90,v3,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,90,v3,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+43,3,90,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,90,v3,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,90,C_concentration,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,90,C_concentration,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+43,3,90,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,90,C_concentration,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
+43,3,90,N_distribution,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+43,3,90,N_distribution,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+43,3,90,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+43,3,90,N_distribution,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,230,v3,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,v3,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,v3,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,v3,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,230,C_concentration,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,C_concentration,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,C_concentration,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,C_concentration,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,230,N_distribution,DMS,True,15.11278275,15.112782739474238,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,N_distribution,X2.3.butanedione,True,0.041743092,0.041743092,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,N_distribution,X4VG,True,0.0194031667,0.019403166705182603,mg/L,log10,0.2,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,230,N_distribution,X.E..2.nonenal,True,0.001499421,0.001499421,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,96,v3,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,96,v3,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+44,1,96,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,1,96,v3,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,96,C_concentration,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,96,C_concentration,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+44,1,96,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,1,96,C_concentration,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,96,N_distribution,DMS,True,15.55845,15.558450017327774,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,96,N_distribution,X2.3.butanedione,True,0.523885941,0.523885941,mg/L,identity,0.09,0.433885941,0.433885941,same trusted concentration; threshold is reference only
+44,1,96,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,1,96,N_distribution,X.E..2.nonenal,True,0.0119350085,0.011935009,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,139,v3,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+44,1,139,v3,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,139,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,1,139,v3,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,139,C_concentration,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+44,1,139,C_concentration,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,139,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,1,139,C_concentration,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,1,139,N_distribution,DMS,True,20.15957,20.159569979151296,ug/L,log10,19.0,1.1595699999999987,1.1595699791512963,same trusted concentration; threshold is reference only
+44,1,139,N_distribution,X2.3.butanedione,True,0.0325512835,0.032551284,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,1,139,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,1,139,N_distribution,X.E..2.nonenal,True,0.002011718,0.002011718,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,81,v3,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,81,v3,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+44,2,81,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,81,v3,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,81,C_concentration,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,81,C_concentration,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+44,2,81,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,81,C_concentration,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,81,N_distribution,DMS,True,8.858685,8.858684996430867,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,81,N_distribution,X2.3.butanedione,True,0.2848143315,0.284814332,mg/L,identity,0.09,0.19481433150000002,0.194814332,same trusted concentration; threshold is reference only
+44,2,81,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,81,N_distribution,X.E..2.nonenal,True,0.003422001,0.003422001,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,185,v3,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,185,v3,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,185,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,185,v3,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,185,C_concentration,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,185,C_concentration,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,185,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,185,C_concentration,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,185,N_distribution,DMS,True,6.663105,6.6631049982134165,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,185,N_distribution,X2.3.butanedione,True,0.035773067,0.035773067,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,185,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,185,N_distribution,X.E..2.nonenal,True,0.0017433755,0.001743376,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,124,v3,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,124,v3,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,124,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,124,v3,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,124,C_concentration,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,124,C_concentration,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,124,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,124,C_concentration,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,2,124,N_distribution,DMS,True,14.29599,14.295990009543798,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,124,N_distribution,X2.3.butanedione,True,0.051620797,0.051620797,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,2,124,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,2,124,N_distribution,X.E..2.nonenal,True,0.0008039065,0.000803907,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,209,v3,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,209,v3,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,209,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,209,v3,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,209,C_concentration,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,209,C_concentration,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,209,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,209,C_concentration,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,209,N_distribution,DMS,True,14.07209,14.072089998419486,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,209,N_distribution,X2.3.butanedione,True,0.0261853075,0.026185308,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,209,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,209,N_distribution,X.E..2.nonenal,True,0.0027121895,0.00271219,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,218,v3,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+44,3,218,v3,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,218,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,218,v3,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,218,C_concentration,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+44,3,218,C_concentration,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,218,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,218,C_concentration,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,218,N_distribution,DMS,True,26.675045,26.67504501603859,ug/L,log10,19.0,7.675045000000001,7.675045016038592,same trusted concentration; threshold is reference only
+44,3,218,N_distribution,X2.3.butanedione,True,0.056959527,0.056959527,mg/L,identity,0.09,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,218,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,218,N_distribution,X.E..2.nonenal,True,0.001110656,0.001110656,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,90,v3,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,90,v3,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+44,3,90,v3,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,90,v3,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,90,C_concentration,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,90,C_concentration,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+44,3,90,C_concentration,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,90,C_concentration,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
+44,3,90,N_distribution,DMS,True,7.933115,7.933115000908002,ug/L,log10,19.0,0.0,0.0,same trusted concentration; threshold is reference only
+44,3,90,N_distribution,X2.3.butanedione,True,0.236137339,0.236137339,mg/L,identity,0.09,0.146137339,0.146137339,same trusted concentration; threshold is reference only
+44,3,90,N_distribution,X4VG,False,,,mg/L,log10,0.2,,,unknown/conflicted; native representation frozen only
+44,3,90,N_distribution,X.E..2.nonenal,True,0.001816275,0.001816275,mg/L,identity,,,,same trusted concentration; threshold is reference only
